@@ -6,27 +6,28 @@ subtitle: Academic background, research interests, and professional history
 
 ## Research Focus
 
-My research explores how multisensory integration shapes our perception of the environment. I investigate the cognitive processes that allow humans to combine information from different sensory modalities to form coherent perceptual experiences.
+My research focuses on understanding how people interact with products, systems, and environments. I investigate user behavior, preferences, and needs to inform effective design and development.
 
 ### Key Research Areas
 
-#### Multisensory Integration
-Investigating how the brain combines information from different sensory modalities (vision, audition, touch) to create unified perceptual experiences.
+#### User Experience & Usability
+Evaluating how people interact with interfaces and products to identify pain points and opportunities for improvement.
 
-#### Perceptual Processing
-Exploring the cognitive mechanisms underlying how we interpret and make sense of sensory information from our environment.
+#### Human Factors
+Analyzing how cognitive and physical capabilities influence user interactions to optimize design for human use.
 
-#### Cognitive Neuroscience
-Using neuroimaging techniques to understand the neural correlates of multisensory perception and integration.
+#### Applied Research
+Translating research insights into practical recommendations that drive product development and innovation.
 
-## Methodologies
+## Research Methods
 
-My research employs various methodologies to investigate cognitive processes:
+I employ a comprehensive set of research methodologies:
 
-- **Behavioral Testing**: Psychophysical experiments to measure perceptual thresholds and response patterns
-- **Neuroimaging**: Using techniques such as fMRI to examine brain activity during multisensory tasks
-- **Eye Tracking**: Monitoring gaze patterns to understand visual attention and information processing
-- **Computational Modeling**: Developing models to predict perceptual outcomes in multisensory scenarios
+- **Moderated Research**: In-person and remote user testing, interviews, and contextual inquiry
+- **Unmoderated Research**: Remote testing platforms, surveys, and automated data collection
+- **Behavioral Analysis**: Observing and measuring user interactions and task performance
+- **Eye Tracking**: Tracking visual attention patterns to understand user focus and information processing
+- **Usability Evaluation**: Identifying design issues through expert reviews and user testing
 
 ## Professional Background
 

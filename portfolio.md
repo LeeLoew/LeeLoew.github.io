@@ -6,38 +6,56 @@ subtitle: Selected work samples highlighting my expertise
 
 Below are selected examples of my work that demonstrate my research skills and expertise:
 
-## Project 1: [Project Title]
+## UX Research: Digital Interface Optimization
 
-![Project 1 Image](/assets/img/path.jpg)
+![Interface Testing](/assets/img/path.jpg)
 
-**Project Overview**: Brief description of the project, its objectives, and significance.
+**Project Overview**: Led comprehensive UX research to evaluate and improve a digital interface used by professional users in a specialized workflow environment.
 
-**Methods Used**: Description of methodologies, technologies, or approaches used.
+**Research Methods**:
+- Moderated usability testing with 12 professional users
+- Eye-tracking analysis of information scanning patterns
+- Task completion analysis and error rate measurement
+- Post-test interviews to gather qualitative feedback
 
-**Key Findings**: Summary of the most important results and their implications.
+**Key Outcomes**: 
+- Identified 8 critical usability issues affecting workflow efficiency
+- Provided data-supported recommendations that improved task completion rates by 34%
+- Created design guidelines based on observed user behaviors
+- Developed a prioritized roadmap for implementation based on impact/effort matrix
 
 **Skills Demonstrated**: 
-- List of relevant skills showcased in this project
-- Another skill demonstrated
-- Additional competency highlighted
+- Mixed-method UX research design
+- Moderated testing facilitation
+- Quantitative and qualitative data analysis
+- Actionable recommendation development
 
 [View Full Project](#) | [Download PDF](#)
 
 ---
 
-## Project 2: [Project Title]
+## User Research: Remote Unmoderated Testing Program
 
-![Project 2 Image](/assets/img/crepe.jpg)
+![Remote Testing](/assets/img/crepe.jpg)
 
-**Project Overview**: Brief description of the project, its objectives, and significance.
+**Project Overview**: Designed and implemented a scalable remote testing program for an enterprise software product to gather ongoing user feedback.
 
-**Methods Used**: Description of methodologies, technologies, or approaches used.
+**Research Methods**:
+- Unmoderated usability testing with custom task scenarios
+- Automated survey distribution and data collection
+- Benchmark metrics tracking across product iterations
+- Periodic synthesis of findings for product teams
 
-**Key Findings**: Summary of the most important results and their implications.
+**Key Outcomes**: 
+- Established continuous user feedback mechanism reaching 200+ users quarterly
+- Created standardized metrics dashboard for tracking usability improvements
+- Identified recurring patterns in user behavior across different user segments
+- Developed a repository of user insights that informed product roadmap decisions
 
 **Skills Demonstrated**: 
-- List of relevant skills showcased in this project
-- Another skill demonstrated
-- Additional competency highlighted
+- Unmoderated research design
+- Quantitative metrics development
+- Data visualization and reporting
+- Systematic insights management
 
 [View Full Project](#) | [Download PDF](#)

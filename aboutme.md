@@ -4,34 +4,34 @@ title: About me
 subtitle: Cognitive Psychologist & Researcher
 ---
 
-I am a Ph.D. in Cognitive Psychology with over 10 years of experience in behavioral research. My research has focused on how the integration of multisensory information determines how we perceive our environment. I am currently working as a Human Factors Consultant at Core Human Factors, bringing my expertise in cognitive psychology to applied research settings.
+I am a Ph.D. in Cognitive Psychology with over 10 years of experience in research methods and human factors. I specialize in understanding how people interact with technology and their environment. I am currently working as a Human Factors Consultant at Core Human Factors, bringing my expertise in cognitive psychology to applied research settings.
 
-### Research Background
+### Research Methods
 
-I am trained in multiple research methods including:
-- Behavioral and neuropsychological testing
-- Neuroimaging
-- Eyetracking
-- Task analysis and workload assessment
+I am experienced in a wide range of research approaches:
+- **User Experience Research**: Moderated and unmoderated usability testing, interviews, and surveys
+- **Behavioral Testing**: Measuring human performance and interaction patterns
+- **Eyetracking**: Analyzing visual attention and information processing
+- **Task Analysis**: Evaluating workflow efficiency and cognitive workload
 
-### Expertise
+### Research Expertise
 
-I have extensive experience in all aspects of human subjects research including:
-- Hypothesis generation
-- Experimental design
-- Participant recruitment and testing
-- Scientific communication
+I have extensive experience in all aspects of user and human subjects research:
+- **Research Design**: Creating robust studies that deliver actionable insights
+- **Participant Management**: Recruiting specialized user groups and conducting effective sessions
+- **Mixed Methods**: Combining qualitative and quantitative approaches for comprehensive understanding
+- **Reporting & Communication**: Translating complex findings into clear recommendations
 
-### Technical Skills
+### Data Analysis & Technical Skills
 
-I am proficient in quantitative methods including:
-- Regression analysis
-- Simulations
-- Psychophysics
-- ANOVA and permutation tests
+I transform research data into meaningful insights using:
+- **Statistical Analysis**: Finding patterns and relationships in complex datasets
+- **Data Visualization**: Creating clear visual representations of findings
+- **User Metrics**: Measuring and analyzing user behavior and performance
+- **A/B Testing**: Comparing design alternatives with data-driven methods
 
 I also have experience with:
-- Programming languages (MATLAB, R, Shell)
-- Statistical software (SPSS)
-- Usability assessment
-- Project management and cross-functional collaboration
+- **Research Tools**: SPSS, R, and specialized research software
+- **UX Tools**: Usability testing platforms and analytics tools
+- **Project Management**: Coordinating cross-functional teams and research initiatives
+- **Collaboration Platforms**: Facilitating teamwork across distributed teams
