@@ -28,17 +28,7 @@ My research employs various methodologies to investigate cognitive processes:
 - **Eye Tracking**: Monitoring gaze patterns to understand visual attention and information processing
 - **Computational Modeling**: Developing models to predict perceptual outcomes in multisensory scenarios
 
-## Publications
-
-### Journal Articles
-
-*A list of journal articles would appear here, formatted in academic citation style.*
-
-### Conference Presentations
-
-*A list of conference presentations would appear here.*
-
-## Curriculum Vitae
+## Professional Background
 
 ### Education
 
