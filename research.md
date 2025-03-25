@@ -54,6 +54,9 @@ Activities: Organizer for college literature festival, Editor for Psychology dep
 
 **Human Factors Consultant**, Core Human Factors, A Rimkus Company  
 Oct 2024 - Present, Bala-Cynwyd, Pennsylvania, United States
+- Conduct formative and summative UX research to evaluate the usability, safety, and effectiveness of medical devices and combination products, ensuring alignment with FDA human factors guidance and usability engineering standards.
+- Identify and mitigate use-related risks through comprehensive task analysis, risk assessments and simulated-use studies, translating findings into actionable design recommendations that enhance user performance.
+- Contribute to regulatory submissions by developing key human factors deliverables, synthesizing UX research findings into compliant documentation, and collaborating with cross-functional teams including design, engineering, and regulatory affairs.
 
 **Graduate Researcher**, University of Delaware  
 Jul 2019 - Oct 2024, Newark, Delaware, United States
