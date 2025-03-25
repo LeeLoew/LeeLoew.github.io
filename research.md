@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Research
-subtitle: My research interests and projects
+title: Research & Experience
+subtitle: Academic background, research interests, and publications
 ---
 
 ## Research Focus
@@ -28,6 +28,74 @@ My research employs various methodologies to investigate cognitive processes:
 - **Eye Tracking**: Monitoring gaze patterns to understand visual attention and information processing
 - **Computational Modeling**: Developing models to predict perceptual outcomes in multisensory scenarios
 
-## Current Projects
+## Publications
 
-*Details about current research projects would be listed here.*
+### Journal Articles
+
+*A list of journal articles would appear here, formatted in academic citation style.*
+
+### Conference Presentations
+
+*A list of conference presentations would appear here.*
+
+### Book Chapters
+
+*Any book chapters would be listed here.*
+
+## Curriculum Vitae
+
+### Education
+
+**Ph.D., Cognitive Psychology**  
+*University and Year*
+
+**M.A./M.S., Psychology**  
+*University and Year*
+
+**B.A./B.S., Psychology**  
+*University and Year*
+
+### Professional Experience
+
+**Position Title**  
+*Organization*  
+Start Date - End Date  
+Description of responsibilities and achievements
+
+**Position Title**  
+*Organization*  
+Start Date - End Date  
+Description of responsibilities and achievements
+
+### Skills
+
+#### Research Methods
+- Behavioral and neuropsychological testing
+- Neuroimaging
+- Eyetracking
+
+#### Quantitative Methods
+- Regression analysis
+- Statistical modeling
+- Simulations
+- Psychophysics
+
+#### Technical Skills
+- Programming languages (e.g., R, Python, MATLAB)
+- Statistical software
+- Experimental design software
+
+### Awards and Honors
+
+**Award Name**  
+*Awarding Institution*  
+Year
+
+**Award Name**  
+*Awarding Institution*  
+Year
+
+### Professional Memberships
+
+- Organization name
+- Organization name
