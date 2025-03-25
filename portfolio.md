@@ -9,7 +9,7 @@ subtitle: Selected research and UX projects
 Below you can browse through my portfolio of selected UX research and human factors projects:
 
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/e/2PACX-1vQgqlZt6AWa7bfz2Np8rp3p_cVBP_mRvdnYu13e4_QIbVxmHXajKpMfnpNRofWEpnjRxpLlqF30PVU2/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/16gV_RLMcEFWNp_TGIc66oRzm7Etw1RAJtBRItQmm1Lk/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
 <div class="portfolio-description mt-4">
@@ -22,7 +22,7 @@ Below you can browse through my portfolio of selected UX research and human fact
     <li><strong>User-centered design</strong> methodologies and recommendations</li>
   </ul>
   
-  <p class="mt-3">For more details about specific projects or to discuss potential collaborations, please <a href="mailto:anupama.nair@example.com">contact me</a>.</p>
+  <p class="mt-3">For more details about specific projects or to discuss potential collaborations, please <a href="mailto:asnair@udel.edu">contact me</a>.</p>
 </div>
 
 <style>
