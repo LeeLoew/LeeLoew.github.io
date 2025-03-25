@@ -48,7 +48,7 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "anupama.nair@example.com"
+  email: "asnair@udel.edu"
   rss: false
 #  facebook: 
 #  github: 
@@ -58,7 +58,7 @@ social-network-links:
 #  whatsapp: 
 #  medium: 
 #  reddit: 
-  linkedin: anupama-nair
+  linkedin: anupama-s-nair
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -100,7 +100,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "anupama-nair.com"
+# url-pretty: "anupama-nair.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
