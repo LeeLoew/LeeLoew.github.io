@@ -1,61 +1,60 @@
 ---
 layout: page
 title: Portfolio
-subtitle: Selected work samples highlighting my expertise
+subtitle: Selected research and UX projects
 ---
 
-Below are selected examples of my work that demonstrate my research skills and expertise:
+## My Portfolio
 
-## UX Research: Digital Interface Optimization
+Below you can browse through my portfolio of selected UX research and human factors projects:
 
-![Interface Testing](/assets/img/path.jpg)
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/e/2PACX-1vQgqlZt6AWa7bfz2Np8rp3p_cVBP_mRvdnYu13e4_QIbVxmHXajKpMfnpNRofWEpnjRxpLlqF30PVU2/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
 
-**Project Overview**: Led comprehensive UX research to evaluate and improve a digital interface used by professional users in a specialized workflow environment.
+<div class="portfolio-description mt-4">
+  <p>This portfolio showcases research projects demonstrating my expertise in:</p>
+  <ul>
+    <li><strong>Moderated research</strong> with specialized user groups</li>
+    <li><strong>Unmoderated testing</strong> for scalable data collection</li>
+    <li><strong>Mixed-method approaches</strong> combining qualitative and quantitative insights</li>
+    <li><strong>Data analysis and visualization</strong> for clear communication of findings</li>
+    <li><strong>User-centered design</strong> methodologies and recommendations</li>
+  </ul>
+  
+  <p class="mt-3">For more details about specific projects or to discuss potential collaborations, please <a href="mailto:anupama.nair@example.com">contact me</a>.</p>
+</div>
 
-**Research Methods**:
-- Moderated usability testing with 12 professional users
-- Eye-tracking analysis of information scanning patterns
-- Task completion analysis and error rate measurement
-- Post-test interviews to gather qualitative feedback
+<style>
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
 
-**Key Outcomes**: 
-- Identified 8 critical usability issues affecting workflow efficiency
-- Provided data-supported recommendations that improved task completion rates by 34%
-- Created design guidelines based on observed user behaviors
-- Developed a prioritized roadmap for implementation based on impact/effort matrix
+.embed-responsive::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
 
-**Skills Demonstrated**: 
-- Mixed-method UX research design
-- Moderated testing facilitation
-- Quantitative and qualitative data analysis
-- Actionable recommendation development
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-[View Full Project](#) | [Download PDF](#)
-
----
-
-## User Research: Remote Unmoderated Testing Program
-
-![Remote Testing](/assets/img/crepe.jpg)
-
-**Project Overview**: Designed and implemented a scalable remote testing program for an enterprise software product to gather ongoing user feedback.
-
-**Research Methods**:
-- Unmoderated usability testing with custom task scenarios
-- Automated survey distribution and data collection
-- Benchmark metrics tracking across product iterations
-- Periodic synthesis of findings for product teams
-
-**Key Outcomes**: 
-- Established continuous user feedback mechanism reaching 200+ users quarterly
-- Created standardized metrics dashboard for tracking usability improvements
-- Identified recurring patterns in user behavior across different user segments
-- Developed a repository of user insights that informed product roadmap decisions
-
-**Skills Demonstrated**: 
-- Unmoderated research design
-- Quantitative metrics development
-- Data visualization and reporting
-- Systematic insights management
-
-[View Full Project](#) | [Download PDF](#)
+.portfolio-description {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+</style>
