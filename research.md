@@ -43,24 +43,21 @@ My research employs various methodologies to investigate cognitive processes:
 ### Education
 
 **Ph.D., Cognitive Psychology** | University of Delaware  
-Jul 2019 - Dec 2024
-- GPA: 4.00/4.00
-- Psychological & Brain Sciences
+Jul 2019 - Dec 2024  
+*Psychological & Brain Sciences*
 
 **M.Sc., Brain and Cognitive Sciences** | University of Amsterdam  
-2015 - 2017
-- Specialization: Cognitive Neuroscience
-- GPA: 8.24/10.00
-- Activities: Editorial board for the Brain and Cognitive Sciences monthly newsletter
+2015 - 2017  
+*Specialization: Cognitive Neuroscience*  
+Activities: Editorial board for the Brain and Cognitive Sciences monthly newsletter
 
 **Academic Exchange Program** | Carleton University  
-2013 - 2014
-- Psychology & Neuroscience
+2013 - 2014  
+*Psychology & Neuroscience*
 
 **B.A., Psychology** | St. Xavier's College  
-2010 - 2013
-- GPA: 3.70/4.00
-- Activities: Organizer for college literature festival, Volunteer for college cultural festival, Editor for the Psychology department monthly magazine
+2010 - 2013  
+Activities: Organizer for college literature festival, Editor for Psychology department magazine
 
 ### Professional Experience
 
