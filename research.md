@@ -33,30 +33,30 @@ I employ a comprehensive set of research methodologies:
 
 ### Education
 
-**Ph.D., Cognitive Psychology** | University of Delaware  
+**Ph.D., Cognitive Psychology**, University of Delaware  
 Jul 2019 - Dec 2024  
 *Psychological & Brain Sciences*
 
-**M.Sc., Brain and Cognitive Sciences** | University of Amsterdam  
+**M.Sc., Brain and Cognitive Sciences**, University of Amsterdam  
 2015 - 2017  
 *Specialization: Cognitive Neuroscience*  
 Activities: Editorial board for the Brain and Cognitive Sciences monthly newsletter
 
-**Academic Exchange Program** | Carleton University  
+**Academic Exchange Program**, Carleton University  
 2013 - 2014  
 *Psychology & Neuroscience*
 
-**B.A., Psychology** | St. Xavier's College  
+**B.A., Psychology**, St. Xavier's College  
 2010 - 2013  
 Activities: Organizer for college literature festival, Editor for Psychology department magazine
 
 ### Professional Experience
 
-**Human Factors Consultant** | Core Human Factors, A Rimkus Company  
-Oct 2024 - Present | Bala-Cynwyd, Pennsylvania, United States
+**Human Factors Consultant**, Core Human Factors, A Rimkus Company  
+Oct 2024 - Present, Bala-Cynwyd, Pennsylvania, United States
 
-**Graduate Researcher** | University of Delaware  
-Jul 2019 - Oct 2024 | Newark, Delaware, United States
+**Graduate Researcher**, University of Delaware  
+Jul 2019 - Oct 2024, Newark, Delaware, United States
 - Managed 5 research projects examining vision-haptics interactions from hypothesis to final presentation
 - Designed experiments and questionnaires, testing 500+ participants including special populations
 - Analyzed data using ANOVA, simulations and permutation tests (MATLAB, R, SPSS)
@@ -65,28 +65,28 @@ Jul 2019 - Oct 2024 | Newark, Delaware, United States
 - Supervised databases with 1000+ participants as subject pool coordinator
 - Served as graduate student representative and Chair of Psychology Mentorship Network
 
-**Human Factors Intern** | Wisk  
-May 2023 - Aug 2023 | Mountain View, California, United States
+**Human Factors Intern**, Wisk  
+May 2023 - Aug 2023, Mountain View, California, United States
 - Conducted 3 complete human factors evaluations in 12 weeks measuring mental workload with UI prototypes
 - Collected eyetracking and performance data from 50+ participants
 - Performed task analyses and usability assessments to improve UI design
 - Ran workload simulations and recommended safety/efficiency improvements
 - Collaborated with cross-functional teams (product managers, engineers, test pilots, UX teams)
 
-**Lab Manager** | The University of Texas at Dallas  
-Sep 2017 - May 2019 | Dallas, Texas, United States
+**Lab Manager**, The University of Texas at Dallas  
+Sep 2017 - May 2019, Dallas, Texas, United States
 - Coordinated multi-site research involving behavioral experiments, eyetracking, TMS and fMRI
 - Developed analysis code in MATLAB and Shell
 - Assisted with grant proposals and managed human subjects testing protocols
 - Handled lab resources, inventories and participant compensation
 
-**Visiting Researcher** | University of Michigan  
-Sep 2016 - Sep 2017 | Ann Arbor, Michigan, USA
+**Visiting Researcher**, University of Michigan  
+Sep 2016 - Sep 2017, Ann Arbor, Michigan, USA
 - Collected/analyzed data from 200+ participants on vision-audition interaction research
 - Published first-author paper and presented at two prestigious conferences
 
-**Graduate Research Assistant** | Vrije Universiteit Amsterdam  
-Jan 2016 - Jul 2016 | Amsterdam Area, Netherlands
+**Graduate Research Assistant**, Vrije Universiteit Amsterdam  
+Jan 2016 - Jul 2016, Amsterdam, Netherlands
 
 ### Skills
 
