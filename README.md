@@ -1,8 +1,10 @@
-# Beautiful Jekyll
+# Anupama Nair Website
 
-[![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
+This repository contains the personal website for Anupama Nair, Ph.D., a cognitive psychologist and researcher specializing in multisensory integration and perception.
 
-> By [Dean Attali](https://deanattali.com) &middot; [Demo](https://beautifuljekyll.com/)
+## About
+
+This website showcases Dr. Nair's professional background, research interests, publications, and CV. It is built using the Beautiful Jekyll theme.
 
 **Beautiful Jekyll** is a ready-to-use template to help you create a beautiful website quickly. Perfect for personal sites, blogs, or simple project websites.  [Check out a demo](https://beautifuljekyll.com) of what you'll get after just two minutes.  You can also look at [my personal website](https://deanattali.com) or [my consulting website](https://attalitech.com) to see it in use, or see [examples of websites](http://beautifuljekyll.com/examples) other people created using this theme.
 

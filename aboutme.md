@@ -1,16 +1,29 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Cognitive Psychologist & Researcher
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I am a Ph.D. in Cognitive Psychology with over 10 years of experience in behavioral research. My research has focused on how the integration of multisensory information determines how we perceive our environment.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+### Research Background
 
-What else do you need?
+I am trained in multiple research methods including:
+- Behavioral and neuropsychological testing
+- Neuroimaging
+- Eyetracking
 
-### My story
+### Expertise
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I have extensive experience in all aspects of human subjects research including:
+- Hypothesis generation
+- Experimental design
+- Participant recruitment and testing
+- Scientific communication
+
+### Technical Skills
+
+I am proficient in quantitative methods including:
+- Regression analysis
+- Simulations
+- Psychophysics
