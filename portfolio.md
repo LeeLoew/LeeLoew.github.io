@@ -8,8 +8,18 @@ subtitle: Selected research and UX projects
 
 Below you can browse through my portfolio of selected UX research and human factors projects:
 
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/16gV_RLMcEFWNp_TGIc66oRzm7Etw1RAJtBRItQmm1Lk/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<div class="portfolio-container">
+  <div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/10SOJTjEDfZehtc9RurXNt3WE9oF5AHcQNurLejZT-60/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+  
+  <div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1tqirth_FFt9gmExEyhfz_WwVCWq42oG0HeQ-KzO9c9w/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+  
+  <div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1DZjzn1yR5JlpqitYAgi2HL6Ktr8TT-I68GiCVxUAC4o/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
 </div>
 
 <div class="portfolio-description mt-4">
@@ -26,12 +36,17 @@ Below you can browse through my portfolio of selected UX research and human fact
 </div>
 
 <style>
+.portfolio-container {
+  margin-bottom: 30px;
+}
+
 .embed-responsive {
   position: relative;
   display: block;
   width: 100%;
   padding: 0;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .embed-responsive::before {
