@@ -9,16 +9,43 @@ subtitle: Selected research and UX projects
 Below you can browse through my portfolio of selected UX research and human factors projects:
 
 <div class="portfolio-container">
-  <div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/10SOJTjEDfZehtc9RurXNt3WE9oF5AHcQNurLejZT-60/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <div class="portfolio-item mb-5">
+    <h3>Project 1: User Experience Research Study</h3>
+    <p class="mb-3">Comprehensive analysis of user interactions with medical device interfaces.</p>
+    <div class="pdf-container">
+      <object data="/Portfolio project 1.pdf" type="application/pdf" width="100%" height="600px">
+        <p>Your browser does not support PDFs. <a href="/Portfolio project 1.pdf">Download the PDF</a> to view it.</p>
+      </object>
+    </div>
+    <p class="text-center mt-2">
+      <a href="/Portfolio project 1.pdf" class="btn btn-primary" download>Download PDF</a>
+    </p>
   </div>
   
-  <div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1tqirth_FFt9gmExEyhfz_WwVCWq42oG0HeQ-KzO9c9w/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <div class="portfolio-item mb-5">
+    <h3>Project 2: Human Factors Evaluation</h3>
+    <p class="mb-3">Assessment of usability and safety factors in product design.</p>
+    <div class="pdf-container">
+      <object data="/Portfolio Project #2.pdf" type="application/pdf" width="100%" height="600px">
+        <p>Your browser does not support PDFs. <a href="/Portfolio Project #2.pdf">Download the PDF</a> to view it.</p>
+      </object>
+    </div>
+    <p class="text-center mt-2">
+      <a href="/Portfolio Project #2.pdf" class="btn btn-primary" download>Download PDF</a>
+    </p>
   </div>
   
-  <div class="embed-responsive embed-responsive-16by9 mb-4">
-    <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1DZjzn1yR5JlpqitYAgi2HL6Ktr8TT-I68GiCVxUAC4o/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <div class="portfolio-item mb-5">
+    <h3>Project 3: Regulatory Compliance Study</h3>
+    <p class="mb-3">Implementation of FDA-compliant human factors testing methodology.</p>
+    <div class="pdf-container">
+      <object data="/Portfolio Project #3.pdf" type="application/pdf" width="100%" height="600px">
+        <p>Your browser does not support PDFs. <a href="/Portfolio Project #3.pdf">Download the PDF</a> to view it.</p>
+      </object>
+    </div>
+    <p class="text-center mt-2">
+      <a href="/Portfolio Project #3.pdf" class="btn btn-primary" download>Download PDF</a>
+    </p>
   </div>
 </div>
 
@@ -41,30 +68,34 @@ Below you can browse through my portfolio of selected UX research and human fact
   margin-bottom: 30px;
 }
 
-.embed-responsive {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
+.portfolio-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.portfolio-item h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pdf-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
-.embed-responsive::before {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
+.btn-primary {
+  background-color: #666666;
+  border-color: #666666;
+  color: white;
 }
 
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.btn-primary:hover {
+  background-color: #555555;
+  border-color: #555555;
 }
 
 .portfolio-description {
