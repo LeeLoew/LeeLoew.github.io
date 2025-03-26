@@ -13,7 +13,7 @@ Below you can browse through my portfolio of selected UX research and human fact
     <h3>Project 1: User Experience Research Study</h3>
     <p class="mb-3">Comprehensive analysis of user interactions with medical device interfaces.</p>
     <div class="pdf-container">
-      <object data="/Portfolio project 1.pdf" type="application/pdf" width="100%" height="600px">
+      <object data="/Portfolio project 1.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px">
         <p>Your browser does not support PDFs. <a href="/Portfolio project 1.pdf">Download the PDF</a> to view it.</p>
       </object>
     </div>
@@ -26,7 +26,7 @@ Below you can browse through my portfolio of selected UX research and human fact
     <h3>Project 2: Human Factors Evaluation</h3>
     <p class="mb-3">Assessment of usability and safety factors in product design.</p>
     <div class="pdf-container">
-      <object data="/Portfolio%20Project%20%232.pdf" type="application/pdf" width="100%" height="600px">
+      <object data="/Portfolio%20Project%20%232.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px">
         <p>Your browser does not support PDFs. <a href="/Portfolio%20Project%20%232.pdf">Download the PDF</a> to view it.</p>
       </object>
     </div>
@@ -39,7 +39,7 @@ Below you can browse through my portfolio of selected UX research and human fact
     <h3>Project 3: Regulatory Compliance Study</h3>
     <p class="mb-3">Implementation of FDA-compliant human factors testing methodology.</p>
     <div class="pdf-container">
-      <object data="/Portfolio%20Project%20%233.pdf" type="application/pdf" width="100%" height="600px">
+      <object data="/Portfolio%20Project%20%233.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px">
         <p>Your browser does not support PDFs. <a href="/Portfolio%20Project%20%233.pdf">Download the PDF</a> to view it.</p>
       </object>
     </div>
