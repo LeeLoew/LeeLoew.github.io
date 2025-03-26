@@ -4,7 +4,7 @@ title: About me
 subtitle: Cognitive Psychologist & Researcher
 ---
 
-I am a Ph.D. in Cognitive Psychology with over 10 years of experience in research methods and human factors. I specialize in understanding how people interact with technology and their environment. I am currently working as a Human Factors Consultant at Core Human Factors, bringing my expertise in cognitive psychology to applied research settings.
+I am a Ph.D. in Cognitive Psychology with over 10 years of experience in research methods and human factors. I specialize in understanding how people interact with technology and their environment. I am currently working as a Human Factors Consultant at Core Human Factors, where I evaluate the usability, safety, and effectiveness of medical devices and combination products in alignment with FDA human factors guidance.
 
 ### Research Methods
 
@@ -21,6 +21,7 @@ I have extensive experience in all aspects of user and human subjects research:
 - **Participant Management**: Recruiting specialized user groups and conducting effective sessions
 - **Mixed Methods**: Combining qualitative and quantitative approaches for comprehensive understanding
 - **Reporting & Communication**: Translating complex findings into clear recommendations
+- **Regulatory Compliance**: Developing human factors deliverables that meet FDA requirements and usability engineering standards
 
 ### Data Analysis & Technical Skills
 

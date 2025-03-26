@@ -1,7 +1,7 @@
 **Research & Experience**
 
 **Research Focus**
-My research explores how multisensory integration shapes our perception of the environment. I investigate the cognitive processes that allow humans to combine information from different sensory modalities to form coherent perceptual experiences.
+My research focuses on understanding how people interact with products, systems, and environments, with particular emphasis on medical devices and user interfaces. I investigate user behavior, preferences, and needs to inform effective design and development that enhances safety and usability.
 
 **Key Research Areas**
 **Multisensory Integration**

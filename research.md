@@ -19,6 +19,9 @@ Analyzing how cognitive and physical capabilities influence user interactions to
 #### Applied Research
 Translating research insights into practical recommendations that drive product development and innovation.
 
+#### Regulatory Compliance
+Developing human factors deliverables that meet FDA requirements and usability engineering standards for medical devices and combination products.
+
 ## Research Methods
 
 I employ a comprehensive set of research methodologies:

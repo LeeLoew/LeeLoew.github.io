@@ -30,6 +30,7 @@ Below you can browse through my portfolio of selected UX research and human fact
     <li><strong>Mixed-method approaches</strong> combining qualitative and quantitative insights</li>
     <li><strong>Data analysis and visualization</strong> for clear communication of findings</li>
     <li><strong>User-centered design</strong> methodologies and recommendations</li>
+    <li><strong>Medical device usability</strong> and regulatory compliance</li>
   </ul>
   
   <p class="mt-3">For more details about specific projects or to discuss potential collaborations, please <a href="mailto:asnair@udel.edu">contact me</a>.</p>
