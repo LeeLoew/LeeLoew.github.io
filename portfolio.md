@@ -26,12 +26,12 @@ Below you can browse through my portfolio of selected UX research and human fact
     <h3>Project 2: Human Factors Evaluation</h3>
     <p class="mb-3">Assessment of usability and safety factors in product design.</p>
     <div class="pdf-container">
-      <object data="/Portfolio Project #2.pdf" type="application/pdf" width="100%" height="600px">
-        <p>Your browser does not support PDFs. <a href="/Portfolio Project #2.pdf">Download the PDF</a> to view it.</p>
+      <object data="/Portfolio%20Project%20%232.pdf" type="application/pdf" width="100%" height="600px">
+        <p>Your browser does not support PDFs. <a href="/Portfolio%20Project%20%232.pdf">Download the PDF</a> to view it.</p>
       </object>
     </div>
     <p class="text-center mt-2">
-      <a href="/Portfolio Project #2.pdf" class="btn btn-primary" download>Download PDF</a>
+      <a href="/Portfolio%20Project%20%232.pdf" class="btn btn-primary" download>Download PDF</a>
     </p>
   </div>
   
@@ -39,12 +39,12 @@ Below you can browse through my portfolio of selected UX research and human fact
     <h3>Project 3: Regulatory Compliance Study</h3>
     <p class="mb-3">Implementation of FDA-compliant human factors testing methodology.</p>
     <div class="pdf-container">
-      <object data="/Portfolio Project #3.pdf" type="application/pdf" width="100%" height="600px">
-        <p>Your browser does not support PDFs. <a href="/Portfolio Project #3.pdf">Download the PDF</a> to view it.</p>
+      <object data="/Portfolio%20Project%20%233.pdf" type="application/pdf" width="100%" height="600px">
+        <p>Your browser does not support PDFs. <a href="/Portfolio%20Project%20%233.pdf">Download the PDF</a> to view it.</p>
       </object>
     </div>
     <p class="text-center mt-2">
-      <a href="/Portfolio Project #3.pdf" class="btn btn-primary" download>Download PDF</a>
+      <a href="/Portfolio%20Project%20%233.pdf" class="btn btn-primary" download>Download PDF</a>
     </p>
   </div>
 </div>
