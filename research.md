@@ -1,123 +1,77 @@
 ---
 layout: page
-title: Research & Experience
-subtitle: Academic background, research interests, and professional history
+title: Experience
+subtitle: Professional background, skills, and career history
 ---
 
-## Research Focus
+## Summary
 
-My research focuses on understanding how people interact with products, systems, and environments. I investigate user behavior, preferences, and needs to inform effective design and development.
+Research strategist and mixed-methods researcher with 14+ years of experience in
+end-to-end research design, stakeholder collaboration, and actionable insight
+development. Skilled in translating complex data into clear, compelling research
+products that support organizational growth, innovation, and strategic
+decision-making.
 
-### Key Research Areas
+## Professional Experience
 
-#### User Experience & Usability
-Evaluating how people interact with interfaces and products to identify pain points and opportunities for improvement.
+**Mixed Methods Researcher and Professor**, Drexel University
+Oct 2023 – Present
+- Designed and facilitated AI upskilling workshops adopted by 40% of faculty and graduate students, improving research workflows and instructional delivery.
+- Created executive-facing research reports and dashboards that streamlined internal communication and data-based decision-making.
+- Researched, designed, and implemented user-centered instructional strategies across 11 university courses, using mixed-methods insights to boost student engagement by 30% and improve learning outcomes by 20%.
+- Shared findings and frameworks through Faculty Senate initiatives, influencing broader instructional policy and innovation strategy across departments.
 
-#### Human Factors
-Analyzing how cognitive and physical capabilities influence user interactions to optimize design for human use.
+**UX Researcher (Contract)**, Bresslergroup — Philadelphia, PA
+2021 – 2022
+- Conducted user research with over 1,000 participants to uncover pain points in medical and consumer device usability, resulting in data-informed product redesigns.
+- Created and launched survey instruments using Qualtrics, capturing insights that shaped product roadmaps and compliance documentation.
+- Directed project kickoffs, timelines, and deliverables for multi-stakeholder research projects, reducing turnaround time by 30%.
+- Delivered research presentations and visual reports to internal teams and external partners, improving insight accessibility and stakeholder engagement.
 
-#### Applied Research
-Translating research insights into practical recommendations that drive product development and innovation.
+**Mixed Methods Researcher**, University of Delaware
+2015 – 2022
+- Designed and implemented research studies with 1,000+ participants, producing insights that contributed to 20+ publications and 23+ conference presentations.
+- Developed and executed mixed-methods protocols that translated complex data into actionable outcomes for academic and applied audiences.
 
-#### Regulatory Compliance
-Developing human factors deliverables that meet FDA requirements and usability engineering standards for medical devices and combination products.
+## Education
 
-## Research Methods
+**Ph.D., Psychological and Brain Sciences** — University of Delaware
 
-I employ a comprehensive set of research methodologies:
+**M.S., Experimental Psychology** — Villanova University
 
-- **Moderated Research**: In-person and remote user testing, interviews, and contextual inquiry
-- **Unmoderated Research**: Remote testing platforms, surveys, and automated data collection
-- **Behavioral Analysis**: Observing and measuring user interactions and task performance
-- **Eye Tracking**: Tracking visual attention patterns to understand user focus and information processing
-- **Usability Evaluation**: Identifying design issues through expert reviews and user testing
+**B.A., Psychology** — Temple University
 
-## Professional Background
+## Skills
 
-### Education
+#### User & Market Research
+- Survey design
+- Interviews
+- JTBD framework
+- Mixed methods
 
-**Ph.D., Cognitive Psychology**, University of Delaware  
-Jul 2019 - Dec 2024  
-*Psychological & Brain Sciences*
+#### Data Analysis & Visualization
+- Quantitative and qualitative analysis
+- Tableau
+- Python
+- Infographics
 
-**M.Sc., Brain and Cognitive Sciences**, University of Amsterdam  
-2015 - 2017  
-*Specialization: Cognitive Neuroscience*  
-Activities: Editorial board for the Brain and Cognitive Sciences monthly newsletter
+#### Stakeholder Communication
+- Cross-functional collaboration
+- Executive engagement
+- Data storytelling
 
-**Academic Exchange Program**, Carleton University  
-2013 - 2014  
-*Psychology & Neuroscience*
+#### Project Management
+- End-to-end execution
+- Asana
+- Agile workflows
+- Timeline development
 
-**B.A., Psychology**, St. Xavier's College  
-2010 - 2013  
-Activities: Organizer for college literature festival, Editor for Psychology department magazine
+#### AI & Innovation
+- Responsible AI adoption
+- Workflow optimization
+- Human-AI teaming
 
-### Professional Experience
-
-**Human Factors Consultant**, Core Human Factors, A Rimkus Company  
-Oct 2024 - Present, Bala-Cynwyd, Pennsylvania, United States
-- Conduct formative and summative UX research to evaluate the usability, safety, and effectiveness of medical devices and combination products, ensuring alignment with FDA human factors guidance and usability engineering standards.
-- Identify and mitigate use-related risks through comprehensive task analysis, risk assessments and simulated-use studies, translating findings into actionable design recommendations that enhance user performance.
-- Contribute to regulatory submissions by developing key human factors deliverables, synthesizing UX research findings into compliant documentation, and collaborating with cross-functional teams including design, engineering, and regulatory affairs.
-
-**Graduate Researcher**, University of Delaware  
-Jul 2019 - Oct 2024, Newark, Delaware, United States
-- Managed 5 research projects examining vision-haptics interactions from hypothesis to final presentation
-- Designed experiments and questionnaires, testing 500+ participants including special populations
-- Analyzed data using ANOVA, simulations and permutation tests (MATLAB, R, SPSS)
-- Mentored 20+ undergraduate students and collaborated with researchers
-- Presented at international conferences and delivered invited talks
-- Supervised databases with 1000+ participants as subject pool coordinator
-- Served as graduate student representative and Chair of Psychology Mentorship Network
-
-**Human Factors Intern**, Wisk  
-May 2023 - Aug 2023, Mountain View, California, United States
-- Conducted 3 complete human factors evaluations in 12 weeks measuring mental workload with UI prototypes
-- Collected eyetracking and performance data from 50+ participants
-- Performed task analyses and usability assessments to improve UI design
-- Ran workload simulations and recommended safety/efficiency improvements
-- Collaborated with cross-functional teams (product managers, engineers, test pilots, UX teams)
-
-**Lab Manager**, The University of Texas at Dallas  
-Sep 2017 - May 2019, Dallas, Texas, United States
-- Coordinated multi-site research involving behavioral experiments, eyetracking, TMS and fMRI
-- Developed analysis code in MATLAB and Shell
-- Assisted with grant proposals and managed human subjects testing protocols
-- Handled lab resources, inventories and participant compensation
-
-**Visiting Researcher**, University of Michigan  
-Sep 2016 - Sep 2017, Ann Arbor, Michigan, USA
-- Collected/analyzed data from 200+ participants on vision-audition interaction research
-- Published first-author paper and presented at two prestigious conferences
-
-**Graduate Research Assistant**, Vrije Universiteit Amsterdam  
-Jan 2016 - Jul 2016, Amsterdam, Netherlands
-
-### Skills
-
-#### Research Methods
-- Behavioral and neuropsychological testing
-- Neuroimaging
-- Eyetracking
-- Experimental design
-
-#### Quantitative Methods
-- Regression analysis
-- Statistical modeling
-- Simulations
-- Psychophysics
-- ANOVA and permutation tests
-
-#### Technical Skills
-- Programming languages (MATLAB, R, Shell)
-- Statistical software (SPSS)
-- Task analysis
-- Usability assessment
-
-#### Professional Skills
-- Project management
-- Scientific communication
-- Participant recruitment and testing
-- Cross-functional team collaboration
-- Mentoring
+#### Technical Tools
+- Qualtrics, Alchemer, UserZoom
+- Figma, Miro
+- Microsoft Office 365

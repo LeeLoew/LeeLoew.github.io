@@ -1,38 +1,35 @@
 ---
 layout: page
 title: About me
-subtitle: Cognitive Psychologist & Researcher
+subtitle: Research Strategist & Mixed-Methods Researcher
 ---
 
-I am a Ph.D. in Cognitive Psychology with over 10 years of experience in research methods and human factors. I specialize in understanding how people interact with technology and their environment. I am currently working as a Human Factors Consultant at Core Human Factors, where I evaluate the usability, safety, and effectiveness of medical devices and combination products in alignment with FDA human factors guidance.
+I'm a research strategist and mixed-methods researcher based in Philadelphia, PA,
+with over 14 years of experience in end-to-end research design, stakeholder
+collaboration, and actionable insight development. I specialize in translating
+complex data into clear, compelling research products that support organizational
+growth, innovation, and strategic decision-making.
 
-### Research Methods
+My work spans academia and industry — from user research with consumer and medical
+devices to AI upskilling and instructional strategy in higher education. Across all
+of it, I focus on turning rigorous research into outcomes that teams can actually act on.
 
-I am experienced in a wide range of research approaches:
-- **User Experience Research**: Moderated and unmoderated usability testing, interviews, and surveys
-- **Behavioral Testing**: Measuring human performance and interaction patterns
-- **Eyetracking**: Analyzing visual attention and information processing
-- **Task Analysis**: Evaluating workflow efficiency and cognitive workload
+### What I Do
 
-### Research Expertise
+- **User & Market Research**: Survey design, interviews, JTBD framework, and mixed methods
+- **Data Analysis & Visualization**: Quantitative and qualitative analysis, dashboards, and infographics
+- **Stakeholder Communication**: Cross-functional collaboration, executive engagement, and data storytelling
+- **AI & Innovation**: Responsible AI adoption, workflow optimization, and human-AI teaming
 
-I have extensive experience in all aspects of user and human subjects research:
-- **Research Design**: Creating robust studies that deliver actionable insights
-- **Participant Management**: Recruiting specialized user groups and conducting effective sessions
-- **Mixed Methods**: Combining qualitative and quantitative approaches for comprehensive understanding
-- **Reporting & Communication**: Translating complex findings into clear recommendations
-- **Regulatory Compliance**: Developing human factors deliverables that meet FDA requirements and usability engineering standards
+### Skills & Expertise
 
-### Data Analysis & Technical Skills
+- **Research Design**: End-to-end study design across academic and applied contexts
+- **Insight Development**: Translating complex data into actionable recommendations
+- **Project Management**: End-to-end execution, agile workflows, and timeline development
+- **Reporting & Communication**: Executive-facing reports, dashboards, and research presentations
 
-I transform research data into meaningful insights using:
-- **Statistical Analysis**: Finding patterns and relationships in complex datasets
-- **Data Visualization**: Creating clear visual representations of findings
-- **User Metrics**: Measuring and analyzing user behavior and performance
-- **A/B Testing**: Comparing design alternatives with data-driven methods
+### Tools & Technologies
 
-I also have experience with:
-- **Research Tools**: SPSS, R, and specialized research software
-- **UX Tools**: Usability testing platforms and analytics tools
-- **Project Management**: Coordinating cross-functional teams and research initiatives
-- **Collaboration Platforms**: Facilitating teamwork across distributed teams
+- **Research platforms**: Qualtrics, Alchemer, UserZoom
+- **Analysis & visualization**: Tableau, Python
+- **Design & collaboration**: Figma, Miro, Asana, Microsoft Office 365
