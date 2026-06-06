@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: Anupama Nair, Ph.D.
+title: Your Name
 
 # Your name to show in the footer
-author: Anupama Nair
+author: Your Name
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -21,7 +21,7 @@ author: Anupama Nair
 
 navbar-links:
   About Me: "aboutme"
-  Research & Experience: "research"
+  Experience: "research"
   Portfolio: "portfolio"
 
 ################
@@ -30,7 +30,8 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/AnuHeadshot.png"
+# TODO: replace with your own square headshot (e.g. "/assets/img/headshot.png")
+avatar: "/assets/img/avatar-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -48,7 +49,8 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "asnair@udel.edu"
+  # TODO: add your own contact + social links
+  email: "you@example.com"
   rss: false
 #  facebook: 
 #  github: 
@@ -58,7 +60,7 @@ social-network-links:
 #  whatsapp: 
 #  medium: 
 #  reddit: 
-  linkedin: anupama-s-nair
+  linkedin: your-linkedin-username
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -84,7 +86,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: My professional portfolio and personal website
 
 ###########################
 # --- General options --- #
@@ -100,7 +102,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-# url-pretty: "anupama-nair.com"
+# url-pretty: "yourname.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
