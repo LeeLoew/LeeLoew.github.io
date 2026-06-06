@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Lee Rogers monogram">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15212B"/>
+      <stop offset="0.55" stop-color="#123741"/>
+      <stop offset="1" stop-color="#0E5A60"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#g)"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#16A39B" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="100" y="100" dy="0.35em" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700"
+        letter-spacing="-2" fill="#FFFFFF">LR</text>
+</svg>
