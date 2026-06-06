@@ -1,26 +1,35 @@
 ---
 layout: page
 title: About me
-subtitle: Your Professional Title
+subtitle: Research Strategist & Mixed-Methods Researcher
 ---
 
-<!-- TODO: Replace the placeholder text below with your own background. -->
+I'm a research strategist and mixed-methods researcher based in Philadelphia, PA,
+with over 14 years of experience in end-to-end research design, stakeholder
+collaboration, and actionable insight development. I specialize in translating
+complex data into clear, compelling research products that support organizational
+growth, innovation, and strategic decision-making.
 
-Introduce yourself here — your background, what you specialize in, and what
-currently drives your work. A paragraph or two is plenty.
+My work spans academia and industry — from user research with consumer and medical
+devices to AI upskilling and instructional strategy in higher education. Across all
+of it, I focus on turning rigorous research into outcomes that teams can actually act on.
 
 ### What I Do
 
-- **Area of focus #1**: A short description.
-- **Area of focus #2**: A short description.
-- **Area of focus #3**: A short description.
+- **User & Market Research**: Survey design, interviews, JTBD framework, and mixed methods
+- **Data Analysis & Visualization**: Quantitative and qualitative analysis, dashboards, and infographics
+- **Stakeholder Communication**: Cross-functional collaboration, executive engagement, and data storytelling
+- **AI & Innovation**: Responsible AI adoption, workflow optimization, and human-AI teaming
 
 ### Skills & Expertise
 
-- **Skill area**: Details.
-- **Skill area**: Details.
-- **Skill area**: Details.
+- **Research Design**: End-to-end study design across academic and applied contexts
+- **Insight Development**: Translating complex data into actionable recommendations
+- **Project Management**: End-to-end execution, agile workflows, and timeline development
+- **Reporting & Communication**: Executive-facing reports, dashboards, and research presentations
 
 ### Tools & Technologies
 
-- A list of the tools, platforms, or technologies you work with.
+- **Research platforms**: Qualtrics, Alchemer, UserZoom
+- **Analysis & visualization**: Tableau, Python
+- **Design & collaboration**: Figma, Miro, Asana, Microsoft Office 365

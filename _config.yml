@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: Your Name
+title: Lee Rogers
 
 # Your name to show in the footer
-author: Your Name
+author: Lee Rogers
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -49,8 +49,7 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  # TODO: add your own contact + social links
-  email: "you@example.com"
+  email: "Leeland.Rogers@gmail.com"
   rss: false
 #  facebook: 
 #  github: 
@@ -60,7 +59,8 @@ social-network-links:
 #  whatsapp: 
 #  medium: 
 #  reddit: 
-  linkedin: your-linkedin-username
+# TODO: add your LinkedIn username to show a LinkedIn icon in the footer
+#  linkedin: your-linkedin-username
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
