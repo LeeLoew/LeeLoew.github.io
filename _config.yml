@@ -295,6 +295,9 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - private/_src
+  - private/README.md
+  - private/encrypt.sh
 
 plugins:
   - jekyll-paginate

@@ -1,0 +1,6 @@
+# Keep PLAINTEXT private pages out of the public repo.
+# Only the .template starter (and this .gitignore) are tracked here.
+# Your real working files (e.g. index.html) stay local and are never committed.
+*
+!.gitignore
+!*.template
