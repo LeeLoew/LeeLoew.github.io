@@ -16,20 +16,27 @@ of it, I focus on turning rigorous research into outcomes that teams can actuall
 
 ### What I Do
 
-- **User & Market Research**: Survey design, interviews, JTBD framework, and mixed methods
-- **Data Analysis & Visualization**: Quantitative and qualitative analysis, dashboards, and infographics
-- **Stakeholder Communication**: Cross-functional collaboration, executive engagement, and data storytelling
-- **AI & Innovation**: Responsible AI adoption, workflow optimization, and human-AI teaming
+- **User & Market Research** — survey design, interviews, the Jobs-to-be-Done framework, and mixed methods
+- **Data Analysis & Visualization** — quantitative and qualitative analysis, dashboards, and infographics
+- **Stakeholder Communication** — cross-functional collaboration, executive engagement, and data storytelling
+- **AI & Innovation** — responsible AI adoption, workflow optimization, and human-AI teaming
 
-### Skills & Expertise
+### How I Work
 
-- **Research Design**: End-to-end study design across academic and applied contexts
-- **Insight Development**: Translating complex data into actionable recommendations
-- **Project Management**: End-to-end execution, agile workflows, and timeline development
-- **Reporting & Communication**: Executive-facing reports, dashboards, and research presentations
+- **Research design** that delivers actionable insight, not just data
+- **End-to-end execution** — from kickoff and protocol design through analysis and delivery
+- **Clear communication** — executive-facing reports, dashboards, and presentations that make findings accessible
 
 ### Tools & Technologies
 
-- **Research platforms**: Qualtrics, Alchemer, UserZoom
-- **Analysis & visualization**: Tableau, Python
-- **Design & collaboration**: Figma, Miro, Asana, Microsoft Office 365
+<ul class="skill-badges">
+  <li>Qualtrics</li>
+  <li>Alchemer</li>
+  <li>UserZoom</li>
+  <li>Tableau</li>
+  <li>Python</li>
+  <li>Figma</li>
+  <li>Miro</li>
+  <li>Asana</li>
+  <li>Microsoft Office 365</li>
+</ul>
