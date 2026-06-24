@@ -28,6 +28,8 @@ navbar-links:
   About Me: "aboutme"
   Experience: "research"
   Portfolio: "portfolio"
+  Insights: "insights"
+  Work With Me: "work-with-me"
 
 ################
 # --- Logo --- #

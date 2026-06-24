@@ -8,13 +8,26 @@ subtitle: Professional background, skills, and career history
 
 Research strategist and mixed-methods researcher with 14+ years of experience in
 end-to-end research design, stakeholder collaboration, and actionable insight
-development. Skilled in translating complex data into clear, compelling research
-products that support organizational growth, innovation, and strategic
-decision-making.
+development. I now lead strategic research at the executive level with a focus on
+the human side of AI — measuring adoption, trust, and real outcomes so
+organizations get genuine value from AI, responsibly. Skilled in translating
+complex data into clear, compelling research that supports organizational growth,
+innovation, and strategic decision-making.
 
 ## Professional Experience
 
 <div class="timeline">
+  <div class="timeline-item">
+    <h3>Director of Strategic Research &amp; Insights</h3>
+    <span class="org">PICPA &amp; CPACrossings</span>
+    <span class="period">Present</span>
+    <ul>
+      <li>Lead the strategic research and insights function, partnering directly with C-suite executives to turn research into organizational strategy.</li>
+      <li>Drive responsible, human-centered adoption of AI across the organization — measuring trust, usage, and real outcomes rather than surface-level activity.</li>
+      <li>Translate complex findings into executive-facing reports and recommendations that shape decision-making at the leadership level.</li>
+    </ul>
+  </div>
+
   <div class="timeline-item">
     <h3>Mixed Methods Researcher &amp; Professor</h3>
     <span class="org">Drexel University</span>
