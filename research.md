@@ -2,6 +2,10 @@
 layout: page
 title: Experience
 subtitle: Professional background, skills, and career history
+description: >-
+  Lee Rogers' professional experience — Director of Strategic Research &
+  Insights, university researcher and professor, UX researcher, and
+  mixed-methods researcher with 14+ years across academia and industry.
 ---
 
 ## Summary
@@ -14,7 +18,7 @@ organizations get genuine value from AI, responsibly. Skilled in translating
 complex data into clear, compelling research that supports organizational growth,
 innovation, and strategic decision-making.
 
-## Professional Experience
+## Professional experience
 
 <div class="timeline">
   <div class="timeline-item">

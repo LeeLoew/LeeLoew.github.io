@@ -1,5 +1,8 @@
-name: Beautiful Jekyll CI
+name: Build site
+# Validation only — deployment happens via GitHub Pages' own branch build
+# of master (github-pages gem). This catches broken Liquid/config before merge.
 on: [push, pull_request]
+
 jobs:
   build:
     name: Build Jekyll
@@ -10,17 +13,8 @@ jobs:
         with:
           ruby-version: '3.3'
       - name: Install dependencies
-        run: bundle install && bundle exec appraisal install
-      - name: Setup Pages
-        id: configure-pages
-        uses: actions/configure-pages@v5
-      - name: Setup CI config
-        run: |
-          echo "---" > _config_ci.yml
-          echo "baseurl: ${{ steps.configure-pages.outputs.base_path }}" >> _config_ci.yml
+        run: bundle install
       - name: Build site
         env:
           JEKYLL_ENV: production
-        run: bundle exec appraisal jekyll build --future --config _config_ci.yml,_config.yml
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        run: bundle exec jekyll build --strict_front_matter

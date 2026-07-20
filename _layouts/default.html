@@ -1,25 +1,103 @@
----
-layout: base
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- capture page_title -%}
+    {%- if page.url == "/" -%}{{ site.title }} — {{ site.tagline }}{%- else -%}{{ page.title }} · {{ site.title }}{%- endif -%}
+  {%- endcapture -%}
+  {%- assign page_description = page.description | default: page.subtitle | default: site.description -%}
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description | strip_newlines | strip }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <meta name="theme-color" content="#15212B">
 
-<div class="intro-header"></div>
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description | strip_newlines | strip }}">
+  <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  {% if page.before-content %}
-    <div class="before-content">
-      {% for file in page.before-content %}
-        {% include {{ file }} %}
-      {% endfor %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% feed_meta %}
+  {% include structured-data.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img class="brand-mark" src="{{ '/assets/img/monogram.svg' | relative_url }}" alt="" width="36" height="36">
+        <span class="brand-name">Lee Rogers</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          {%- assign current = page.url | replace: ".html", "" -%}
+          {%- for item in site.nav %}
+          {%- assign item_dir = item.url | append: "/" %}
+          <li><a href="{{ item.url | relative_url }}" {% if current == item.url or current == item_dir %}aria-current="page"{% endif %}>{{ item.name }}</a></li>
+          {%- endfor %}
+          {%- assign cta_dir = site.cta.url | append: "/" %}
+          <li><a class="btn btn-nav" href="{{ site.cta.url | relative_url }}" {% if current == site.cta.url or current == cta_dir %}aria-current="page"{% endif %}>{{ site.cta.name }}</a></li>
+        </ul>
+      </nav>
     </div>
-  {% endif %}
+  </header>
 
-  {{ content }}
+  <main id="main">
+    {{ content }}
+  </main>
 
-  {% if page.after-content %}
-    <div class="after-content">
-      {% for file in page.after-content %}
-        {% include {{ file }} %}
-      {% endfor %}
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <img src="{{ '/assets/img/monogram.svg' | relative_url }}" alt="" width="44" height="44">
+        <div>
+          <p class="footer-name">{{ site.author.name }}</p>
+          <p class="footer-tag">{{ site.tagline }}</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+          {%- endfor %}
+          <li><a href="{{ site.cta.url | relative_url }}">{{ site.cta.name }}</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        <p>{{ site.author.location }}</p>
+        {%- if site.author.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+        {%- endif %}
+      </div>
     </div>
-  {% endif %}
-</main>
+    <div class="shell footer-legal">
+      <p>© {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var header = document.getElementById('site-header');
+      toggle.addEventListener('click', function () {
+        var open = header.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

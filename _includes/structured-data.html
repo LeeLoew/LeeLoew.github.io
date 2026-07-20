@@ -1,20 +1,15 @@
 {%- comment -%}
-  Schema.org JSON-LD structured data for SEO and AI-search (GEO/AEO).
-  Emitted only on the home page to describe the site (WebSite) and its
-  owner (Person). Most fields are driven by _config.yml so they stay in
-  sync with the rest of the site. sameAs is built only from social links
-  that are actually configured (no guessed profiles).
+  Schema.org JSON-LD (WebSite + Person) for SEO and AI-search (GEO/AEO).
+  Emitted only on the home page. Fields are driven by _config.yml so they
+  stay in sync; sameAs is built only from profiles actually configured.
 {%- endcomment -%}
 {%- if page.url == "/" or page.url == "/index.html" -%}
 {%- assign sameas = "" -%}
-{%- if site.social-network-links.github -%}
-  {%- assign sameas = sameas | append: "https://github.com/" | append: site.social-network-links.github | append: "|" -%}
+{%- if site.author.github -%}
+  {%- assign sameas = sameas | append: "https://github.com/" | append: site.author.github | append: "|" -%}
 {%- endif -%}
-{%- if site.social-network-links.linkedin -%}
-  {%- assign sameas = sameas | append: "https://www.linkedin.com/in/" | append: site.social-network-links.linkedin | append: "|" -%}
-{%- endif -%}
-{%- if site.social-network-links.twitter -%}
-  {%- assign sameas = sameas | append: "https://twitter.com/" | append: site.social-network-links.twitter | append: "|" -%}
+{%- if site.author.linkedin -%}
+  {%- assign sameas = sameas | append: "https://www.linkedin.com/in/" | append: site.author.linkedin | append: "|" -%}
 {%- endif -%}
 {%- assign sameas = sameas | split: "|" -%}
 <script type="application/ld+json">
@@ -32,13 +27,11 @@
     {
       "@type": "Person",
       "@id": "{{ site.url }}/#person",
-      "name": {{ site.author | jsonify }},
+      "name": {{ site.author.name | jsonify }},
       "url": "{{ site.url }}/",
-      {%- if site.avatar %}
-      "image": "{{ site.avatar | absolute_url }}",
-      {%- endif %}
-      "jobTitle": "Research Strategist & Mixed-Methods Researcher",
-      "description": "Research strategist and mixed-methods researcher based in Philadelphia, PA, with 14+ years of experience in end-to-end research design, stakeholder collaboration, and actionable insight development.",
+      "jobTitle": {{ site.author.job_title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "email": "mailto:{{ site.author.email }}",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Philadelphia",
@@ -46,12 +39,14 @@
         "addressCountry": "US"
       },
       "knowsAbout": [
+        "Human-Centered AI",
+        "AI Adoption Research",
+        "Responsible AI",
+        "Human-AI Teaming",
         "User Research",
-        "UX Research",
         "Mixed-Methods Research",
         "Survey Design",
         "Data Analysis",
-        "Data Visualization",
         "Data Storytelling"
       ]
       {%- if sameas.size > 0 %},
