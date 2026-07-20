@@ -60,7 +60,7 @@ defaults:
 # Keep repo plumbing and private-page tooling out of the published site.
 exclude:
   - README.md
-  - CLAUDE.md
+  - CLAUDE.local.md
   - Gemfile
   - Gemfile.lock
   - vendor
