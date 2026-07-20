@@ -16,8 +16,6 @@ framework). GitHub Pages builds and deploys it automatically from `master`.
 | Layout / nav / footer | `_layouts/`, nav links in `_config.yml` |
 | Password-gated pages | `private/` — see `private/README.md` |
 
-Full conventions and guardrails: see [CLAUDE.md](CLAUDE.md).
-
 ## Local preview
 
 ```bash
