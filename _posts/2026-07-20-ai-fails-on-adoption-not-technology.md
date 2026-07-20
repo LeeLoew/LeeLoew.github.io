@@ -6,6 +6,7 @@ description: >-
   AI rollouts rarely fail because the model isn't good enough. They fail on
   trust, automation bias, and habit change — the human systems around the
   technology. Here's what behavioral science says about making AI stick.
+related_work: [start-from-trust]
 ---
 
 Walk into any organization that "adopted AI last year" and ask a simple

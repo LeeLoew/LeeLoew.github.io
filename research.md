@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Experience
+kicker: Curriculum vitae
 subtitle: Professional background, skills, and career history
 description: >-
   Lee Rogers' professional experience — Director of Strategic Research &

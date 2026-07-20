@@ -28,7 +28,7 @@ nav:
   - name: Experience
     url: /research
   - name: Work
-    url: /portfolio
+    url: /work
   - name: Insights
     url: /insights
 cta:
@@ -37,6 +37,15 @@ cta:
 
 # Future insight essays live in _posts/ and publish under /insights/<slug>/
 permalink: /insights/:title/
+
+# Case studies live in _work/ and publish under /work/<slug>/
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+
+# Site-wide social-share image (per-page override: og_image in front matter)
+og_image: /assets/img/og.png
 
 timezone: America/New_York
 markdown: kramdown
@@ -47,6 +56,7 @@ kramdown:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
 feed:
   path: feed.xml
 
@@ -56,11 +66,17 @@ defaults:
       path: "private"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: case-study
 
 # Keep repo plumbing and private-page tooling out of the published site.
 exclude:
   - README.md
   - CLAUDE.local.md
+  - assets/img/og-source.svg
   - Gemfile
   - Gemfile.lock
   - vendor

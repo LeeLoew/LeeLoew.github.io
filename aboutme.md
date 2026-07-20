@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About me
+kicker: About
 subtitle: Applied-AI specialist · Behavioral scientist (PhD) · Research strategist
 description: >-
   About Lee Rogers — an applied-AI specialist and PhD behavioral scientist in
@@ -53,7 +54,9 @@ CPA organizations across the country.
 </ul>
 
 <div class="page-cta">
-  <h2>Trying to get real value from AI?</h2>
-  <p>Not a demo — adoption that lasts. See how I can help, or just say hello.</p>
+  <div>
+    <h2>Trying to get real value from AI?</h2>
+    <p>Not a demo — adoption that lasts. See how I can help, or just say hello.</p>
+  </div>
   <a class="btn btn-primary" href="{{ '/work-with-me' | relative_url }}">Work with me</a>
 </div>

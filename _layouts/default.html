@@ -11,20 +11,26 @@
   <meta name="description" content="{{ page_description | strip_newlines | strip }}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-  <meta name="theme-color" content="#15212B">
+  <meta name="theme-color" content="#141D26">
 
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'case-study' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_description | strip_newlines | strip }}">
   <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-  <meta name="twitter:card" content="summary">
+  {%- assign og_image = page.og_image | default: site.og_image %}
+  <meta property="og:image" content="{{ og_image | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ site.title }} — {{ site.tagline }}">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/assets/fonts/fraunces-latin.woff2' | relative_url }}">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ '/assets/fonts/inter-latin.woff2' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script>document.documentElement.className += " js";</script>
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   {% feed_meta %}
   {% include structured-data.html %}
 </head>
@@ -34,8 +40,8 @@
   <header class="site-header" id="site-header">
     <div class="shell header-inner">
       <a class="brand" href="{{ '/' | relative_url }}">
-        <img class="brand-mark" src="{{ '/assets/img/monogram.svg' | relative_url }}" alt="" width="36" height="36">
         <span class="brand-name">Lee Rogers</span>
+        <span class="brand-role">PhD</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
@@ -49,7 +55,7 @@
           <li><a href="{{ item.url | relative_url }}" {% if current == item.url or current == item_dir %}aria-current="page"{% endif %}>{{ item.name }}</a></li>
           {%- endfor %}
           {%- assign cta_dir = site.cta.url | append: "/" %}
-          <li><a class="btn btn-nav" href="{{ site.cta.url | relative_url }}" {% if current == site.cta.url or current == cta_dir %}aria-current="page"{% endif %}>{{ site.cta.name }}</a></li>
+          <li><a class="btn-nav" href="{{ site.cta.url | relative_url }}" {% if current == site.cta.url or current == cta_dir %}aria-current="page"{% endif %}>{{ site.cta.name }}</a></li>
         </ul>
       </nav>
     </div>
@@ -62,11 +68,8 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <div class="footer-brand">
-        <img src="{{ '/assets/img/monogram.svg' | relative_url }}" alt="" width="44" height="44">
-        <div>
-          <p class="footer-name">{{ site.author.name }}</p>
-          <p class="footer-tag">{{ site.tagline }}</p>
-        </div>
+        <p class="footer-name">{{ site.author.name }}</p>
+        <p class="footer-tag">{{ site.tagline }}</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <ul>
@@ -85,19 +88,8 @@
       </div>
     </div>
     <div class="shell footer-legal">
-      <p>© {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
+      <p class="colophon">© {{ site.time | date: "%Y" }} {{ site.author.name }} · {{ site.author.location }} · Set in Fraunces &amp; Inter · Built with Jekyll, no trackers</p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      var toggle = document.querySelector('.nav-toggle');
-      var header = document.getElementById('site-header');
-      toggle.addEventListener('click', function () {
-        var open = header.classList.toggle('nav-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    })();
-  </script>
 </body>
 </html>

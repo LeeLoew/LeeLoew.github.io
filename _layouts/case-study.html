@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="shell">
+    <p class="eyebrow">{% if page.depth == "brief" %}Method note{% else %}Case study{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {%- if page.tagline %}
+    <p class="page-subtitle">{{ page.tagline }}</p>
+    {%- endif %}
+  </div>
+</section>
+
+<div class="shell cs-layout">
+  <aside class="cs-aside">
+    <div class="cs-glance">
+      <h2>At a glance</h2>
+      <dl>
+        {% if page.client %}<div><dt>Client</dt><dd>{{ page.client }}</dd></div>{% endif %}
+        {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+        {% if page.period %}<div><dt>Period</dt><dd>{{ page.period }}</dd></div>{% endif %}
+        {% if page.tags %}<div><dt>Focus</dt><dd>{{ page.tags | join: " · " }}</dd></div>{% endif %}
+      </dl>
+    </div>
+    {% if page.metrics %}
+    <div class="cs-metrics">
+      {% for m in page.metrics %}
+      <div class="cs-metric"><span class="num">{{ m.value }}</span><span class="label">{{ m.label }}</span></div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </aside>
+
+  <article class="cs-body prose">
+    {{ content }}
+
+    {% if page.related_posts %}
+    <aside class="cs-related">
+      <h2>Read the essay</h2>
+      <ul>
+        {% for slug in page.related_posts %}
+          {% for p in site.posts %}{% if p.url contains slug %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          {% endif %}{% endfor %}
+        {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+  </article>
+</div>
+
+{% assign studies = site.work | sort: "order" %}
+{% for s in studies %}{% if s.url == page.url %}{% assign cs_i = forloop.index0 %}{% endif %}{% endfor %}
+{% assign cs_last = studies.size | minus: 1 %}
+<nav class="shell cs-pager" aria-label="Case studies">
+  {% if cs_i > 0 %}{% assign pi = cs_i | minus: 1 %}{% assign cs_prev = studies[pi] %}
+  <a class="pager-link pager-prev" href="{{ cs_prev.url | relative_url }}"><span>← Previous</span>{{ cs_prev.title }}</a>
+  {% endif %}
+  <a class="btn btn-ghost" href="{{ '/work' | relative_url }}">All work</a>
+  {% if cs_i < cs_last %}{% assign ni = cs_i | plus: 1 %}{% assign cs_next = studies[ni] %}
+  <a class="pager-link pager-next" href="{{ cs_next.url | relative_url }}"><span>Next →</span>{{ cs_next.title }}</a>
+  {% endif %}
+</nav>
