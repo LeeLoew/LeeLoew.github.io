@@ -2,61 +2,71 @@
 layout: page
 title: About me
 kicker: About
-subtitle: Applied-AI specialist · Behavioral scientist (PhD) · Research strategist
+subtitle: Behavioral scientist (PhD) · Applied-AI specialist · Philadelphia
 description: >-
-  About Lee Rogers — an applied-AI specialist and PhD behavioral scientist in
-  Philadelphia who brings AI into real organizational workflows and focuses on
-  the human side that makes adoption stick.
+  About Lee Rogers, a behavioral scientist (PhD) and research strategist in
+  Philadelphia who builds production AI systems and studies the human side
+  of whether people adopt them.
 ---
 
-I'm the person who brings AI into an organization and makes it actually work.
-The technology is the easy part — I focus on the human side so it sticks, and
-I keep it responsible.
+{% assign portrait = site.static_files | where: "path", "/assets/img/portrait.jpg" | first %}
+<figure class="about-portrait{% unless portrait %} is-placeholder{% endunless %}">
+  {% if portrait %}
+  <img src="{{ '/assets/img/portrait.jpg' | relative_url }}" alt="Lee Rogers" width="480" height="600">
+  {% else %}
+  <img src="{{ '/assets/img/monogram.svg' | relative_url }}" alt="" width="120" height="120">
+  {% endif %}
+</figure>
 
-I'm a research strategist and applied-AI specialist based in Philadelphia, PA,
-with over 14 years of experience turning complex questions into evidence
-organizations can act on. As a PhD in psychological and brain sciences, I focus
-on the part of AI most people skip: trust, judgment, habits, and change — the
-behavioral science of whether people actually adopt the tools put in front of
-them.
+I'm Lee Rogers, a research strategist in Philadelphia. For fourteen years my
+work has had the same shape in every setting: take a question an organization
+cares about, design research that answers it honestly, and carry the answer
+into the room where the decision gets made.
 
-Today I lead strategic research at the executive level in the accounting
-profession, where I've put AI into production for membership research,
-benchmarking, and day-to-day workflows — turning manual, slow work into
-measurable time and quality gains. My research products are licensed by state
-CPA organizations across the country.
+These days most of those questions involve AI. I lead strategic research in
+the accounting profession, where I've moved AI out of the pilot phase and into
+production for membership research, benchmarking, and the everyday work in
+between. Research I author is licensed by state CPA organizations around the
+country.
 
-## What I do
+My PhD is in psychological and brain sciences, and it turned out to be the
+useful half of applied AI. Whether a rollout succeeds has less to do with the
+model than with trust, habit, and professional judgment: people over-rely on
+tools that sound confident, abandon tools that embarrassed them once, and
+quietly go back to the old way when the new one asks too much of them.
+Designing around those tendencies is most of my job.
 
-- **Applied AI** — real deployments in real workflows: multi-agent research pipelines, AI-assisted analysis, and automation with measurable before-and-after results
-- **The human side of adoption** — trust calibration, automation bias, change management, and human-in-the-loop design, grounded in behavioral science
-- **Research & strategy** — mixed-methods research, scenario planning, benchmarking, and survey programs that support executive decisions
-- **Responsible AI** — practical governance that lets organizations say "yes" with confidence; currently pursuing the IAPP AI Governance Professional (AIGP) credential
+Two things shape how I work. I like proof more than theory, so everything I
+publish or ship is anchored to a real outcome, including the parts that didn't
+work on the first try. And I want this technology handled responsibly: systems
+that cite their sources, admit uncertainty, and keep sensitive data where it
+belongs. I'm currently pursuing the IAPP AI Governance Professional (AIGP)
+credential to put formal structure under that instinct.
 
-## How I work
-
-- **Proof over theory** — everything anchors to a real outcome, with the unglamorous 80% included
-- **Designed for trust** — systems that decline rather than guess, carry sources for their claims, and earn the confidence of the people using them
-- **Clear communication** — executive-facing reports, frameworks, and presentations that make findings actionable
-
-## Tools & technologies
+## Tools
 
 <ul class="skill-badges">
   <li>Claude Code</li>
-  <li>Multi-agent AI pipelines</li>
   <li>Python</li>
   <li>Qualtrics</li>
   <li>Alchemer</li>
   <li>Tableau</li>
   <li>Figma</li>
-  <li>Miro</li>
   <li>Microsoft 365 &amp; Copilot</li>
 </ul>
 
+## Now · July 2026
+
+A running note on what has my attention, updated as it changes. The member
+enrichment pipeline is in production and growing. I'm partway through the
+IAPP AIGP coursework. And the AI-adoption webinar continues on the national
+state-society circuit, which keeps me in front of the audiences this research
+is for.
+
 <div class="page-cta">
   <div>
-    <h2>Trying to get real value from AI?</h2>
-    <p>Not a demo — adoption that lasts. See how I can help, or just say hello.</p>
+    <h2>Working on something similar?</h2>
+    <p>If your organization is somewhere in the middle of an AI rollout, I've probably seen a version of your situation before.</p>
   </div>
   <a class="btn btn-primary" href="{{ '/work-with-me' | relative_url }}">Work with me</a>
 </div>

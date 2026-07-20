@@ -1,23 +1,21 @@
 ---
 layout: page
-title: Experience
+title: Background
 kicker: Curriculum vitae
-subtitle: Professional background, skills, and career history
+subtitle: Fourteen years of research, from academic labs to executive strategy
 description: >-
-  Lee Rogers' professional experience — Director of Strategic Research &
-  Insights putting AI into production, university researcher and professor,
-  and mixed-methods researcher with 14+ years across academia and industry.
+  Lee Rogers' background: Director of Strategic Research & Insights putting
+  AI into production, university researcher and professor, and mixed-methods
+  researcher across academia and industry.
 ---
 
 ## Summary
 
-Research strategist and applied-AI specialist with 14+ years of experience in
-end-to-end research design, stakeholder collaboration, and actionable insight
-development. I lead strategic research at the executive level and put AI into
-production for research, benchmarking, and day-to-day workflows — with a
-behavioral scientist's focus on trust, judgment, and change so the technology
-actually gets adopted. My research products are licensed by state CPA
-organizations nationally.
+I've spent fourteen years designing research and turning it into decisions:
+first in academic labs, then in UX consulting, now leading strategic research
+in the accounting profession, where I also put AI into production. The
+consistent part is end-to-end ownership, from the question to the instrument
+to the analysis to the room where the findings land.
 
 ## Professional experience
 
@@ -27,10 +25,10 @@ organizations nationally.
     <span class="org">PICPA &amp; CPACrossings</span>
     <span class="period">Present</span>
     <ul>
-      <li>Lead the strategic research and insights function, partnering directly with C-suite executives to turn research into organizational strategy.</li>
-      <li>Author research products licensed and rebranded by six state CPA organizations, including a national AI-adoption research package and companion CPE webinar.</li>
-      <li>Put AI into production for membership research, benchmarking, and everyday workflows — multi-agent pipelines with source-cited, confidence-scored output and privacy-first design.</li>
-      <li>Drive responsible, human-centered AI adoption across the organization, advising executives on strategy, trust, and real outcomes rather than surface-level activity.</li>
+      <li>Lead the strategic research and insights function, working directly with the executive team to turn research into strategy.</li>
+      <li>Author research products licensed and rebranded by six state CPA organizations, including a national AI-adoption package with a companion CPE webinar.</li>
+      <li>Put AI into production for membership research, benchmarking, and everyday workflows: multi-agent pipelines with source-cited, confidence-scored output and privacy-first design.</li>
+      <li>Advise executives on responsible AI adoption, with an emphasis on trust and measured outcomes.</li>
     </ul>
   </div>
 
@@ -39,22 +37,21 @@ organizations nationally.
     <span class="org">Drexel University</span>
     <span class="period">Oct 2023 – Present</span>
     <ul>
-      <li>Designed and facilitated AI upskilling workshops adopted by 40% of faculty and graduate students, improving research workflows and instructional delivery.</li>
-      <li>Created executive-facing research reports and dashboards that streamlined internal communication and data-based decision-making.</li>
-      <li>Researched, designed, and implemented user-centered instructional strategies across 11 university courses, using mixed-methods insights to boost student engagement by 30% and improve learning outcomes by 20%.</li>
-      <li>Shared findings and frameworks through Faculty Senate initiatives, influencing instructional policy and innovation strategy across departments.</li>
+      <li>Designed and ran AI upskilling workshops for faculty and graduate students.</li>
+      <li>Built executive-facing research reports and dashboards used in internal decision-making.</li>
+      <li>Designed and taught user-centered instruction across 11 university courses, using mixed-methods evidence to improve engagement and outcomes.</li>
+      <li>Brought findings into Faculty Senate initiatives on instructional policy.</li>
     </ul>
   </div>
 
   <div class="timeline-item">
     <h3>UX Researcher (Contract)</h3>
-    <span class="org">Bresslergroup — Philadelphia, PA</span>
+    <span class="org">Bresslergroup · Philadelphia, PA</span>
     <span class="period">2021 – 2022</span>
     <ul>
-      <li>Conducted user research with over 1,000 participants to uncover pain points in medical and consumer device usability, resulting in data-informed product redesigns.</li>
-      <li>Created and launched survey instruments using Qualtrics, capturing insights that shaped product roadmaps and compliance documentation.</li>
-      <li>Directed project kickoffs, timelines, and deliverables for multi-stakeholder research projects, reducing turnaround time by 30%.</li>
-      <li>Delivered research presentations and visual reports to internal teams and external partners, improving insight accessibility and stakeholder engagement.</li>
+      <li>Ran user research with over 1,000 participants on medical and consumer device usability, feeding data-informed product redesigns.</li>
+      <li>Built and launched Qualtrics survey instruments that shaped product roadmaps and compliance documentation.</li>
+      <li>Managed kickoffs, timelines, and deliverables for multi-stakeholder research projects.</li>
     </ul>
   </div>
 
@@ -63,8 +60,8 @@ organizations nationally.
     <span class="org">University of Delaware</span>
     <span class="period">2015 – 2022</span>
     <ul>
-      <li>Designed and implemented research studies with 1,000+ participants, producing insights that contributed to 20+ publications and 23+ conference presentations.</li>
-      <li>Developed and executed mixed-methods protocols that translated complex data into actionable outcomes for academic and applied audiences.</li>
+      <li>Designed and ran research studies with 1,000+ participants across seven years of lab research.</li>
+      <li>Contributed to 20+ publications and 23+ conference presentations.</li>
     </ul>
   </div>
 </div>
@@ -85,14 +82,14 @@ organizations nationally.
     <div class="school">Temple University</div>
   </div>
   <div class="edu-card">
-    <div class="degree">AI Governance Professional (AIGP) — in progress</div>
+    <div class="degree">AI Governance Professional (AIGP), in progress</div>
     <div class="school">IAPP</div>
   </div>
 </div>
 
 ## Skills
 
-#### Applied AI & Automation
+#### Applied AI
 <ul class="skill-badges">
   <li>Multi-agent AI pipelines</li>
   <li>Claude Code</li>
@@ -101,53 +98,32 @@ organizations nationally.
   <li>EU AI Act &amp; NIST AI RMF literacy</li>
 </ul>
 
-#### User & Market Research
+#### Research methods
 <ul class="skill-badges">
   <li>Survey design</li>
   <li>Interviews</li>
-  <li>JTBD framework</li>
   <li>Mixed methods</li>
+  <li>JTBD framework</li>
+  <li>Quantitative &amp; qualitative analysis</li>
 </ul>
 
-#### Data Analysis & Visualization
+#### AI adoption &amp; change
 <ul class="skill-badges">
-  <li>Quantitative analysis</li>
-  <li>Qualitative analysis</li>
-  <li>Tableau</li>
-  <li>Python</li>
-  <li>Infographics</li>
-</ul>
-
-#### Stakeholder Communication
-<ul class="skill-badges">
-  <li>Cross-functional collaboration</li>
-  <li>Executive engagement</li>
-  <li>Data storytelling</li>
-</ul>
-
-#### Project Management
-<ul class="skill-badges">
-  <li>End-to-end execution</li>
-  <li>Agile workflows</li>
-  <li>Timeline development</li>
-  <li>Asana</li>
-</ul>
-
-#### AI Adoption & Change
-<ul class="skill-badges">
-  <li>Responsible AI adoption</li>
   <li>Trust calibration</li>
   <li>Automation bias</li>
   <li>Change management</li>
   <li>Human-AI teaming</li>
+  <li>Data storytelling</li>
 </ul>
 
-#### Technical Tools
+#### Tools
 <ul class="skill-badges">
+  <li>Python</li>
+  <li>Tableau</li>
   <li>Qualtrics</li>
   <li>Alchemer</li>
-  <li>UserZoom</li>
   <li>Figma</li>
   <li>Miro</li>
-  <li>Microsoft Office 365</li>
+  <li>Microsoft 365 &amp; Copilot</li>
+  <li>Asana</li>
 </ul>
