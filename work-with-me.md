@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Work With Me
+kicker: Engage
 subtitle: Speaking, advisory, and research on applied AI that people actually adopt
 description: >-
   Work with Lee Rogers — keynotes, CPE webinars, and workshops on AI adoption;
@@ -18,20 +19,25 @@ but the approach applies anywhere people and AI have to work together.
 
 ## How I help
 
-<div class="feature-item">
-  <h3>Speaking &amp; Workshops</h3>
-  <p>Keynotes, executive briefings, CPE webinars, and hands-on workshops on applied AI and the human side of adoption — grounded in real deployments and behavioral science, free of the hype cycle. My current talk, built from published research, runs on the national state-society circuit.</p>
-</div>
+### Speaking & workshops
 
-<div class="feature-item">
-  <h3>Advisory</h3>
-  <p>A thinking partner for leaders steering an AI strategy: where the real use cases are, why a rollout is stalling, how to design for trust instead of mandating usage, and what responsible adoption should look like for your people and your clients.</p>
-</div>
+Keynotes, executive briefings, CPE webinars, and hands-on workshops on applied
+AI and the human side of adoption — grounded in real deployments and
+behavioral science, free of the hype cycle. My current talk, built from
+published research, runs on the national state-society circuit.
 
-<div class="feature-item">
-  <h3>Research Programs</h3>
-  <p>Rigorous, mixed-methods research that supports big decisions — AI adoption and impact studies, scenario planning and forecasting, market and profession-wide benchmarking, and member or customer research programs.</p>
-</div>
+### Advisory
+
+A thinking partner for leaders steering an AI strategy: where the real use
+cases are, why a rollout is stalling, how to design for trust instead of
+mandating usage, and what responsible adoption should look like for your
+people and your clients.
+
+### Research programs
+
+Rigorous, mixed-methods research that supports big decisions — AI adoption
+and impact studies, scenario planning and forecasting, market and
+profession-wide benchmarking, and member or customer research programs.
 
 ## Who this is for
 
@@ -40,7 +46,9 @@ organization where AI has to earn the trust of skilled people before it can
 deliver value.
 
 <div class="page-cta">
-  <h2>Start a conversation</h2>
-  <p>The best first step is a short conversation about what you're trying to learn, decide, or change.</p>
+  <div>
+    <h2>Start a conversation</h2>
+    <p>The best first step is a short conversation about what you're trying to learn, decide, or change.</p>
+  </div>
   <a class="btn btn-primary" href="mailto:{{ site.author.email }}">Get in touch</a>
 </div>

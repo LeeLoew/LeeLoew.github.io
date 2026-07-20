@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Insights
+kicker: Essays
 subtitle: Writing on applied AI, adoption, and the human side of the rollout
 description: >-
   Essays by Lee Rogers on applied AI — real use cases with measurable wins,
@@ -19,7 +20,9 @@ organization — with the numbers, the behavioral science, and the unglamorous
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    {% if post.subtitle %}<p class="post-blurb">{{ post.subtitle }}</p>{% endif %}
+    {% assign pw = post.content | strip_html | number_of_words %}
+    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }} · {% include reading-time.html words=pw %}</span>
   </li>
   {% endfor %}
 </ul>
@@ -35,7 +38,9 @@ organization — with the numbers, the behavioral science, and the unglamorous
 - **Responsible by default** — governance as the thing that lets an organization say *yes* to AI, translated into plain, practical checks.
 
 <div class="page-cta">
-  <h2>Stay in the loop</h2>
-  <p>New essays land here first. A dedicated newsletter is on the way — ask to be notified when it launches.</p>
+  <div>
+    <h2>Stay in the loop</h2>
+    <p>New essays land here first. A dedicated newsletter is on the way — ask to be notified when it launches.</p>
+  </div>
   <a class="btn btn-primary" href="mailto:{{ site.author.email }}?subject=Notify%20me%20about%20the%20newsletter">Get notified</a>
 </div>

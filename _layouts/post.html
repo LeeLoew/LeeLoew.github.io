@@ -8,7 +8,8 @@ layout: default
     {%- if page.subtitle %}
     <p class="page-subtitle">{{ page.subtitle }}</p>
     {%- endif %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    {%- assign post_words = content | strip_html | number_of_words %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time><span aria-hidden="true"> · </span>{% include reading-time.html words=post_words %}</p>
   </div>
 </section>
 
@@ -16,6 +17,21 @@ layout: default
   {{ content }}
 </article>
 
-<div class="shell post-footer">
-  <a class="btn btn-ghost" href="{{ '/insights' | relative_url }}">← All insights</a>
-</div>
+{% if page.related_work %}
+<aside class="shell post-related">
+  <h2>Related case studies</h2>
+  <ul>
+    {% for slug in page.related_work %}
+      {% for s in site.work %}{% if s.url contains slug %}
+      <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a> — {{ s.tagline }}</li>
+      {% endif %}{% endfor %}
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}
+
+<nav class="shell cs-pager" aria-label="Essays">
+  {% if page.previous %}<a class="pager-link pager-prev" href="{{ page.previous.url | relative_url }}"><span>← Older</span>{{ page.previous.title }}</a>{% endif %}
+  <a class="btn btn-ghost" href="{{ '/insights' | relative_url }}">All insights</a>
+  {% if page.next %}<a class="pager-link pager-next" href="{{ page.next.url | relative_url }}"><span>Newer →</span>{{ page.next.title }}</a>{% endif %}
+</nav>
