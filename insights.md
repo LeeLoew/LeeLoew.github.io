@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Insights
-subtitle: Writing on human-centered AI, adoption, and the value gap
+subtitle: Writing on applied AI, adoption, and the human side of the rollout
 description: >-
-  Essays and original research by Lee Rogers on the human side of AI in
-  professional services — adoption, trust, responsible AI, and why so many AI
-  investments underdeliver.
+  Essays by Lee Rogers on applied AI — real use cases with measurable wins,
+  the behavioral science of adoption, augmenting professional judgment, and
+  responsible AI as an enabler.
 ---
 
-I write about the human side of AI in professional services and finance — how
-people actually adopt these tools, why so many AI investments underdeliver, and
-what rigorous research says about closing the gap between adoption and real value.
+I write about what it actually takes to get value from AI inside a real
+organization — with the numbers, the behavioral science, and the unglamorous
+80% that never makes it into the demos.
 
 {% if site.posts.size > 0 %}
 ## Latest essays
@@ -24,21 +24,18 @@ what rigorous research says about closing the gap between adoption and real valu
   {% endfor %}
 </ul>
 {% else %}
-> **Coming soon.** I'm building out a regular set of essays and original research
-> here. In the meantime, the latest thinking goes out first to my network on
-> LinkedIn.
+> **Coming soon.** Essays and original research are on the way.
 {% endif %}
 
-## Topics I cover
+## What I cover
 
-- **The AI value gap** — why most organizations can't tell whether their AI is working, and how to measure what actually matters.
-- **Human-centered adoption** — trust, behavior change, and what makes AI stick (or fail) with real teams.
-- **Responsible AI in practice** — governance and ethics translated from policy into everyday decisions.
-- **Research that earns the room** — turning evidence into something executives can act on.
+- **Real use cases & measurable wins** — concrete AI deployments and the efficiency they produced: before/after, time saved, quality gained, and what broke first.
+- **The human side of adoption** — trust, automation bias, resistance, and habit change: what brain science says about why AI rollouts succeed or fail.
+- **Augmenting professional judgment** — AI plus experts done right: where to trust the model, and where the human must stay in the loop.
+- **Responsible by default** — governance as the thing that lets an organization say *yes* to AI, translated into plain, practical checks.
 
 <div class="page-cta">
   <h2>Stay in the loop</h2>
-  <p>A dedicated newsletter is on the way. Until then, the fastest way to follow along is on LinkedIn — or ask to be notified when it launches.</p>
-  <!-- TODO: replace with a newsletter signup once Substack/Beehiiv is set up. -->
+  <p>New essays land here first. A dedicated newsletter is on the way — ask to be notified when it launches.</p>
   <a class="btn btn-primary" href="mailto:{{ site.author.email }}?subject=Notify%20me%20about%20the%20newsletter">Get notified</a>
 </div>

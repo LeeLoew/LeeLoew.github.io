@@ -4,11 +4,11 @@
 # whitelisted plugins work here.
 
 title: Lee Rogers
-tagline: Research Strategist · Human-Centered AI in Professional Services
+tagline: Applied AI That People Actually Adopt
 description: >-
-  Lee Rogers is a research strategist helping professional-services and
-  finance leaders measure whether their AI is actually working — for their
-  people and their clients — using rigorous, human-centered research.
+  Lee Rogers is a research strategist and applied-AI specialist who brings AI
+  into real organizations to drive measurable results — and, as a PhD
+  behavioral scientist, makes sure people actually adopt it. Done responsibly.
 url: "https://leeloew.github.io"
 baseurl: ""
 
@@ -16,7 +16,7 @@ author:
   name: Lee Rogers
   email: Leeland.Rogers@gmail.com
   location: Philadelphia, PA
-  job_title: Research Strategist & Mixed-Methods Researcher
+  job_title: Research Strategist & Applied-AI Specialist
   # Add profile handles here to surface them in the footer and structured data.
   # linkedin: your-linkedin-slug
   # github: LeeLoew
@@ -27,7 +27,7 @@ nav:
     url: /aboutme
   - name: Experience
     url: /research
-  - name: Portfolio
+  - name: Work
     url: /portfolio
   - name: Insights
     url: /insights
