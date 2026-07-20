@@ -4,19 +4,19 @@ title: Experience
 subtitle: Professional background, skills, and career history
 description: >-
   Lee Rogers' professional experience — Director of Strategic Research &
-  Insights, university researcher and professor, UX researcher, and
-  mixed-methods researcher with 14+ years across academia and industry.
+  Insights putting AI into production, university researcher and professor,
+  and mixed-methods researcher with 14+ years across academia and industry.
 ---
 
 ## Summary
 
-Research strategist and mixed-methods researcher with 14+ years of experience in
+Research strategist and applied-AI specialist with 14+ years of experience in
 end-to-end research design, stakeholder collaboration, and actionable insight
-development. I now lead strategic research at the executive level with a focus on
-the human side of AI — measuring adoption, trust, and real outcomes so
-organizations get genuine value from AI, responsibly. Skilled in translating
-complex data into clear, compelling research that supports organizational growth,
-innovation, and strategic decision-making.
+development. I lead strategic research at the executive level and put AI into
+production for research, benchmarking, and day-to-day workflows — with a
+behavioral scientist's focus on trust, judgment, and change so the technology
+actually gets adopted. My research products are licensed by state CPA
+organizations nationally.
 
 ## Professional experience
 
@@ -27,8 +27,9 @@ innovation, and strategic decision-making.
     <span class="period">Present</span>
     <ul>
       <li>Lead the strategic research and insights function, partnering directly with C-suite executives to turn research into organizational strategy.</li>
-      <li>Drive responsible, human-centered adoption of AI across the organization — measuring trust, usage, and real outcomes rather than surface-level activity.</li>
-      <li>Translate complex findings into executive-facing reports and recommendations that shape decision-making at the leadership level.</li>
+      <li>Author research products licensed and rebranded by six state CPA organizations, including a national AI-adoption research package and companion CPE webinar.</li>
+      <li>Put AI into production for membership research, benchmarking, and everyday workflows — multi-agent pipelines with source-cited, confidence-scored output and privacy-first design.</li>
+      <li>Drive responsible, human-centered AI adoption across the organization, advising executives on strategy, trust, and real outcomes rather than surface-level activity.</li>
     </ul>
   </div>
 
@@ -67,7 +68,7 @@ innovation, and strategic decision-making.
   </div>
 </div>
 
-## Education
+## Education & credentials
 
 <div class="edu-grid">
   <div class="edu-card">
@@ -82,9 +83,22 @@ innovation, and strategic decision-making.
     <div class="degree">B.A., Psychology</div>
     <div class="school">Temple University</div>
   </div>
+  <div class="edu-card">
+    <div class="degree">AI Governance Professional (AIGP) — in progress</div>
+    <div class="school">IAPP</div>
+  </div>
 </div>
 
 ## Skills
+
+#### Applied AI & Automation
+<ul class="skill-badges">
+  <li>Multi-agent AI pipelines</li>
+  <li>Claude Code</li>
+  <li>AI evaluation &amp; accuracy auditing</li>
+  <li>Human-in-the-loop design</li>
+  <li>EU AI Act &amp; NIST AI RMF literacy</li>
+</ul>
 
 #### User & Market Research
 <ul class="skill-badges">
@@ -118,10 +132,12 @@ innovation, and strategic decision-making.
   <li>Asana</li>
 </ul>
 
-#### AI & Innovation
+#### AI Adoption & Change
 <ul class="skill-badges">
   <li>Responsible AI adoption</li>
-  <li>Workflow optimization</li>
+  <li>Trust calibration</li>
+  <li>Automation bias</li>
+  <li>Change management</li>
   <li>Human-AI teaming</li>
 </ul>
 

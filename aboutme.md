@@ -1,52 +1,59 @@
 ---
 layout: page
 title: About me
-subtitle: Research Strategist & Mixed-Methods Researcher
+subtitle: Applied-AI specialist · Behavioral scientist (PhD) · Research strategist
 description: >-
-  About Lee Rogers — a research strategist and mixed-methods researcher in
-  Philadelphia with 14+ years of experience across academia and industry, now
-  focused on human-centered AI adoption.
+  About Lee Rogers — an applied-AI specialist and PhD behavioral scientist in
+  Philadelphia who brings AI into real organizational workflows and focuses on
+  the human side that makes adoption stick.
 ---
 
-I'm a research strategist and mixed-methods researcher based in Philadelphia, PA,
-with over 14 years of experience in end-to-end research design, stakeholder
-collaboration, and actionable insight development. I specialize in translating
-complex data into clear, compelling research products that support organizational
-growth, innovation, and strategic decision-making.
+I'm the person who brings AI into an organization and makes it actually work.
+The technology is the easy part — I focus on the human side so it sticks, and
+I keep it responsible.
 
-My work spans academia and industry — from user research with consumer and medical
-devices to AI upskilling and instructional strategy in higher education. Across all
-of it, I focus on turning rigorous research into outcomes that teams can actually act on.
+I'm a research strategist and applied-AI specialist based in Philadelphia, PA,
+with over 14 years of experience turning complex questions into evidence
+organizations can act on. As a PhD in psychological and brain sciences, I focus
+on the part of AI most people skip: trust, judgment, habits, and change — the
+behavioral science of whether people actually adopt the tools put in front of
+them.
+
+Today I lead strategic research at the executive level in the accounting
+profession, where I've put AI into production for membership research,
+benchmarking, and day-to-day workflows — turning manual, slow work into
+measurable time and quality gains. My research products are licensed by state
+CPA organizations across the country.
 
 ## What I do
 
-- **User & Market Research** — survey design, interviews, the Jobs-to-be-Done framework, and mixed methods
-- **Data Analysis & Visualization** — quantitative and qualitative analysis, dashboards, and infographics
-- **Stakeholder Communication** — cross-functional collaboration, executive engagement, and data storytelling
-- **AI & Innovation** — responsible AI adoption, workflow optimization, and human-AI teaming
+- **Applied AI** — real deployments in real workflows: multi-agent research pipelines, AI-assisted analysis, and automation with measurable before-and-after results
+- **The human side of adoption** — trust calibration, automation bias, change management, and human-in-the-loop design, grounded in behavioral science
+- **Research & strategy** — mixed-methods research, scenario planning, benchmarking, and survey programs that support executive decisions
+- **Responsible AI** — practical governance that lets organizations say "yes" with confidence; currently pursuing the IAPP AI Governance Professional (AIGP) credential
 
 ## How I work
 
-- **Research design** that delivers actionable insight, not just data
-- **End-to-end execution** — from kickoff and protocol design through analysis and delivery
-- **Clear communication** — executive-facing reports, dashboards, and presentations that make findings accessible
+- **Proof over theory** — everything anchors to a real outcome, with the unglamorous 80% included
+- **Designed for trust** — systems that decline rather than guess, carry sources for their claims, and earn the confidence of the people using them
+- **Clear communication** — executive-facing reports, frameworks, and presentations that make findings actionable
 
 ## Tools & technologies
 
 <ul class="skill-badges">
+  <li>Claude Code</li>
+  <li>Multi-agent AI pipelines</li>
+  <li>Python</li>
   <li>Qualtrics</li>
   <li>Alchemer</li>
-  <li>UserZoom</li>
   <li>Tableau</li>
-  <li>Python</li>
   <li>Figma</li>
   <li>Miro</li>
-  <li>Asana</li>
-  <li>Microsoft Office 365</li>
+  <li>Microsoft 365 &amp; Copilot</li>
 </ul>
 
 <div class="page-cta">
-  <h2>Curious whether we should work together?</h2>
-  <p>See how I partner with leaders on AI adoption, research, and speaking — or just say hello.</p>
+  <h2>Trying to get real value from AI?</h2>
+  <p>Not a demo — adoption that lasts. See how I can help, or just say hello.</p>
   <a class="btn btn-primary" href="{{ '/work-with-me' | relative_url }}">Work with me</a>
 </div>
