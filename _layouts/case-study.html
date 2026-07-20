@@ -20,6 +20,7 @@ layout: default
         {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
         {% if page.period %}<div><dt>Period</dt><dd>{{ page.period }}</dd></div>{% endif %}
         {% if page.tags %}<div><dt>Focus</dt><dd>{{ page.tags | join: " · " }}</dd></div>{% endif %}
+        {% if page.updated %}<div><dt>Updated</dt><dd>{{ page.updated }}</dd></div>{% endif %}
       </dl>
     </div>
     {% if page.metrics %}
@@ -56,7 +57,7 @@ layout: default
   {% if cs_i > 0 %}{% assign pi = cs_i | minus: 1 %}{% assign cs_prev = studies[pi] %}
   <a class="pager-link pager-prev" href="{{ cs_prev.url | relative_url }}"><span>← Previous</span>{{ cs_prev.title }}</a>
   {% endif %}
-  <a class="btn btn-ghost" href="{{ '/work' | relative_url }}">All work</a>
+  <a class="btn btn-ghost" href="{{ '/work' | relative_url }}">All case studies</a>
   {% if cs_i < cs_last %}{% assign ni = cs_i | plus: 1 %}{% assign cs_next = studies[ni] %}
   <a class="pager-link pager-next" href="{{ cs_next.url | relative_url }}"><span>Next →</span>{{ cs_next.title }}</a>
   {% endif %}

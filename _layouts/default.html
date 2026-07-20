@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- capture page_title -%}
-    {%- if page.url == "/" -%}{{ site.title }} — {{ site.tagline }}{%- else -%}{{ page.title }} · {{ site.title }}{%- endif -%}
+    {%- if page.url == "/" -%}{{ site.title }} · {{ site.tagline }}{%- else -%}{{ page.title }} · {{ site.title }}{%- endif -%}
   {%- endcapture -%}
   {%- assign page_description = page.description | default: page.subtitle | default: site.description -%}
   <title>{{ page_title }}</title>
   <meta name="description" content="{{ page_description | strip_newlines | strip }}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-  <meta name="theme-color" content="#141D26">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF7F2">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#13181D">
 
   <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'case-study' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
@@ -22,7 +23,7 @@
   <meta property="og:image" content="{{ og_image | absolute_url }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="{{ site.title }} — {{ site.tagline }}">
+  <meta property="og:image:alt" content="{{ site.title }} · {{ site.tagline }}">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">

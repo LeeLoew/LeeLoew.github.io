@@ -1,19 +1,21 @@
 ---
 layout: page
-title: Work
-subtitle: Case studies with the measurable outcomes, the human-adoption design, and the guardrails that made them work
+title: Case studies
+subtitle: Production deployments with the numbers, and the design decisions behind them
 kicker: Selected work
 permalink: /work/
 redirect_from:
   - /portfolio/
   - /portfolio.html
 description: >-
-  Selected work by Lee Rogers — AI-adoption research licensed by six state CPA
-  organizations, a zero-wrong multi-agent AI enrichment pipeline, autonomous
-  scenario forecasting, and profession-wide benchmarking.
+  Case studies from Lee Rogers: AI-adoption research licensed by six state
+  CPA organizations, a multi-agent enrichment pipeline with a zero-error
+  audit, scenario forecasting, and profession-wide benchmarking.
 ---
 
 {% assign studies = site.work | sort: "order" %}
+
+## Full case studies
 
 <ol class="case-list">
 {% for s in studies %}{% if s.depth == "full" %}
@@ -31,8 +33,8 @@ description: >-
 
 <h2 class="work-section-label">Method notes</h2>
 
-Shorter looks at repeatable methods — shared at the level of approach rather
-than client detail.
+Shorter write-ups of repeatable methods, shared at the level of approach
+rather than client detail.
 
 <ol class="case-list" style="counter-reset: case 2;">
 {% for s in studies %}{% if s.depth == "brief" %}
@@ -51,15 +53,15 @@ than client detail.
 ## Earlier work
 
 Usability research with 1,000+ participants across medical and consumer
-devices (Bresslergroup); a decade of mixed-methods research at the University
-of Delaware contributing to 20+ publications and 23+ conference talks; AI
-upskilling workshops adopted by 40% of faculty and graduate students at Drexel
+devices (Bresslergroup); seven years of mixed-methods research at the
+University of Delaware contributing to 20+ publications and 23+ conference
+talks; AI upskilling workshops for faculty and graduate students at Drexel
 University.
 
 <div class="page-cta">
   <div>
     <h2>Want the full story on any of these?</h2>
-    <p>I'm happy to walk through the methods, the missteps, and what I'd do differently.</p>
+    <p>Happy to walk through the methods on a call, including what I'd do differently now.</p>
   </div>
   <a class="btn btn-primary" href="mailto:{{ site.author.email }}">Contact me</a>
 </div>

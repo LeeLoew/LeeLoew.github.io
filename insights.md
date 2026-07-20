@@ -1,17 +1,18 @@
 ---
 layout: page
-title: Insights
+title: Writing
 kicker: Essays
-subtitle: Writing on applied AI, adoption, and the human side of the rollout
+subtitle: On applied AI and the people who have to live with it
 description: >-
-  Essays by Lee Rogers on applied AI — real use cases with measurable wins,
-  the behavioral science of adoption, augmenting professional judgment, and
-  responsible AI as an enabler.
+  Essays by Lee Rogers on applied AI: what real deployments returned, why
+  people trust or ignore new tools, and governance that helps organizations
+  say yes.
 ---
 
-I write about what it actually takes to get value from AI inside a real
-organization — with the numbers, the behavioral science, and the unglamorous
-80% that never makes it into the demos.
+I write about getting value from AI inside a real organization, with the
+numbers attached. That means behavioral science, honest accounting of what
+worked and what didn't, and the unglamorous 80% of the job that never makes
+it into a demo.
 
 {% if site.posts.size > 0 %}
 ## Latest essays
@@ -30,17 +31,17 @@ organization — with the numbers, the behavioral science, and the unglamorous
 > **Coming soon.** Essays and original research are on the way.
 {% endif %}
 
-## What I cover
+## What to expect
 
-- **Real use cases & measurable wins** — concrete AI deployments and the efficiency they produced: before/after, time saved, quality gained, and what broke first.
-- **The human side of adoption** — trust, automation bias, resistance, and habit change: what brain science says about why AI rollouts succeed or fail.
-- **Augmenting professional judgment** — AI plus experts done right: where to trust the model, and where the human must stay in the loop.
-- **Responsible by default** — governance as the thing that lets an organization say *yes* to AI, translated into plain, practical checks.
+The topics repeat because the work repeats: concrete deployments and what
+they returned, why skilled people trust or ignore new tools, where expert
+judgment belongs in the loop, and governance that makes yes possible. When I
+publish original research, it shows up here first.
 
 <div class="page-cta">
   <div>
-    <h2>Stay in the loop</h2>
-    <p>New essays land here first. A dedicated newsletter is on the way — ask to be notified when it launches.</p>
+    <h2>Follow along</h2>
+    <p>New essays land in the RSS feed the moment they publish. No newsletter yet; when there is one, it will be announced here.</p>
   </div>
-  <a class="btn btn-primary" href="mailto:{{ site.author.email }}?subject=Notify%20me%20about%20the%20newsletter">Get notified</a>
+  <a class="btn btn-primary" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
 </div>

@@ -6,9 +6,9 @@
 title: Lee Rogers
 tagline: Applied AI That People Actually Adopt
 description: >-
-  Lee Rogers is a research strategist and applied-AI specialist who brings AI
-  into real organizations to drive measurable results — and, as a PhD
-  behavioral scientist, makes sure people actually adopt it. Done responsibly.
+  Lee Rogers is a behavioral scientist (PhD) and research strategist in
+  Philadelphia. He builds AI systems for associations and professional-services
+  firms, and studies what makes skilled people trust and use them.
 url: "https://leeloew.github.io"
 baseurl: ""
 
@@ -25,11 +25,11 @@ author:
 nav:
   - name: About
     url: /aboutme
-  - name: Experience
+  - name: Background
     url: /research
-  - name: Work
+  - name: Case studies
     url: /work
-  - name: Insights
+  - name: Writing
     url: /insights
 cta:
   name: Work With Me

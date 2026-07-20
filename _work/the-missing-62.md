@@ -1,12 +1,13 @@
 ---
 title: "The Missing 62%"
-tagline: "AI membership intelligence at scale — zero-wrong accuracy, built solo"
+tagline: "Member research at a scale no team could do by hand, verified by a zero-error audit"
 client: "PICPA"
 role: "Designed & built solo"
 tags: [Applied AI, Data Enrichment]
 depth: full
 featured: true
 order: 2
+updated: "July 2026"
 metrics:
   - value: "0"
     label: "wrong entries in the accuracy audit"
@@ -15,54 +16,54 @@ metrics:
   - value: "3–4"
     label: "person-years of manual work, estimated"
   - value: "~$200/mo"
-    label: "flat AI subscription — no vendor contract"
+    label: "flat AI subscription, no vendor contract"
 related_posts: [the-missing-62]
 description: >-
-  A four-stage multi-agent AI pipeline (anchor → corroborate → weigh → verify)
-  that enriched thousands of records with a zero-wrong accuracy audit, beat a
-  commercial data tool head-to-head, and surfaced a seven-figure membership
-  opportunity — built solo on a flat monthly AI subscription.
+  A four-stage multi-agent AI pipeline (anchor, corroborate, weigh, verify)
+  that enriched thousands of records, passed an accuracy audit with zero
+  wrong entries, beat a commercial data tool head to head, and surfaced a
+  seven-figure membership opportunity. Built solo on a flat monthly AI
+  subscription.
 ---
 
 ## The challenge
 
-A majority of Pennsylvania's licensed CPAs — roughly 16,000 people, the
-missing 62% — weren't PICPA members. The opportunity was obvious; the
-prospect list wasn't. It held names and license numbers only: no firm, no
-role, no seniority, no way to reach anyone thoughtfully. Researching each
-person properly takes 20–30 minutes across multiple sources — an estimated
-**three to four person-years** of manual work. Commercial data vendors were
-inaccurate when tested, and raised exactly the compliance and brand questions
-a professional association should be asking.
+A majority of Pennsylvania's licensed CPAs, roughly 16,000 people or about
+62%, weren't PICPA members. The opportunity was obvious. The prospect list
+wasn't much help: names and license numbers only, without the firm, role, or
+seniority you'd need to reach anyone thoughtfully. Researching one person
+properly takes 20 to 30 minutes across multiple sources, which works out to
+an estimated three to four person-years of manual work. Commercial data
+vendors tested poorly, and they raised the kind of compliance and brand
+questions a professional association is obligated to ask.
 
 ## The approach
 
 I built a four-stage multi-agent AI pipeline:
 
-1. **Anchor** each person's identity — and reject the look-alikes
-2. **Corroborate** facts across five *independent* public sources
-3. **Weigh** the evidence by source reliability — not naive voting
+1. **Anchor** each person's identity, rejecting the look-alikes
+2. **Corroborate** facts across five independent public sources
+3. **Weigh** the evidence by source reliability
 4. **Verify** every value against the page it was cited from
 
-Two design choices mattered more than any model choice. It runs **locally**,
-so sensitive member data never leaves the building. And it's built to
-**decline rather than guess**: every field carries a source and a confidence
-level, and when the evidence isn't there, the field stays empty. No false
-precision.
+Two design choices mattered more than any model choice. The pipeline runs
+locally, so sensitive member data never leaves the building. And it declines
+rather than guesses: every field carries a source and a confidence level,
+and when the evidence isn't there, the field stays empty.
 
-{% include stat-callout.html value="7/10" title="Head-to-head, zero errors" text="In a bake-off against a commercial data tool, the pipeline scored 7 out of 10 with zero errors; the vendor managed 2–3 out of 10 — and was confidently wrong." %}
+{% include stat-callout.html value="7/10" title="Head-to-head, zero errors" text="In a bake-off against a commercial data tool, the pipeline scored 7 out of 10 with zero errors. The vendor managed 2–3 out of 10 and was confidently wrong." %}
 
 ## The results
 
-Thousands of records enriched with a **zero-wrong accuracy audit**. The
-output is a segmented, source-cited dataset behind a **seven-figure
-membership opportunity** — built solo, on a flat ~$200/month AI subscription,
-with no per-record metering, no data-vendor contract, and no added headcount.
+Thousands of records enriched, and an accuracy audit that found zero wrong
+entries. The output is a segmented, source-cited dataset behind a
+seven-figure membership opportunity, built solo on a flat ~$200/month AI
+subscription, without per-record metering or a data-vendor contract.
 
 ## What I learned
 
-The win isn't speed, though the speed is absurd. It's **accuracy you can
-trust enough to act on**. A pipeline that guesses confidently is worse than no
-pipeline — someone eventually acts on the wrong guess, and then nobody trusts
-any of it. Provenance, confidence, and restraint are what turn AI output into
-something a team will actually build a campaign on.
+The speed matters less than the trust. A pipeline that guesses confidently
+poisons its own results: the first wrong answer someone acts on discredits
+every row that was right. Provenance, confidence levels, and the discipline
+to leave a field blank are what make AI output something a team will build
+a campaign on.

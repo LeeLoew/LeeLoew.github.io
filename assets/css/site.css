@@ -427,10 +427,8 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 .stat .label {
   display: block;
   margin-top: 6px;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
   color: var(--muted);
 }
 @media (max-width: 720px) {
@@ -472,7 +470,7 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 
 .section-head { max-width: 62ch; margin-bottom: 44px; }
 .section-head h2 { font-size: var(--step-4); font-weight: 580; }
-.section-head p { color: var(--muted); font-size: var(--step-1); }
+.section-head p { color: var(--text); font-size: var(--step-1); }
 
 /* --------------------------------------------------------------------------
    Numbered trio (replaces icon cards)
@@ -579,10 +577,8 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 .case .where {
   grid-column: 2;
   margin: 0 0 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--muted);
 }
 .case h3 {
@@ -674,13 +670,11 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 .prose h3 { font-size: var(--step-2); margin-top: 1.8em; }
 .prose h4 {
   font-family: var(--font-text);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--muted);
+  font-size: var(--step-0);
+  font-weight: 650;
+  color: var(--heading);
   margin-top: 2.2em;
-  margin-bottom: 0.9em;
+  margin-bottom: 0.7em;
 }
 .prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 1.2em; }
 .prose li { margin-bottom: 0.45em; }
@@ -746,10 +740,10 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
   margin-top: 12px;
 }
 .cs-glance dt {
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   color: var(--muted);
 }
 .cs-glance dd {
@@ -855,7 +849,8 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 
 @media (max-width: 980px) {
   .cs-layout { grid-template-columns: 1fr; }
-  .cs-aside { margin-bottom: 40px; }
+  .cs-body { order: 1; }
+  .cs-aside { order: 2; margin-top: 40px; }
   .cs-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
 }
 
@@ -893,7 +888,7 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
   line-height: 1.25;
 }
 .post-list a:hover { color: var(--accent-strong); }
-.post-blurb { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
+.post-blurb { margin: 6px 0 0; color: var(--text); max-width: 60ch; }
 .post-list .post-date {
   display: block;
   margin-top: 8px;
@@ -1010,7 +1005,46 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
   border: none;
   padding: 0;
 }
-.page-cta p { margin: 0; max-width: 44ch; color: var(--muted); }
+.page-cta p { margin: 0; max-width: 44ch; color: var(--text); }
+.page-cta .cta-alt {
+  margin-top: 10px;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   About portrait (renders a placeholder until assets/img/portrait.jpg exists)
+   -------------------------------------------------------------------------- */
+.about-portrait {
+  float: right;
+  width: min(220px, 38vw);
+  aspect-ratio: 4 / 5;
+  margin: 6px 0 20px 28px;
+  border: var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-portrait.is-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-portrait.is-placeholder img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+@media (max-width: 560px) {
+  .about-portrait { float: none; margin: 0 0 24px; width: min(220px, 60vw); }
+}
 
 /* --------------------------------------------------------------------------
    Footer
@@ -1095,9 +1129,13 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
 .error-page p { color: var(--muted); max-width: 46ch; margin-bottom: 1.6em; }
 
 /* --------------------------------------------------------------------------
-   Motion: reveals + count-up (gated on .js)
+   Motion: scroll reveals (gated on .js). If site.js never runs, the fallback
+   animation un-hides everything after 1.6s so content can't be stranded;
+   site.js sets .js-ready to cancel it.
    -------------------------------------------------------------------------- */
 .js [data-reveal] { opacity: 0; transform: translateY(14px); }
+.js:not(.js-ready) [data-reveal] { animation: reveal-fallback 0.4s ease 1.6s forwards; }
+@keyframes reveal-fallback { to { opacity: 1; transform: none; } }
 .js [data-reveal].is-in {
   opacity: 1;
   transform: none;
@@ -1105,9 +1143,8 @@ a:hover { color: var(--heading); text-decoration-color: currentColor; }
   transition-delay: calc(var(--ri, 0) * 70ms);
 }
 /* pure-CSS stagger indices */
-.stats-band .stat:nth-child(2), .trio > article:nth-child(2) { --ri: 1; }
-.stats-band .stat:nth-child(3), .trio > article:nth-child(3) { --ri: 2; }
-.stats-band .stat:nth-child(4) { --ri: 3; }
+.trio > article:nth-child(2) { --ri: 1; }
+.trio > article:nth-child(3) { --ri: 2; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
