@@ -1,9 +1,2 @@
----
-layout: null
-sitemap: false
----
 User-agent: *
-Allow: /
-Disallow: /private/
-
-Sitemap: {{ site.url }}/sitemap.xml
+Disallow: /
