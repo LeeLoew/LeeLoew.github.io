@@ -1267,6 +1267,19 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Review-only: reviewer feedback block (not part of the partner kit) */
+.review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
+.review-feedback h3 { margin: 0 0 8px; }
+.review-feedback p { font-size: 15px; color: var(--muted); margin: 0 0 16px; }
+.rf-btn { font: inherit; font-size: var(--size-small); font-weight: 600; color: var(--brand-dark);
+  background: none; border: 1.5px solid var(--brand); border-radius: 999px; padding: 9px 20px; cursor: pointer; }
+.rf-btn:hover { background: var(--brand-tint); }
+.rf-panel { margin-top: 18px; }
+.rf-panel iframe { display: block; width: 100%; height: 1040px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface); }
+.rf-panel .rf-alt { margin: 10px 0 0; font-size: var(--size-small); }
+@media (max-width: 640px) { .rf-panel iframe { height: 1180px; } }
+
 </style>
 </head>
 <body>
@@ -1306,6 +1319,29 @@ including the parts that sit behind a member login on a live site.</div>
 <ul class="hlist"><li><span class="hk">Ask where the numbers came from</span><span class="hb">Every figure has a source: a system, a person, an estimate. Know which one you are looking at.</span></li><li><span class="hk">Be suspicious of output that looks too clean</span><span class="hb">A schedule that ties perfectly on the first pass, an AI summary with no caveats, a total that matches expectations exactly: these deserve a second look, precisely because they invite you to skip one.</span></li><li><span class="hk">Treat skepticism as a practice</span><span class="hb">You do not have to be a doubter by nature. You have to build the habit of checking.</span></li><li><span class="hk">Apply it double to AI output</span><span class="hb">More and more first-year work arrives already drafted, by a tool, and somebody has to be the person who checks it. That person is you, and firms notice fast whether you pass output along or catch what is wrong with it. The habits are on <a href="ai-with-judgment.html">AI With Judgment</a>; the instinct starts here.</span></li></ul>
 <h2 id="keep-going">Keep going</h2>
 <ul><li>Skepticism applies doubly when a machine wrote the first draft: <strong><a href="ai-with-judgment.html">AI With Judgment</a></strong>, including the verification note that shows your checking.</li><li>Starting soon? <strong><a href="your-first-90-days.html">Your First 90 Days</a></strong> is the scorecard these habits live on.</li><li>The research behind this page is Section 2 of the paper, where the judgment gap shows up in the data. <a href="#" class="stub" title="Your web team points this link at your hosted copy of the research paper (guide, Part A)">Download the full paper</a>.</li><li class="slot-item"><div class="slot-block"><span class="slot-label">[MEMBER CTA]</span><span class="slot-help">Your society's student membership pitch and join link go here.</span></div></li></ul>
+<section class="review-feedback" id="feedback">
+<h3>Reviewing this page?</h3>
+<p>Tell us what works and what does not. Five quick questions, about a minute.</p>
+<button type="button" class="rf-btn" id="rf-toggle" aria-expanded="false" aria-controls="rf-panel">Leave feedback on this page</button>
+<div class="rf-panel" id="rf-panel" hidden>
+<iframe id="rf-frame" title="Page feedback form" data-src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=N6H2EKF110GvzQwohvElKbM4cL_S3MROjoqHYiQSYZxUMzNXWDJJNjkxWTBJN1dDVVNMWFVRTjRaSyQlQCN0PWcu&amp;embed=true" loading="lazy"></iframe>
+<p class="rf-alt">Form not loading? <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=N6H2EKF110GvzQwohvElKbM4cL_S3MROjoqHYiQSYZxUMzNXWDJJNjkxWTBJN1dDVVNMWFVRTjRaSyQlQCN0PWcu" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+</div>
+</section>
+<script>
+(function () {
+  var b = document.getElementById('rf-toggle'), p = document.getElementById('rf-panel'), f = document.getElementById('rf-frame');
+  if (!b || !p || !f) return;
+  b.addEventListener('click', function () {
+    var open = p.hidden;
+    if (open && !f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src'));
+    p.hidden = !open;
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.textContent = open ? 'Hide the feedback form' : 'Leave feedback on this page';
+    if (open) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
 </main>
 <footer class="site-footer">Your State Society (placeholder). Built from the College to Career partner kit,
 review draft, July 2026.</footer>
