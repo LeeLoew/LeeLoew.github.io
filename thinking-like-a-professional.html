@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1267,6 +1262,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
+
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
 .review-feedback h3 { margin: 0 0 8px; }
@@ -1302,18 +1313,21 @@ including the parts that sit behind a member login on a live site.</div>
 <p>Four steps, in order. It fits on an index card; treat it like one and keep it where you work.</p>
 <div class="stair"><div class="step"><span class="n">1</span><b>Clarify before you start.</b><p>Repeat the assignment back in your own words: what is due, in what format, by when. Thirty seconds of clarification can save days of rework.</p></div><div class="step"><span class="n">2</span><b>Work it as far as you can.</b><p>The file, the prior year, the instructions you were given: exhaust what is in front of you before you raise your hand. That is not a courtesy to your manager; it is what being the professional means.</p></div><div class="step"><span class="n">3</span><b>Bring a draft answer with your question.</b><p>Here is what I found, here is what I tried, here is my best guess. That lands differently from a blank shrug, even when the guess is wrong.</p></div><div class="step"><span class="n">4</span><b>If you are truly stuck, say so within a day.</b><p>Sitting on a problem does not make it smaller. A question on Tuesday is cheap; the same question on Friday is a fire.</p></div></div>
 <h2 id="the-ladder-worked">The ladder, worked</h2>
-<p>The assignment: &quot;Tie out the March cash balance for the Morrison file. It&#x27;s off by a few hundred dollars.&quot; Two ways to come back with a question.</p>
+<p>The assignment: &quot;Roll the prepaid expense schedule forward for the Morrison file and tie it to the general ledger. It&#x27;s off by a few hundred dollars.&quot; Two ways to come back with a question.</p>
 <div class="contrast">
-<div class="ex"><p class="exlabel exlabel1">The blank shrug</p><p>Hey, I couldn&#x27;t figure out the cash tie-out. The numbers don&#x27;t match. What should I do?</p></div>
-<div class="ex ex2"><p class="exlabel exlabel2">The draft attached</p><p>The March cash balance is off by $412. I checked the bank rec against the general ledger: a 3/28 deposit posted twice, once on its own and once inside a batch. I think the fix is reversing the standalone entry, but I wanted to confirm before I touch anything. Am I close?</p></div>
-<p class="verdict">Same student, same problem, same amount of not-knowing. The second version took ten more minutes and reads like a colleague; the first reads like a forwarded task. The wrong guess, confirmed and corrected in one reply, still teaches you the fix and still builds trust.</p></div>
+<div class="ex"><p class="exlabel exlabel1">The blank shrug</p><p>Hey, I couldn&#x27;t get the prepaid schedule to tie. The numbers don&#x27;t match. What should I do?</p></div>
+<div class="ex ex2"><p class="exlabel exlabel2">The draft attached</p><p>The prepaid schedule is $412 higher than the general ledger. I traced it: a March insurance payment is on the schedule twice, once on its own and once inside a batch. I haven&#x27;t changed anything. I think one line is a duplicate, but I wanted you to see it before anyone adjusts. Am I close?</p></div>
+<p class="verdict">Same student, same problem, same amount of not-knowing. The second version took ten more minutes and reads like a colleague; the first reads like a forwarded task. Notice what the second one does not do: it changes nothing. Finding the difference and flagging it is first-year work at a firm of any size; deciding what to do about it is the reviewer&#x27;s call, for now. The wrong guess, confirmed and corrected in one reply, still teaches you the fix and still builds trust.</p></div>
 <h2 id="which-questions-go-where">Which questions go where</h2>
 <p>Some questions can only be answered inside your firm: how this client likes things done, who handles what, why the firm does it this way. Take those to a person, and soon. Nearly everything else, standard accounting treatment, how the software works, what a term means, you can run down yourself first, AI included. Bring people the questions only they could have answered, and your questions become evidence you think.</p>
 <div class="wq"><div class="wqcol"><p class="wqh wqh1">Take it to a person</p><p class="wqi">How this client likes things done</p><p class="wqi">Who handles what</p><p class="wqi">Why the firm does it this way</p></div><div class="wqcol wqcol2"><p class="wqh wqh2">Run it down yourself first</p><p class="wqi">Standard accounting treatment</p><p class="wqi">How the software works</p><p class="wqi">What a term means</p></div></div>
+<p class="ainote"><strong>Before you paste anything into an AI tool:</strong> know your firm&#x27;s AI policy first, and keep client names, numbers, and documents out of any tool the firm has not approved. Use made-up details when you practice.</p>
 <h2 id="the-now-what-habit">The now-what habit</h2>
 <div class="quote-card"><p class="q">“I just handed something in. Now what?”</p><span class="who">The question a group of firm and education leaders said new hires never ask out loud, spring 2026</span></div>
-<p>Here is where many new hires stall. Picture the Morrison tie-out again: your fix came back confirmed, the file is clean, and the quiet move is to close it and wait for the next assignment. The better move takes ten seconds longer: &quot;While I was in the rec I noticed two other accounts carrying small differences. Want me to start tracing those, or hold until you&#x27;ve reviewed this one?&quot; Attach a proposed next step to everything you hand off: what you would do next and why, or what you noticed along the way that might need attention. You will sometimes propose the wrong thing, and that is fine; a wrong proposal gets corrected in one sentence, while silent waiting gets noticed for the wrong reasons. Start with the very next thing you submit, in class or at work.</p>
+<p>Here is where many new hires stall. Picture the Morrison schedule again: your flag came back confirmed, the duplicate is fixed, and the quiet move is to close the file and wait for the next assignment. The better move takes ten seconds longer: &quot;While I was in the schedule I noticed two other accounts carrying small differences. Want me to start tracing those, or hold until you&#x27;ve reviewed this one?&quot; Attach a proposed next step to everything you hand off: what you would do next and why, or what you noticed along the way that might need attention. You will sometimes propose the wrong thing, and that is fine; a wrong proposal gets corrected in one sentence, while silent waiting gets noticed for the wrong reasons. Start with the very next thing you submit, in class or at work.</p>
 <div class="stat-callout"><p>Among the lowest ratings managers gave their early-career staff across 37 skills in a 2025 study: <strong>making informed decisions without needing step-by-step instructions</strong>.</p><span class="source">The same 2025 readiness study cited across these pages. Every habit on this page is that skill, practiced.</span></div>
+<h2 id="the-why-after-the-what">The why, after the what</h2>
+<p>There is a second question worth attaching to a task, and the timing is the whole trick. Once you have done something a time or two, and it is done, ask where it fits: &quot;I&#x27;ve finished the prepaid schedule. Can you show me where it lands in the rest of the engagement?&quot; Asked after the work, that question reads as curiosity, and it builds your picture of the whole job faster than anything else you can do. Asked before you have done the task, it can read as a stall, and some people get stuck in the why before they can do the what. Get the what done first. Then ask. <a href="small-firm-mid-size-large.html">Small Firm, Mid-Size, Large</a> has the large-firm version of the same move: ask a senior for the full-engagement walkthrough once.</p>
 <h2 id="skepticism-starter-version">Skepticism, starter version</h2>
 <p>Professional skepticism sounds like something you develop after years in audit. Start now, with three habits:</p>
 <ul class="hlist"><li><span class="hk">Ask where the numbers came from</span><span class="hb">Every figure has a source: a system, a person, an estimate. Know which one you are looking at.</span></li><li><span class="hk">Be suspicious of output that looks too clean</span><span class="hb">A schedule that ties perfectly on the first pass, an AI summary with no caveats, a total that matches expectations exactly: these deserve a second look, precisely because they invite you to skip one.</span></li><li><span class="hk">Treat skepticism as a practice</span><span class="hb">You do not have to be a doubter by nature. You have to build the habit of checking.</span></li><li><span class="hk">Apply it double to AI output</span><span class="hb">More and more first-year work arrives already drafted, by a tool, and somebody has to be the person who checks it. That person is you, and firms notice fast whether you pass output along or catch what is wrong with it. The habits are on <a href="ai-with-judgment.html">AI With Judgment</a>; the instinct starts here.</span></li></ul>

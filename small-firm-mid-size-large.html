@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1267,6 +1262,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
+
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
 .review-feedback h3 { margin: 0 0 8px; }
@@ -1303,6 +1314,7 @@ including the parts that sit behind a member login on a live site.</div>
 <div class="table-wrap tw-narrow"><table class="content-table"><thead><tr><th></th><th class="th-size"><span class="thsq sq1"></span>Small firm</th><th class="th-size"><span class="thsq sq2"></span>Mid-size firm</th><th class="th-size"><span class="thsq sq3"></span>Large firm</th></tr></thead><tbody><tr><td>First client contact</td><td>Often your first weeks</td><td>Your early months</td><td>Slower; you support engagements from behind the scenes first</td></tr><tr><td>Who trains you</td><td>The partner down the hall; your questions are the curriculum</td><td>An orientation, maybe a peer mentor; after that, whoever you ask</td><td>A formal program and a starting class of peers</td></tr><tr><td>What February looks like</td><td>A little of everything: returns, cleanups, fieldwork</td><td>Running pieces of an engagement</td><td>Your narrow slice of a big engagement, at volume</td></tr><tr><td>Who owns your development</td><td>You do, from day one, and everyone knows it</td><td>You do, though nobody says so out loud</td><td>The program in year one; you after that</td></tr><tr><td>How you stand out</td><td>Initiative and client comfort</td><td>Asking for work one level up</td><td>A running record of your work and initiative, and making sure it gets seen</td></tr><tr class="tr-action"><td>Your prep move</td><td>Practice client conversations now; build the look-it-up-first habit</td><td>Map the firm&#x27;s real support in month one; supply what is thin</td><td>Ask for the full-engagement walkthrough; keep the running record</td></tr></tbody></table></div>
 <h2 id="preparing-for-each">Preparing for each</h2>
 <div class="cols"><div class="col"><p class="ch"><span class="thsq sq1"></span>Small firm</p><ol class="ms"><li><small>Before day one</small>Practice talking to clients about their money (start with <a href="communication-is-the-job.html">Communication Is the Job</a>); you will be client-facing early</li><li><small>Every day</small>Write down what you do not understand and run it down yourself first, AI included</li><li><small>Same day</small>Save the partner down the hall for the questions only your firm can answer, and bring those the same day</li><li><small>Everywhere</small>Firms differ on how much asking they welcome; the habit that works everywhere is answering what you can for yourself first (<a href="thinking-like-a-professional.html">Which questions go where</a>)</li></ol></div><div class="col"><p class="ch"><span class="thsq sq2"></span>Mid-size firm</p><ol class="ms"><li><small>Month one</small>Learn how the firm actually supports your development: who mentors first-years, what check-ins really happen, what comes after orientation</li><li><small>Where it is thin</small>Supply it yourself; connect with the person you want to learn from</li><li><small>Before busy season</small>Set your own checkpoints with <a href="your-first-90-days.html">Your First 90 Days</a>, on the calendar before busy season swallows it</li><li><small>Then</small>Ask for work one level above what you were hired to do; mid-size firms usually say yes</li></ol></div><div class="col"><p class="ch"><span class="thsq sq3"></span>Large firm</p><ol class="ms"><li><small>Day one</small>The training program is the minimum, and everyone in your starting class gets the same one; what you add beyond it is what sets you apart</li><li><small>Early</small>Ask a senior to walk you through a full engagement once so you can see where your piece fits</li><li><small>All year</small>Keep a running record of what you worked on and learned</li><li><small>Review time</small>In a class of dozens, nobody tracks your growth for you; that record is how your work gets seen</li></ol></div></div>
+<p class="ainote"><strong>Before you paste anything into an AI tool:</strong> know your firm&#x27;s AI policy first, and keep client names, numbers, and documents out of any tool the firm has not approved. Use made-up details when you practice.</p>
 <h2 id="heading-to-industry-instead">Heading to industry instead</h2>
 <p>Public accounting is not the only door out of an accounting degree. Plenty of graduates start in industry: a company&#x27;s accounting or corporate-finance team rather than a firm serving many clients. The first year changes shape there. You work for one employer instead of a rotation of clients, so depth comes from knowing one business well rather than seeing many. The rhythm is the month-end and quarter-end close instead of busy season. Training structure varies as much as it does across firm sizes: some companies run rotational development programs; many hand you a manager and a close calendar. What does not change: communication is still the job, the question ladder still works, and your development is still yours to own. The checklist on <a href="your-first-90-days.html">Your First 90 Days</a> reads the same at a company as it does at a firm.</p>
 <div class="spine"><div class="srow hdr"><div class="sl">At a firm</div><div class="sc">What changes</div><div class="sr">At a company</div></div><div class="srow"><div class="sl">A rotation of clients</div><div class="sc">Who you work for</div><div class="sr">One employer</div></div><div class="srow"><div class="sl">Busy season</div><div class="sc">The rhythm</div><div class="sr">The month-end and quarter-end close</div></div><div class="srow"><div class="sl">Seeing many businesses</div><div class="sc">Depth comes from</div><div class="sr">Knowing one business well</div></div><div class="srow"><div class="sl">Varies by firm size</div><div class="sc">Training</div><div class="sr">A rotational program at some; a manager and a close calendar at many</div></div><div class="srow"><div class="same"><b>What does not change:</b> <a class="pill" href="communication-is-the-job.html">Communication is the job</a><a class="pill" href="thinking-like-a-professional.html">The question ladder</a><a class="pill" href="your-first-90-days.html">Your development is yours</a></div></div></div>

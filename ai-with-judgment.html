@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1267,6 +1262,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
+
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
 .review-feedback h3 { margin: 0 0 8px; }
@@ -1296,16 +1307,19 @@ including the parts that sit behind a member login on a live site.</div>
 <div class="crumb"><a href="index.html">&larr; Hub home</a></div>
 <h1>AI With Judgment</h1>
 <span class="pill gated">On your site: behind the free member login</span>
+<p class="updated"><strong>Last updated: September 2026.</strong> AI tools and firm policies change quickly. Treat this page as a starting point, and your firm&#x27;s current policy as the rule.</p>
 <div class="rule2"><div class="ra"><b>Ask first.</b><span>Nobody may hand you the rules on day one; across the market, they are still being worked out.</span></div><div class="rb"><b>Verify always.</b><span>The edge is fluency combined with judgment about when to trust what comes out.</span></div></div><div class="band70"><span class="n">70%</span><p>of tax and accounting firms have yet to set a policy guiding how generative AI gets used in their practice.<small>Thomson Reuters Institute survey of 1,700+ professionals, 2025</small></p></div><p>You grew up with these tools and your fluency is real; firms want it. Two tools on this page carry most of that judgment: <a class="toollink" href="#what-goes-in-safe-ask-first-never">What goes in</a>, a table for what goes into AI, and <a class="toollink" href="#what-comes-out-the-verification-note">What comes out</a>, a note format for what comes out.</p>
 <h2 id="what-goes-in-safe-ask-first-never">What goes in: safe, ask first, never</h2>
 <div class="mat"><div class="zones"><div class="z z1"><tr><th class="th-safe">Safe on your own<small>your own drafts and learning</small></div><div class="z z2">Ask before you do it<small>the firm’s lines</small></div><div class="z z3">Never<small>client information, unchecked output</small></div></div><div class="arrowline"></div><div class="chips"><div class="mcol"><div class="chip">Drafting an email or memo for you to edit</div><div class="chip">Summarizing a document so you know where to read closely</div><div class="chip">Explaining an unfamiliar concept in plain language</div><div class="chip">A first draft of a checklist or an outline</div></div><div class="mcol"><div class="chip">Using any AI tool on client work your firm has not approved</div><div class="chip">Pasting firm templates, workpapers, or internal guidance into an outside tool</div><div class="chip">Building a tool or automation the team would rely on</div></div><div class="mcol"><div class="chip">Client names, numbers, or documents in an unapproved tool</div><div class="chip">Presenting AI output as finished work without checking it</div><div class="chip">Guessing at the policy instead of asking</div></div></div></div>
 <p>The middle column is not a restriction; it is how you learn where your firm draws its lines. The information clients hand this profession is protected by rules and expectations older than any technology on your desk. Treat it that way from the start, and when in doubt, ask before you paste.</p>
+<p><strong>These are rules of thumb, and your firm&#x27;s policy wins.</strong> Some firms run approved tools built to hold client data; there, the never column means outside tools. Even an email draft can carry a client&#x27;s name, so check the policy before the first paste, not after. And if a tool gets something wrong in work you handed in, that error is yours to own.</p>
 <p>How this changes by firm size: at a small firm there may be no policy yet, and your careful asking may be what starts one. At the largest firms the answer is often built in; several of the largest firms now run their own internal AI platforms, and if your firm gives you one, use it, with outside tools treated as the never column unless someone tells you otherwise.</p>
 <h2 id="what-comes-out-the-verification-note">What comes out: the verification note</h2>
 <p>AI tools do not warn you when they are wrong. A stale rate reads like a current one, and an invented citation looks real until you try to open it. So when a tool helped with a piece of work, attach two lines that show what you checked:</p>
 <div class="vform"><p class="fk">Verification note</p><div class="frow"><span class="k v">Verified:</span><span class="line">filing threshold against the current-year instructions; all three citations opened, all real.</span></div><div class="frow"><span class="k nv">Not verified:</span><span class="line">prior-year comparative figures; flagged for review.</span></div></div>
 <p>Adapt the content, keep the form. Reviewers trust work faster when they can see the checking behind it.</p>
 <p>Practice once before it counts. Take an AI output you would have used as-is and verify it end to end: trace every number to its source, open every citation. Write down what you would have missed. That is where to check hardest next time.</p>
+<p class="ainote"><strong>Before you paste anything into an AI tool:</strong> know your firm&#x27;s AI policy first, and keep client names, numbers, and documents out of any tool the firm has not approved. Use made-up details when you practice.</p>
 <p>Nothing to practice on? Have the tool make something. Paste this in:</p>
 <div class="promptq"><p>&ldquo;Write a one-page summary of [a topic from your coursework] and plant three plausible errors in it: one wrong number, one misstated rule, one invented source. Do not reveal them until I list what I found.&rdquo;</p></div>
 <p>Then verify it the way you would verify client work. Catching all three is the job.</p>

@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1267,6 +1262,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
+
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
 .review-feedback h3 { margin: 0 0 8px; }
@@ -1299,6 +1310,7 @@ including the parts that sit behind a member login on a live site.</div>
 <span class="pill gated">On your site: behind your member login</span>
 <div class="stat-hero"><div class="srow"><p class="snum">12%</p><div class="sright"><p class="slab">of employees strongly agree their organization does a great job onboarding new hires</p><div class="strack"><div class="sfill" style="width:12%"></div></div></div></div><p class="ssrc">Gallup workplace research, across companies of every size</p></div>
 <p>The bar is that low. A firm with no training department can clear it with a page of paper and a calendar. At most small and mid-size firms, new hires belong to whoever hired them, with no program behind them; the six moves that matter do not require one. We graded the evidence for each; less is rigorously proven about onboarding than vendors claim.</p>
+<p>Start by remembering what the first weeks felt like. Most of what a new hire does not know is small: where things are, when lunch happens, whether it is fine to ask, what the abbreviations on the file mean. Nobody who has done the job for fifteen years remembers learning those things, so nobody says them. Every move below is, one way or another, saying them out loud.</p>
 <h2 id="the-menu-with-the-evidence-graded">The menu, with the evidence graded</h2>
 <div class="table-wrap tw-narrow"><table class="content-table"><thead><tr><th>The move</th><th>Strength of evidence</th><th>Cost</th></tr></thead><tbody><tr><td>1. Write the expectations down</td><td>Strong and consistent: role clarity is among the best-documented predictors</td><td>An hour</td></tr><tr><td>2. Give the peer mentor a calendar</td><td>Strong company evidence; modest average effects in research; frequency drives it</td><td>One person&#x27;s time</td></tr><tr><td>3. Early client contact, with a debrief</td><td>Supported stretch beats sink-or-swim; feedback is the active ingredient</td><td>A seat in your next meeting</td></tr><tr><td>4. Internships that are early and real</td><td>The best-documented practice on this list</td><td>Scheduling will</td></tr><tr><td>5. Close the loop with the schools you hire from</td><td>Not yet studied; the firm leaders we spoke with vouch for it</td><td>One email</td></tr><tr><td>6. Schedule the feedback from week one</td><td>Strong: it is the expectations research, applied weekly</td><td>Fifteen minutes a week</td></tr></tbody></table></div>
 <div class="movehead" id="move-1"><span class="mtag">1</span><h3>Write the expectations down.</h3></div>
@@ -1318,6 +1330,7 @@ including the parts that sit behind a member login on a live site.</div>
 <div class="movehead" id="move-6"><span class="mtag">6</span><h3>Schedule the feedback.</h3></div>
 <p><strong>Fifteen scheduled minutes a week beats a saved-up review.</strong> Short, regular check-ins on the calendar from week one, not saved for review season. Fifteen minutes weekly covers it: what went well, one thing to change next week, and whatever questions they have been sitting on. New hires who hear nothing assume the worst and stall; the ones who hear something weekly correct course while correcting is still cheap.</p>
 <div class="stat-hero"><div class="srow"><p class="snum">54%</p><div class="sright"><p class="slab">of managers say they give their early-career staff feedback on communication</p><div class="strack"><div class="sfill" style="width:54%"></div></div></div></div><div class="srow"><p class="snum alt">20%</p><div class="sright"><p class="slab">of that staff say they receive it</p><div class="strack"><div class="sfill alt" style="width:20%"></div></div></div></div><p class="ssrc">The Illinois CPA Society’s 2025 readiness study. Whatever you believe you already deliver, schedule it anyway.</p></div>
+<p><strong>Then run the checklist two-sided.</strong> Hand the first-90-days checklist from this hub to every new hire on day one, and say what will happen with it: at about day 90, they mark themselves, you mark them, and you compare. Talk about where the two sheets line up and where they do not, in those words, aligned or not yet, never as a score. The readiness study behind this hub found new hires rating themselves well above their managers on nearly every skill, so a gap is expected; what you are teaching is that the honest conversation is safe here. Said on day one, it is a plan. Sprung at day 90, it is a teardown, and one delivered badly can set someone back a year.</p>
 <h2 id="what-firms-are-actually-doing">What firms are actually doing</h2>
 <p>Practices firm leaders described to us in spring 2026, already running at real firms, each one a live version of a move above:</p>
 <ul><li>Two weeks of structured onboarding on the firm&#x27;s software stack before client work starts (move 1, scaled up).</li><li>Interns started in spring busy season rather than summer, deliberately (move 4).</li><li>Outreach to students 12 to 18 months before internship eligibility: tours, panels, networking (move 4, upstream).</li><li>College classes brought into the firm for a working day, not just the career fair (move 5).</li><li>Recruiting by teaching: presenting at schools on the topics students ask about, employer second (move 5, upstream).</li><li>New-hire and client-meeting simulations that rebuild the practice reps technology has removed from live work (move 3, before the stakes are real).</li></ul>

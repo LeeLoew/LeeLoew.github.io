@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1266,6 +1261,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t b { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
+
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
 
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }

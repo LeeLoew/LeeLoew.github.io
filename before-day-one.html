@@ -745,29 +745,24 @@ ul.checklist li::before {
 .scorecard ul.checklist { background: none; border: none; border-radius: 0; padding: 0; margin: 0; }
 .scorecard ul.checklist li { padding: 12px 160px 12px 0; border-top: 1px solid var(--border); }
 .scorecard ul.checklist li:first-child { border-top: 1px solid var(--border); }
-.scorecard ul.checklist li::before {
-  left: auto;
-  right: 101px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--brand);
-  border-radius: 50%;
-  background: var(--bg);
-}
-.scorecard ul.checklist li::after {
-  content: "";
-  position: absolute;
-  right: 27px;
-  top: 50%;
-  margin-top: -11px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--warn);
-  border-radius: 50%;
-  background: var(--bg);
-}
+.scorecard ul.checklist li::before, .scorecard ul.checklist li::after { content: none; }
+/* Clickable marks (foundation board 9/15, James): two real buttons per item,
+   remembered in the reader's browser; the pseudo-element circles retired. */
+.scorecard ul.checklist li { position: relative; }
+.scorecard .ck { position: absolute; top: 50%; margin-top: -12px; width: 24px; height: 24px; padding: 0;
+  border-radius: 50%; background: var(--bg); cursor: pointer; font: inherit; }
+.scorecard .ck1 { right: 99px; border: 2px solid var(--brand); }
+.scorecard .ck2 { right: 25px; border: 2px solid var(--warn); }
+.scorecard .ck .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scorecard .ck1[aria-pressed="true"] { background: var(--brand); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck2[aria-pressed="true"] { background: var(--warn); box-shadow: inset 0 0 0 3px var(--bg); }
+.scorecard .ck:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scorecard li.is-doing .cktxt { color: var(--muted); }
+.scorecard .cksum { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; }
+.scorecard .cks { margin: 0; font-size: 14px; color: var(--body); }
+.scorecard .cklink { font: inherit; font-size: 13px; color: var(--brand-dark); background: none; border: 0; padding: 0;
+  text-decoration: underline; cursor: pointer; white-space: nowrap; }
 .btn-dl {
   display: inline-block;
   background: var(--brand);
@@ -1022,14 +1017,14 @@ blockquote.prompt { padding-left: 62px; position: relative; }
 .rlbl .sq1, .ch .sq1 { width: 8px; height: 8px; }
 .rlbl .sq2, .ch .sq2 { width: 11px; height: 11px; }
 .rlbl .sq3, .ch .sq3 { width: 14px; height: 14px; background: var(--brand); }
-.rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; }
-.rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
-.rail .own.dashed { border-style: dashed; }
-.rail .own.late { border-radius: 0 7px 7px 0; }
-.rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
-.rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
-.rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
-.rail .tag b { display: block; color: var(--ink); font-weight: 600; }
+.rails .rail { position: relative; height: 14px; border-radius: 7px; background: #dfe5ec; margin: 0; }
+.rails .rail .own { position: absolute; top: 0; bottom: 0; border-radius: 7px; background: var(--brand-tint); border: 1px solid var(--brand); box-sizing: border-box; }
+.rails .rail .own.dashed { border-style: dashed; }
+.rails .rail .own.late { border-radius: 0 7px 7px 0; }
+.rails .rail .prog { position: absolute; top: 0; bottom: 0; border-radius: 7px 0 0 7px; background: repeating-linear-gradient(135deg, #cfd8e3 0 4px, #e9eef3 4px 8px); border: 1px solid var(--border); box-sizing: border-box; }
+.rails .rail .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--accent); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1.5px var(--accent); box-sizing: border-box; }
+.rails .rail .tag { position: absolute; top: 22px; transform: translateX(-50%); font-size: 12px; line-height: 1.35; color: var(--body); white-space: nowrap; text-align: center; }
+.rails .rail .tag b { display: block; color: var(--ink); font-weight: 600; }
 .rails .axis { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
 .legend { display: flex; gap: 18px 26px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -1267,6 +1262,22 @@ ol.ms > li:last-child { padding-bottom: 0; }
 .cd .day .t::after { content: ""; position: absolute; right: -9px; top: -2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
 .cd .day .c { border-left: 0; padding: 0 0 0 26px; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--ink); }
 
+/* Foundation board 9/15 pass (2026-09-20) */
+.ainote { position: relative; background: #fff8e8; border: 1px solid #f0d99a; border-left: 4px solid var(--warn);
+  border-radius: var(--radius); padding: 12px 16px 12px 46px; font-size: 14.5px; line-height: 1.55; margin: 0 0 var(--space); }
+.ainote::before { content: "!"; position: absolute; left: 15px; top: 13px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--warn); color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 20px; }
+.updated { font-size: 13.5px; color: var(--muted); border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 0 0 var(--space); }
+.updated strong { color: var(--ink); }
+.win .bodyt .greet { display: inline-block; }
+.script .stxt.egreet { font-style: normal; }
+.hlist.stop { background: none; border: 0; padding: 0; display: grid; gap: 12px; }
+.hlist.stop li { border: 1px solid #f0c9c9; border-left: 5px solid var(--warn); border-top-width: 1px; border-radius: var(--radius);
+  background: #fff6f6; padding: 14px 18px 14px 18px; }
+.hlist.stop li:first-child { border-top: 1px solid #f0c9c9; }
+.hlist.stop .hk::before { content: "Stop"; display: inline-block; background: var(--warn); color: #fff; border-radius: 3px;
+  padding: 2px 7px; margin-right: 10px; font-size: 10.5px; letter-spacing: 0.1em; }
+
 /* Review-only: reviewer feedback block (not part of the partner kit) */
 .review-feedback { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
 .review-feedback h3 { margin: 0 0 8px; }
@@ -1299,14 +1310,15 @@ including the parts that sit behind a member login on a live site.</div>
 <div class="stat-hero"><p class="shead">Firms recruit their interns <strong>two to three years</strong> before the first day of full-time work.</p><div class="rail"><div class="rbar"><span class="rb1"></span><span class="rb2"></span></div><div class="rcols"><div class="rc"><span class="yr">2027</span><p>One national firm&rsquo;s early internship posting for summer 2027&hellip;</p></div><div class="rc"><span class="yr">2028</span><p>&hellip;required a 2028 graduation date</p></div><div class="rc"><span class="yr">2030</span><p>Another early-identification program signs students graduating as late as 2030</p></div></div></div><p class="ssrc">Firm recruiting postings, read May through July 2026</p></div>
 <p>The classmates who collect offers senior year are usually the ones who started as underclassmen, and the window opens far sooner than campus rumor says it does. Below is the actual calendar, and one move per year. Find your row.</p>
 <h2 id="the-real-recruiting-calendar">The real recruiting calendar</h2>
-<div class="cd"><div class="cdrow"><div class="t"><b>4</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Freshman</span></div><p>Early-identification programs quietly recruit underclassmen; several open as early as freshman year.</p><p class="mv">Show up: accounting club, one career fair, and ask your career center to connect you with a CPA to shadow for a day.</p></div></div><div class="cdrow"><div class="t"><b>3</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Sophomore</span></div><p>Early-ID internships and leadership programs are posted for students two or more years from graduation.</p><p class="mv">Search each target firm&#x27;s early-careers page for its early-ID program by name, and apply to at least one.</p></div></div><div class="cdrow"><div class="t"><b>2</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Junior</span></div><p>Applications for the internship before senior year open in August and September, roughly a year ahead of the internship itself.</p><p class="mv">Put the application window on your calendar for the first week of fall classes, and treat it like a deadline.</p></div></div><div class="cdrow"><div class="t"><b>1</b><small>year out</small></div><div class="c"><div class="y"><span class="yr">Senior</span></div><p>The internship converts, or does not, into the full-time offer, usually decided by summer&#x27;s end.</p><p class="mv">Treat the internship as the tryout it is, then start the exam while school is fresh.</p></div></div><div class="day"><div class="t"><b>Day one</b></div><div class="c">Your first day of full-time work</div></div></div>
+<div class="cd"><div class="cdrow"><div class="t"><b>5+</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">High school</span></div><p>Some firms run short summer programs for high-school students curious about accounting, usually a day or two at the firm.</p><p class="mv">Ask your school counselor or <span class="slot-inline">[SOCIETY NAME]</span> which firms near you run one, and go.</p></div></div><div class="cdrow"><div class="t"><b>4</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Freshman</span></div><p>Early-identification programs quietly recruit underclassmen; several open as early as freshman year, and firm-sponsored case competitions on campus start now too.</p><p class="mv">Show up: accounting club, one career fair, a case competition if your school runs one, and ask your career center to connect you with a CPA to shadow for a day.</p></div></div><div class="cdrow"><div class="t"><b>3</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Sophomore</span></div><p>Early-ID internships and summer leadership programs are posted for students two or more years from graduation; the leadership programs are usually a few days at the firm, and they feed the internship class.</p><p class="mv">Search each target firm&#x27;s early-careers page for its early-ID program or summer leadership program by name, and apply to at least one.</p></div></div><div class="cdrow"><div class="t"><b>2</b><small>years out</small></div><div class="c"><div class="y"><span class="yr">Junior</span></div><p>Applications for the internship before senior year open in August and September, roughly a year ahead of the internship itself.</p><p class="mv">Put the application window on your calendar for the first week of fall classes, and treat it like a deadline.</p></div></div><div class="cdrow"><div class="t"><b>1</b><small>year out</small></div><div class="c"><div class="y"><span class="yr">Senior</span></div><p>The internship converts, or does not, into the full-time offer, usually decided by summer&#x27;s end.</p><p class="mv">Treat the internship as the tryout it is, then start the exam while school is fresh.</p></div></div><div class="day"><div class="t"><b>Day one</b></div><div class="c">Your first day of full-time work</div></div></div>
 <p>One number to take seriously:</p>
 <div class="stat-hero"><div class="srow"><p class="snumw">6 in 10</p><div class="sright"><div class="ppl"><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp f" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg><svg class="pp" viewBox="0 0 22 30"><circle class="sh" cx="11" cy="5.5" r="4.4"/><path class="sh" d="M11 13c-4.6 0-7.5 3.2-7.5 8V28h15v-7c0-4.8-2.9-8-7.5-8Z"/></svg></div><p class="slab">interns convert to a full-time offer, which makes the internship the real job interview</p></div></div><p class="ssrc">NACE reports a 63.1% conversion rate for 2024–25 interns, the highest in five years</p></div>
 <h2 id="if-the-calendar-already-passed-you">If the calendar already passed you</h2>
 <p>The multi-year machinery above belongs mostly to the largest firms. Many small and mid-size firms hire much closer to their start dates, and an internship at a small local firm that you take seriously will do more for you than a bigger name you never applied to. <a href="small-firm-mid-size-large.html">Small Firm, Mid-Size, Large</a> explains why that path is often the better one anyway.</p>
 <h2 id="the-licensure-piece">The licensure piece</h2>
-<p>Most states have added alternative pathways to CPA licensure since 2025. In plain terms: the traditional 150-credit-hour route is no longer the only door in much of the country; many states now also license CPAs through a bachelor&#x27;s degree plus additional professional experience, and the rules keep changing state by state. Which pathway you plan around changes how you pick your credits, when you can sit for the exam, and how soon after graduation you can hold the license. Do not build your final year on what an older student or a recruiting page remembers; check <span class="slot-inline">[SOCIETY NAME]</span> for your state&#x27;s current requirements before you lock in your schedule, and ask what each pathway looks like where you plan to practice.</p>
-<div class="wq lfork"><div class="wqcol"><p class="wqh wqh1">The traditional 150-credit-hour route</p><p class="wqi">No longer the only door in much of the country</p></div><div class="wqcol wqcol2"><p class="wqh wqh2">A bachelor&rsquo;s degree plus additional professional experience</p><p class="wqi">The rules keep changing state by state</p></div><div class="wqfoot"><p class="wqfl">Which pathway you plan around changes</p><p class="wqi">How you pick your credits</p><p class="wqi">When you can sit for the exam</p><p class="wqi">How soon after graduation you can hold the license</p></div></div>
+<p>Most states have added alternative pathways to CPA licensure since 2025. In plain terms: the 150-credit-hour route, the one most students still hear described as the standard path, is no longer the only door in much of the country; many states now also license CPAs through a bachelor&#x27;s degree plus additional professional experience, and the rules keep changing state by state. Which pathway you plan around changes how you pick your credits, when you can sit for the exam, and how soon after graduation you can hold the license. Do not build your final year on what an older student or a recruiting page remembers; check <span class="slot-inline">[SOCIETY NAME]</span> for your state&#x27;s current requirements before you lock in your schedule, and ask what each pathway looks like where you plan to practice.</p>
+<div class="wq lfork"><div class="wqcol"><p class="wqh wqh1">The 150-credit-hour route</p><p class="wqi">No longer the only door in much of the country</p></div><div class="wqcol wqcol2"><p class="wqh wqh2">A bachelor&rsquo;s degree plus additional professional experience</p><p class="wqi">The rules keep changing state by state</p></div><div class="wqfoot"><p class="wqfl">Which pathway you plan around changes</p><p class="wqi">How you pick your credits</p><p class="wqi">When you can sit for the exam</p><p class="wqi">How soon after graduation you can hold the license</p></div></div>
+<p class="updated"><strong>Last reviewed: September 2026.</strong> Pathway rules are still changing state by state. If you are reading this much later, confirm the current rules before you plan around them.</p>
 <div class="challenge">
 <h2 id="your-move-this-month">Your move, this month</h2>
 <p>Go back up to the calendar, find the row for your school year, and do the move in its right-hand column this month, not next semester. Then spend the time before your start date on the habits in the rest of these pages: the scorecard, the call script, the question ladder. The calendar rewards whoever moves first, and now you know when it actually starts.</p>
