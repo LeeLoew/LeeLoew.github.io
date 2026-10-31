@@ -41,16 +41,36 @@ a:hover,a:focus-visible{border-bottom-color:currentColor;outline:none}
 .rail nav a:hover{color:var(--accent-ink)}
 .rail .foot{font-size:13px;color:var(--muted);margin:0}
 @media(min-width:900px){.rail .foot{margin-top:12px}}
+/* hero band (home) */
+.hero{background:var(--accent);color:#f3f6f4;margin-left:calc(-1 * max(20px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(20px,env(safe-area-inset-right,0px)));
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.hero-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:28px;padding-block:40px 0}
+@media(min-width:900px){.hero-in{grid-template-columns:minmax(0,1fr) 360px;gap:80px;padding-block:64px 0;align-items:end}}
+.hero .name{font-family:var(--display);font-weight:500;font-size:clamp(44px,6vw,64px);line-height:1;letter-spacing:-.02em;margin:0 0 14px;color:#fff}
+.hero .name span{font-weight:400;font-size:.42em;letter-spacing:0;margin-left:.3em;color:rgba(255,255,255,.72)}
+.hero .role{margin:0 0 36px;font-size:18px;line-height:1.45;max-width:34ch;color:rgba(255,255,255,.86)}
+@media(min-width:900px){.hero .role{margin-bottom:56px}}
+.hero .text{align-self:center;padding-bottom:0}
+.portrait{width:100%;max-width:360px;aspect-ratio:1/1;overflow:hidden;background:var(--accent);justify-self:end;margin:0}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;filter:grayscale(1) contrast(1.08) brightness(1.02);mix-blend-mode:luminosity;opacity:.92}
+@media(max-width:899px){.portrait{max-width:260px;justify-self:start}}
 /* main */
-main{min-width:0;max-width:640px}
+main{min-width:0;max-width:660px}
 section{margin:0 0 64px}
 section:last-child{margin-bottom:0}
 .eyebrow{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;font-weight:600}
-h1{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.6vw,40px);line-height:1.15;letter-spacing:-.012em;margin:0 0 18px;text-wrap:balance}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,5vw,46px);line-height:1.15;letter-spacing:-.012em;margin:0 0 18px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:500;font-size:28px;line-height:1.2;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance}
 h3{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.25;margin:0 0 6px}
 p{margin:0 0 1em}
-p.lede{font-size:20px;line-height:1.5}
+p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27px);line-height:1.35;letter-spacing:-.005em}
+.sec-title{font-family:var(--display);font-weight:500;font-size:30px;line-height:1.15;letter-spacing:-.01em;margin:0 0 20px}
+.tone{background:var(--paper);padding:28px 28px 8px;margin:0 -28px 64px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+@media(max-width:899px){.tone{margin-inline:-20px;padding-inline:20px}}
+.tone .entries li:last-child{border-bottom:0}
+.pull{margin:0 0 64px;padding:0}
+.pull p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(23px,2.8vw,29px);line-height:1.3;letter-spacing:-.005em;margin:0 0 12px;text-wrap:balance}
+.pull cite{font-style:normal;font-size:14px;color:var(--muted)}
 .when{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.02em}
 /* entry lists */
 .entries{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
@@ -79,7 +99,7 @@ details em{font-style:italic}
 /* article pages */
 article header{margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 article header p{color:var(--muted);margin:0}
-article h2{font-size:24px;margin-top:40px}
+article h2{font-size:26px;margin-top:44px}
 article ul,article ol{padding-left:22px}
 article li{margin-bottom:8px}
 .facts{list-style:none;padding:0;margin:0 0 8px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px 24px}
@@ -93,7 +113,7 @@ article li{margin-bottom:8px}
 @media(prefers-reduced-motion:no-preference){a{transition:color .15s,border-color .15s}}
 """
 
-def shell(title, body, depth, current):
+def shell(title, body, depth, current, hero=False):
     pre = "../" * depth
     nav = []
     for label, href, key in [("Papers", "index.html#papers", "home"), ("Research", "index.html#research", "home"),
@@ -101,6 +121,20 @@ def shell(title, body, depth, current):
                              ("Contact", "index.html#contact", "home")]:
         cur = ' aria-current="page"' if key == current else ""
         nav.append(f'<a href="{pre}{href}"{cur}>{label}</a>')
+    hero_html = f'''
+<header class="hero">
+  <div class="hero-in">
+    <div class="text">
+      <p class="name">Lee Rogers<span>PhD</span></p>
+      <p class="role">Director of Strategic Research and Insights, PICPA and CPA Crossings. Philadelphia.</p>
+    </div>
+    <figure class="portrait"><img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="360" height="360"></figure>
+  </div>
+</header>''' if hero else ""
+    rail_id = "" if hero else f'''
+    <img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="132" height="132">
+    <p class="name">Lee Rogers<span>PhD</span></p>
+    <p class="role">Director of Strategic Research and Insights, PICPA and CPA Crossings. Philadelphia.</p>'''
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -111,12 +145,9 @@ def shell(title, body, depth, current):
 <link rel="stylesheet" href="{pre}assets/site.css">
 <link rel="icon" href="data:,">
 </head>
-<body>
+<body>{hero_html}
 <div class="frame">
-  <aside class="rail">
-    <img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="132" height="132">
-    <p class="name">Lee Rogers<span>PhD</span></p>
-    <p class="role">Director of Strategic Research and Insights, PICPA and CPA Crossings. Philadelphia.</p>
+  <aside class="rail">{rail_id}
     <nav aria-label="Site">{''.join(nav)}</nav>
     <p class="foot"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
   </aside>
@@ -135,8 +166,8 @@ HOME = f"""
   <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide. That turned out to be the right preparation for the question most organizations are now working through: what happens when skilled people are handed AI, and what it takes for them to keep using it.</p>
 </section>
 
-<section id="papers">
-  <p class="eyebrow">Papers</p>
+<section id="papers" class="tone">
+  <h2 class="sec-title">Papers</h2>
   <ol class="entries">
     <li>
       <h3><a href="work/start-from-trust.html">Start from Trust</a></h3>
@@ -151,8 +182,13 @@ HOME = f"""
   </ol>
 </section>
 
+<blockquote class="pull">
+  <p>The firms that navigate this period best will not be the firms that trusted everything. They will be the firms that started from trust and built from there.</p>
+  <cite>Start from Trust, 2026</cite>
+</blockquote>
+
 <section id="research">
-  <p class="eyebrow">The research operation</p>
+  <h2 class="sec-title">The research operation</h2>
   <p>PICPA is the second-oldest state CPA society in the country, with about 20,000 members. I took its research function from one publication line to the evidence base behind membership, workforce, advocacy, and revenue decisions. Some of the pieces:</p>
   <ul class="entries">
     <li>
@@ -179,7 +215,7 @@ HOME = f"""
 </section>
 
 <section id="background">
-  <p class="eyebrow">Background</p>
+  <h2 class="sec-title">Background</h2>
   <ul class="creds">
     <li><b>PhD, Psychological and Brain Sciences</b><span>University of Delaware</span></li>
     <li><b>MS, Experimental Psychology</b><span>Villanova University</span></li>
@@ -200,8 +236,8 @@ HOME = f"""
   </details>
 </section>
 
-<section id="writing">
-  <p class="eyebrow">Writing</p>
+<section id="writing" class="tone">
+  <h2 class="sec-title">Writing</h2>
   <ul class="entries">
     <li>
       <h3><a href="writing/adoption.html">Most AI projects don't fail on the technology. They fail on adoption.</a></h3>
@@ -215,7 +251,7 @@ HOME = f"""
 </section>
 
 <section id="contact" class="contact">
-  <p class="eyebrow">Contact</p>
+  <h2 class="sec-title">Contact</h2>
   <p>Talks and advisory, by email.</p>
   <p class="email"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
 </section>
@@ -366,7 +402,7 @@ M62_ESSAY = essay("The Missing 62%: researching 16,000 people on a $200 subscrip
 """)
 
 PAGES = {
-    "index.html": ("Lee Rogers", HOME, 0, "home"),
+    "index.html": ("Lee Rogers", HOME, 0, "home", True),
     "work/start-from-trust.html": ("Start from Trust · Lee Rogers", SFT, 1, "work"),
     "work/college-to-career.html": ("College to Career · Lee Rogers", CTC, 1, "work"),
     "work/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62, 1, "work"),
@@ -379,8 +415,10 @@ PAGES = {
 if __name__ == "__main__":
     (ROOT / "assets").mkdir(parents=True, exist_ok=True)
     (ROOT / "assets" / "site.css").write_text(CSS.strip() + "\n")
-    for rel, (title, body, depth, cur) in PAGES.items():
+    for rel, spec in PAGES.items():
+        title, body, depth, cur = spec[:4]
+        hero = spec[4] if len(spec) > 4 else False
         out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(shell(title, body, depth, cur))
+        out.write_text(shell(title, body, depth, cur, hero))
         print("wrote", out.relative_to(ROOT.parent))
