@@ -18,60 +18,48 @@ CSS = r"""
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --gutter:max(20px,env(safe-area-inset-left,0px));
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
-  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
 a{color:var(--accent-ink);text-decoration:none;border-bottom:1px solid rgba(42,90,78,.35)}
 a:hover,a:focus-visible{border-bottom-color:currentColor;outline:none}
-.frame{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px;padding-block:36px 72px}
-@media(min-width:900px){.frame{grid-template-columns:272px minmax(0,1fr);gap:80px;padding-block:72px 96px}}
-/* rail */
-.rail{display:flex;flex-direction:column;gap:18px;min-width:0}
-@media(min-width:900px){.rail{position:sticky;top:48px;align-self:start}}
-.rail img{width:132px;height:132px;object-fit:cover;object-position:top;border-radius:50%;display:block;max-width:100%}
-.rail .name{font-family:var(--display);font-size:30px;font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
-.rail .name span{font-weight:400;color:var(--muted);font-size:.6em;margin-left:.25em;letter-spacing:0}
-.rail .role{margin:0;color:var(--muted);font-size:15px;line-height:1.45;max-width:28ch}
-.rail nav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px;margin-top:4px}
-@media(min-width:900px){.rail nav{flex-direction:column;gap:6px;border-top:1px solid var(--rule);padding-top:16px}}
-.rail nav a{border:0;color:var(--ink)}
-.rail nav a[aria-current]{color:var(--accent-ink)}
-.rail nav a:hover{color:var(--accent-ink)}
-.rail .foot{font-size:13px;color:var(--muted);margin:0}
-@media(min-width:900px){.rail .foot{margin-top:12px}}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+/* top bar */
+.top{border-bottom:1px solid var(--rule);background:var(--bg)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-block:16px}
+.brand{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:-.01em;color:var(--ink);border:0;white-space:nowrap}
+.brand span{font-weight:400;color:var(--muted);font-size:.72em;margin-left:.3em}
+.top nav{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15.5px}
+.top nav a{border:0;color:var(--ink);padding-block:2px}
+.top nav a:hover{color:var(--accent-ink)}
+.top nav a[aria-current]{color:var(--accent-ink);border-bottom:2px solid var(--accent)}
 /* hero band (home) */
-.hero{background:var(--accent);color:#f3f6f4;margin-left:calc(-1 * max(20px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(20px,env(safe-area-inset-right,0px)));
-  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.hero-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:28px;padding-block:40px 0}
-@media(min-width:900px){.hero-in{grid-template-columns:minmax(0,1fr) 360px;gap:80px;padding-block:64px 0;align-items:end}}
-.hero .name{font-family:var(--display);font-weight:500;font-size:clamp(44px,6vw,64px);line-height:1;letter-spacing:-.02em;margin:0 0 14px;color:#fff}
+.hero{background:var(--accent);color:#f3f6f4}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:24px;padding-block:32px 0}
+@media(min-width:760px){.hero .wrap{grid-template-columns:minmax(0,1fr) 250px;gap:56px;padding-block:40px 0;align-items:end}}
+.hero .text{align-self:center;padding-bottom:28px}
+.hero .name{font-family:var(--display);font-weight:500;font-size:clamp(36px,4.6vw,48px);line-height:1;letter-spacing:-.02em;margin:0 0 12px;color:#fff}
 .hero .name span{font-weight:400;font-size:.42em;letter-spacing:0;margin-left:.3em;color:rgba(255,255,255,.72)}
-.hero .role{margin:0 0 36px;font-size:18px;line-height:1.45;max-width:34ch;color:rgba(255,255,255,.86)}
-@media(min-width:900px){.hero .role{margin-bottom:56px}}
-.hero .text{align-self:center;padding-bottom:0}
-.portrait{width:100%;max-width:360px;aspect-ratio:1/1;overflow:hidden;background:var(--accent);justify-self:end;margin:0}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;filter:grayscale(1) contrast(1.08) brightness(1.02);mix-blend-mode:luminosity;opacity:.92}
-@media(max-width:899px){.portrait{max-width:260px;justify-self:start}}
+.hero .role{margin:0;font-size:17px;line-height:1.45;max-width:36ch;color:rgba(255,255,255,.86)}
+.portrait{width:100%;max-width:250px;aspect-ratio:1/1;overflow:hidden;margin:0;justify-self:end}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+@media(max-width:759px){.portrait{max-width:200px;justify-self:start}}
 /* main */
-main{min-width:0;max-width:660px}
-section{margin:0 0 64px}
+main{padding-block:44px 80px}
+main .wrap{max-width:760px;margin-left:auto;margin-right:auto}
+@media(min-width:760px){main .wrap{margin-left:max(20px,calc((100% - 1040px)/2 + 20px))}}
+section{margin:0 0 56px}
 section:last-child{margin-bottom:0}
-.eyebrow{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;font-weight:600}
 h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,5vw,46px);line-height:1.15;letter-spacing:-.012em;margin:0 0 18px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:500;font-size:28px;line-height:1.2;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance}
 h3{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.25;margin:0 0 6px}
 p{margin:0 0 1em}
 p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27px);line-height:1.35;letter-spacing:-.005em}
-.sec-title{font-family:var(--display);font-weight:500;font-size:30px;line-height:1.15;letter-spacing:-.01em;margin:0 0 20px}
-.tone{background:var(--paper);padding:28px 28px 8px;margin:0 -28px 64px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-@media(max-width:899px){.tone{margin-inline:-20px;padding-inline:20px}}
-.tone .entries li:last-child{border-bottom:0}
-.pull{margin:0 0 64px;padding:0}
-.pull p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(23px,2.8vw,29px);line-height:1.3;letter-spacing:-.005em;margin:0 0 12px;text-wrap:balance}
-.pull cite{font-style:normal;font-size:14px;color:var(--muted)}
-.when{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.eyebrow{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;font-weight:600}
+.page-head{margin-bottom:28px}
+.page-head p{color:var(--muted);font-size:17px;max-width:60ch}
 /* entry lists */
 .entries{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .entries li{padding:22px 0;border-top:1px solid var(--rule)}
@@ -81,18 +69,22 @@ p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27p
 .entries p{margin:0;color:var(--ink)}
 .entries p+p{margin-top:6px}
 .entries .meta{color:var(--muted);font-size:14.5px}
-.entries .more{display:inline-block;margin-top:8px;font-size:15px}
+/* home pointers */
+.pointers{list-style:none;margin:0;padding:0;display:grid;gap:14px 32px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.pointers li{border-top:1px solid var(--rule);padding-top:12px}
+.pointers a{border:0;font-family:var(--display);font-size:21px;color:var(--ink)}
+.pointers a:hover{color:var(--accent-ink)}
+.pointers p{margin:4px 0 0;font-size:15px;color:var(--muted)}
 /* background */
 .creds{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:4px}
-.creds li{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 .creds b{font-weight:600}
 .creds span{color:var(--muted)}
-details{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;margin:18px 0 0}
-summary{cursor:pointer;font-weight:600;font-size:15px}
-summary::-webkit-details-marker{color:var(--muted)}
-details ol{margin:12px 0 4px;padding-left:22px;font-size:15px;color:var(--ink)}
-details li{margin-bottom:8px}
-details em{font-style:italic}
+.pubs{margin:8px 0 0;padding-left:22px;font-size:15.5px}
+.pubs li{margin-bottom:8px}
+/* pull quote */
+.pull{margin:0 0 56px;padding:0}
+.pull p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(23px,2.8vw,29px);line-height:1.3;letter-spacing:-.005em;margin:0 0 12px;text-wrap:balance}
+.pull cite{font-style:normal;font-size:14px;color:var(--muted)}
 /* contact */
 .contact p{font-size:19px}
 .contact .email{font-family:var(--mono);font-size:16px}
@@ -110,31 +102,32 @@ article li{margin-bottom:8px}
 .callout b{font-family:var(--display);font-weight:500;font-size:26px;display:block;line-height:1.1;margin-bottom:4px}
 .callout p{margin:0;font-size:16px}
 .back{font-size:14.5px;color:var(--muted);border:0}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px}
+footer a{color:var(--muted)}
 @media(prefers-reduced-motion:no-preference){a{transition:color .15s,border-color .15s}}
 """
 
+NAV = [("Papers", "papers.html"), ("Research", "research.html"), ("Background", "background.html"),
+       ("Writing", "writing.html"), ("Contact", "contact.html")]
+
 def shell(title, body, depth, current, hero=False):
     pre = "../" * depth
-    nav = []
-    for label, href, key in [("Papers", "index.html#papers", "home"), ("Research", "index.html#research", "home"),
-                             ("Background", "index.html#background", "home"), ("Writing", "index.html#writing", "home"),
-                             ("Contact", "index.html#contact", "home")]:
-        cur = ' aria-current="page"' if key == current else ""
-        nav.append(f'<a href="{pre}{href}"{cur}>{label}</a>')
-    hero_html = f'''
+    parts = []
+    for label, href in NAV:
+        cur = ' aria-current="page"' if href == current else ""
+        parts.append(f'<a href="{pre}{href}"{cur}>{label}</a>')
+    nav = "".join(parts)
+    hero_html = f"""
 <header class="hero">
-  <div class="hero-in">
+  <div class="wrap">
     <div class="text">
       <p class="name">Lee Rogers<span>PhD</span></p>
       <p class="role">Director of Strategic Research and Insights, PICPA and CPA Crossings. Philadelphia.</p>
     </div>
-    <figure class="portrait"><img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="360" height="360"></figure>
+    <figure class="portrait"><img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="250" height="250"></figure>
   </div>
-</header>''' if hero else ""
-    rail_id = "" if hero else f'''
-    <img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="132" height="132">
-    <p class="name">Lee Rogers<span>PhD</span></p>
-    <p class="role">Director of Strategic Research and Insights, PICPA and CPA Crossings. Philadelphia.</p>'''
+</header>""" if hero else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -145,41 +138,33 @@ def shell(title, body, depth, current, hero=False):
 <link rel="stylesheet" href="{pre}assets/site.css">
 <link rel="icon" href="data:,">
 </head>
-<body>{hero_html}
-<div class="frame">
-  <aside class="rail">{rail_id}
-    <nav aria-label="Site">{''.join(nav)}</nav>
-    <p class="foot"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
-  </aside>
-  <main>
+<body>
+<div class="top"><div class="wrap">
+  <a class="brand" href="{pre}index.html">Lee Rogers<span>PhD</span></a>
+  <nav aria-label="Site">{nav}</nav>
+</div></div>{hero_html}
+<main><div class="wrap">
 {body}
-  </main>
-</div>
+</div></main>
+<footer><div class="wrap"><span>Lee Rogers, Philadelphia</span><a href="mailto:{EMAIL}">{EMAIL}</a></div></footer>
 </body>
 </html>
 """
 
+def page(title, intro, body):
+    return f"""
+<div class="page-head">
+  <h1>{title}</h1>
+  {f'<p>{intro}</p>' if intro else ''}
+</div>
+{body}
+"""
+
 # ---------------------------------------------------------------- home
-HOME = f"""
-<section id="top">
+HOME = """
+<section>
   <p class="lede">I run the research operation at the Pennsylvania Institute of CPAs and its national research arm, CPA Crossings. The papers I write there go out under the names of state CPA societies across the country.</p>
   <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide. That turned out to be the right preparation for the question most organizations are now working through: what happens when skilled people are handed AI, and what it takes for them to keep using it.</p>
-</section>
-
-<section id="papers" class="tone">
-  <h2 class="sec-title">Papers</h2>
-  <ol class="entries">
-    <li>
-      <h3><a href="work/start-from-trust.html">Start from Trust</a></h3>
-      <p class="meta">Insights series · 2026</p>
-      <p>Technology adoption for small and mid-size CPA firms, built around a framework that maps people by how much they use AI and how much they trust it. Six state CPA organizations license it under their own brands, and a companion CPE webinar runs on the national circuit.</p>
-    </li>
-    <li>
-      <h3><a href="work/college-to-career.html">College to Career</a></h3>
-      <p class="meta">Insights series · 2026</p>
-      <p>What the first year at a firm asks of new accountants, and what firms and professors can do before day one. Built from roundtables with firm leaders and the published research; every recommended practice carries an evidence grade. The second package in the series.</p>
-    </li>
-  </ol>
 </section>
 
 <blockquote class="pull">
@@ -187,75 +172,94 @@ HOME = f"""
   <cite>Start from Trust, 2026</cite>
 </blockquote>
 
-<section id="research">
-  <h2 class="sec-title">The research operation</h2>
-  <p>PICPA is the second-oldest state CPA society in the country, with about 20,000 members. I took its research function from one publication line to the evidence base behind membership, workforce, advocacy, and revenue decisions. Some of the pieces:</p>
-  <ul class="entries">
-    <li>
-      <h3><a href="work/census.html">The Pennsylvania CPA Census</a></h3>
-      <p>A full-population portrait of the state's profession from the public licensing roster, reported in aggregate with small-cell suppression. The first whole-population evidence base the organization has had.</p>
-    </li>
-    <li>
-      <h3><a href="work/forecast.html">Membership to 2035</a></h3>
-      <p>A cohort-replacement forecast, backtested to under 1% error, with a scenario simulator leadership uses to test recruitment, retention, and pricing levers.</p>
-    </li>
-    <li>
-      <h3><a href="work/the-missing-62.html">The Missing 62%</a></h3>
-      <p>Roughly 16,000 licensed CPAs in the state were not members. A four-stage AI pipeline researched them from public sources, passed an accuracy audit with zero wrong entries, and surfaced a seven-figure opportunity. Built alone, on a flat $200-a-month subscription.</p>
-    </li>
-    <li>
-      <h3>Peer-society intelligence</h3>
-      <p>A verified base covering 17 state CPA societies: offerings, dues mechanics, financials. Built with paired gather-and-verify agents and adversarial checking, so every claim traces to a source.</p>
-    </li>
-    <li>
-      <h3>The member survey</h3>
-      <p>The organization's largest member survey to date, analyzed end to end: the outcome of a board-level KPI, the strongest driver of perceived value, and a weighting caveat on the reported NPS.</p>
-    </li>
+<section>
+  <ul class="pointers">
+    <li><a href="papers.html">Papers</a><p>Start from Trust and College to Career, the Insights series.</p></li>
+    <li><a href="research.html">Research</a><p>The census, the forecast to 2035, and the rest of the operation.</p></li>
+    <li><a href="background.html">Background</a><p>Degrees, prior work, publications.</p></li>
+    <li><a href="writing.html">Writing</a><p>Two essays on adoption and on building with AI.</p></li>
   </ul>
-</section>
-
-<section id="background">
-  <h2 class="sec-title">Background</h2>
-  <ul class="creds">
-    <li><b>PhD, Psychological and Brain Sciences</b><span>University of Delaware</span></li>
-    <li><b>MS, Experimental Psychology</b><span>Villanova University</span></li>
-    <li><b>BA, Psychology</b><span>Temple University</span></li>
-  </ul>
-  <p>Before PICPA: teaching and research at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at Delaware on visual statistical learning, reward, and attention.</p>
-  <p>Six peer-reviewed publications and 21 conference talks and posters. In progress: an MBA, and the IAPP AI Governance Professional credential.</p>
-  <details>
-    <summary>Publications</summary>
-    <ol>
-      <li>Park, Rogers, Vickery (2021). Reward impacts visual statistical learning. <em>Cognitive, Affective, and Behavioral Neuroscience</em>.</li>
-      <li>Rogers, Park, Vickery (2021). Visual statistical learning is modulated by arbitrary and natural categories. <em>Psychonomic Bulletin and Review</em>.</li>
-      <li>Park, Rogers, Vickery (2018). The roles of order, distance, and interstitial items in temporal visual statistical learning. <em>Attention, Perception, and Psychophysics</em>, 80(6).</li>
-      <li>Kan, Garrison, Drummey, Emmert, Rogers (2017). The roles of chronological age and time perspective in memory positivity. <em>Aging, Neuropsychology, and Cognition</em>, 25(4).</li>
-      <li>Rogers, Friedman, Vickery (2016). No apparent influence of reward upon visual statistical learning. <em>Frontiers in Psychology</em>, 7.</li>
-      <li>Anderson, Folk, Garrison, Rogers (2016). Mechanisms of habitual approach. <em>Journal of Experimental Psychology: General</em>, 145(6).</li>
-    </ol>
-  </details>
-</section>
-
-<section id="writing" class="tone">
-  <h2 class="sec-title">Writing</h2>
-  <ul class="entries">
-    <li>
-      <h3><a href="writing/adoption.html">Most AI projects don't fail on the technology. They fail on adoption.</a></h3>
-      <p class="meta">What a behavioral scientist sees in stalled AI rollouts</p>
-    </li>
-    <li>
-      <h3><a href="writing/the-missing-62.html">The Missing 62%: researching 16,000 people on a $200 subscription</a></h3>
-      <p class="meta">The build story, and the design rule that mattered more than the model</p>
-    </li>
-  </ul>
-</section>
-
-<section id="contact" class="contact">
-  <h2 class="sec-title">Contact</h2>
-  <p>Talks and advisory, by email.</p>
-  <p class="email"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
 </section>
 """
+
+PAPERS = page("Papers", "The Insights series: research packages written for state CPA societies to publish under their own names.", """
+<ol class="entries">
+  <li>
+    <h3><a href="work/start-from-trust.html">Start from Trust</a></h3>
+    <p class="meta">Insights series · 2026</p>
+    <p>Technology adoption for small and mid-size CPA firms, built around a framework that maps people by how much they use AI and how much they trust it. Six state CPA organizations license it under their own brands, and a companion CPE webinar runs on the national circuit.</p>
+  </li>
+  <li>
+    <h3><a href="work/college-to-career.html">College to Career</a></h3>
+    <p class="meta">Insights series · 2026</p>
+    <p>What the first year at a firm asks of new accountants, and what firms and professors can do before day one. Built from roundtables with firm leaders and the published research; every recommended practice carries an evidence grade. The second package in the series.</p>
+  </li>
+</ol>
+""")
+
+RESEARCH = page("The research operation", "PICPA is the second-oldest state CPA society in the country, with about 20,000 members. I took its research function from one publication line to the evidence base behind membership, workforce, advocacy, and revenue decisions. Some of the pieces:", """
+<ul class="entries">
+  <li>
+    <h3><a href="work/census.html">The Pennsylvania CPA Census</a></h3>
+    <p>A full-population portrait of the state's profession from the public licensing roster, reported in aggregate with small-cell suppression. The first whole-population evidence base the organization has had.</p>
+  </li>
+  <li>
+    <h3><a href="work/forecast.html">Membership to 2035</a></h3>
+    <p>A cohort-replacement forecast, backtested to under 1% error, with a scenario simulator leadership uses to test recruitment, retention, and pricing levers.</p>
+  </li>
+  <li>
+    <h3><a href="work/the-missing-62.html">The Missing 62%</a></h3>
+    <p>Roughly 16,000 licensed CPAs in the state were not members. A four-stage AI pipeline researched them from public sources, passed an accuracy audit with zero wrong entries, and surfaced a seven-figure opportunity. Built alone, on a flat $200-a-month subscription.</p>
+  </li>
+  <li>
+    <h3>Peer-society intelligence</h3>
+    <p>A verified base covering 17 state CPA societies: offerings, dues mechanics, financials. Built with paired gather-and-verify agents and adversarial checking, so every claim traces to a source.</p>
+  </li>
+  <li>
+    <h3>The member survey</h3>
+    <p>The organization's largest member survey to date, analyzed end to end: the outcome of a board-level KPI, the strongest driver of perceived value, and a weighting caveat on the reported NPS.</p>
+  </li>
+</ul>
+""")
+
+BACKGROUND = page("Background", "", """
+<ul class="creds">
+  <li><b>PhD, Psychological and Brain Sciences</b><span>University of Delaware</span></li>
+  <li><b>MS, Experimental Psychology</b><span>Villanova University</span></li>
+  <li><b>BA, Psychology</b><span>Temple University</span></li>
+</ul>
+<p>Before PICPA: teaching and research at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at Delaware on visual statistical learning, reward, and attention.</p>
+<p>Six peer-reviewed publications and 21 conference talks and posters. In progress: an MBA, and the IAPP AI Governance Professional credential.</p>
+<h2 style="margin-top:40px">Publications</h2>
+<ol class="pubs">
+  <li>Park, Rogers, Vickery (2021). Reward impacts visual statistical learning. <em>Cognitive, Affective, and Behavioral Neuroscience</em>.</li>
+  <li>Rogers, Park, Vickery (2021). Visual statistical learning is modulated by arbitrary and natural categories. <em>Psychonomic Bulletin and Review</em>.</li>
+  <li>Park, Rogers, Vickery (2018). The roles of order, distance, and interstitial items in temporal visual statistical learning. <em>Attention, Perception, and Psychophysics</em>, 80(6).</li>
+  <li>Kan, Garrison, Drummey, Emmert, Rogers (2017). The roles of chronological age and time perspective in memory positivity. <em>Aging, Neuropsychology, and Cognition</em>, 25(4).</li>
+  <li>Rogers, Friedman, Vickery (2016). No apparent influence of reward upon visual statistical learning. <em>Frontiers in Psychology</em>, 7.</li>
+  <li>Anderson, Folk, Garrison, Rogers (2016). Mechanisms of habitual approach. <em>Journal of Experimental Psychology: General</em>, 145(6).</li>
+</ol>
+""")
+
+WRITING = page("Writing", "", """
+<ul class="entries">
+  <li>
+    <h3><a href="writing/adoption.html">Most AI projects don't fail on the technology. They fail on adoption.</a></h3>
+    <p class="meta">What a behavioral scientist sees in stalled AI rollouts</p>
+  </li>
+  <li>
+    <h3><a href="writing/the-missing-62.html">The Missing 62%: researching 16,000 people on a $200 subscription</a></h3>
+    <p class="meta">The build story, and the design rule that mattered more than the model</p>
+  </li>
+</ul>
+""")
+
+CONTACT = page("Contact", "", f"""
+<div class="contact">
+  <p>Talks and advisory, by email.</p>
+  <p class="email"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+</div>
+""")
 
 # ---------------------------------------------------------------- case studies
 def article(eyebrow, title, sub, facts, body):
@@ -402,14 +406,19 @@ M62_ESSAY = essay("The Missing 62%: researching 16,000 people on a $200 subscrip
 """)
 
 PAGES = {
-    "index.html": ("Lee Rogers", HOME, 0, "home", True),
-    "work/start-from-trust.html": ("Start from Trust · Lee Rogers", SFT, 1, "work"),
-    "work/college-to-career.html": ("College to Career · Lee Rogers", CTC, 1, "work"),
-    "work/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62, 1, "work"),
-    "work/census.html": ("The Pennsylvania CPA Census · Lee Rogers", CENSUS, 1, "work"),
-    "work/forecast.html": ("Membership to 2035 · Lee Rogers", FORECAST, 1, "work"),
-    "writing/adoption.html": ("AI fails on adoption · Lee Rogers", ADOPTION, 1, "writing"),
-    "writing/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62_ESSAY, 1, "writing"),
+    "index.html": ("Lee Rogers", HOME, 0, "index.html", True),
+    "papers.html": ("Papers · Lee Rogers", PAPERS, 0, "papers.html"),
+    "research.html": ("Research · Lee Rogers", RESEARCH, 0, "research.html"),
+    "background.html": ("Background · Lee Rogers", BACKGROUND, 0, "background.html"),
+    "writing.html": ("Writing · Lee Rogers", WRITING, 0, "writing.html"),
+    "contact.html": ("Contact · Lee Rogers", CONTACT, 0, "contact.html"),
+    "work/start-from-trust.html": ("Start from Trust · Lee Rogers", SFT, 1, "papers.html"),
+    "work/college-to-career.html": ("College to Career · Lee Rogers", CTC, 1, "papers.html"),
+    "work/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62, 1, "research.html"),
+    "work/census.html": ("The Pennsylvania CPA Census · Lee Rogers", CENSUS, 1, "research.html"),
+    "work/forecast.html": ("Membership to 2035 · Lee Rogers", FORECAST, 1, "research.html"),
+    "writing/adoption.html": ("AI fails on adoption · Lee Rogers", ADOPTION, 1, "writing.html"),
+    "writing/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62_ESSAY, 1, "writing.html"),
 }
 
 if __name__ == "__main__":
