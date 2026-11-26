@@ -77,8 +77,9 @@ p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27p
 .pointers p{margin:4px 0 0;font-size:15px;color:var(--muted)}
 /* background */
 .creds{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:4px}
-.creds b{font-weight:600}
+.creds b{font-weight:600;margin-right:10px}
 .creds span{color:var(--muted)}
+.sub{margin-top:44px;padding-top:28px;border-top:1px solid var(--rule)}
 .pubs{margin:8px 0 0;padding-left:22px;font-size:15.5px}
 .pubs li{margin-bottom:8px}
 /* pull quote */
@@ -162,8 +163,7 @@ def page(title, intro, body):
 # ---------------------------------------------------------------- home
 HOME = """
 <section>
-  <p class="lede">I run the research operation at the Pennsylvania Institute of CPAs and its national research arm, CPA Crossings. The papers I write there go out under the names of state CPA societies across the country.</p>
-  <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide. That turned out to be the right preparation for the question most organizations are now working through: what happens when skilled people are handed AI, and what it takes for them to keep using it.</p>
+  <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide.</p>
 </section>
 """
 
@@ -174,8 +174,8 @@ BACKGROUND = page("Background", "", """
   <li><b>BA, Psychology</b><span>Temple University</span></li>
 </ul>
 <p>Before PICPA: teaching and research at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at Delaware on visual statistical learning, reward, and attention.</p>
-<p>Six peer-reviewed publications and 21 conference talks and posters. In progress: an MBA, and the IAPP AI Governance Professional credential.</p>
-<h2 style="margin-top:40px">Publications</h2>
+<section class="sub">
+<h2>Academic publications</h2>
 <ol class="pubs">
   <li>Park, Rogers, Vickery (2021). Reward impacts visual statistical learning. <em>Cognitive, Affective, and Behavioral Neuroscience</em>.</li>
   <li>Rogers, Park, Vickery (2021). Visual statistical learning is modulated by arbitrary and natural categories. <em>Psychonomic Bulletin and Review</em>.</li>
@@ -184,11 +184,11 @@ BACKGROUND = page("Background", "", """
   <li>Rogers, Friedman, Vickery (2016). No apparent influence of reward upon visual statistical learning. <em>Frontiers in Psychology</em>, 7.</li>
   <li>Anderson, Folk, Garrison, Rogers (2016). Mechanisms of habitual approach. <em>Journal of Experimental Psychology: General</em>, 145(6).</li>
 </ol>
+</section>
 """)
 
 CONTACT = page("Contact", "", f"""
 <div class="contact">
-  <p>Talks and advisory, by email.</p>
   <p class="email"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
 </div>
 """)
