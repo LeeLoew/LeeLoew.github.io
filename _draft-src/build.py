@@ -242,7 +242,7 @@ HOME = """
   <h2 class="label">Service</h2>
   <div class="body">
     <ul class="scope">
-      <li>Community member, Institutional Review Board, Holy Family University</li>
+      <li>Independent member, Institutional Review Board, Holy Family University</li>
     </ul>
   </div>
 </section>
@@ -283,7 +283,7 @@ BACKGROUND = page("Background", "", """
   <h2 class="label">Service</h2>
   <div class="body">
     <ul class="roles">
-      <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, October 2025 to present</span>
+      <li><b>Institutional Review Board, Independent Member</b><span>Holy Family University, October 2025 to present</span>
         <ul class="points">
           <li>Independent oversight of research involving people, on the board with authority to approve or stop it</li>
           <li>Holds the outside seat that federal regulations require, answerable to the public and not the institution</li>
