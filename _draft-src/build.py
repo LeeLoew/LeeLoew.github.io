@@ -304,20 +304,6 @@ BACKGROUND = page("Background", "", """
     </ul>
   </div>
 </section>
-
-<section class="band">
-  <h2 class="label">Academic publications</h2>
-  <div class="body">
-<ol class="pubs">
-  <li>Park, Rogers, Vickery (2021). Reward impacts visual statistical learning. <em>Cognitive, Affective, and Behavioral Neuroscience</em>.</li>
-  <li>Rogers, Park, Vickery (2021). Visual statistical learning is modulated by arbitrary and natural categories. <em>Psychonomic Bulletin and Review</em>.</li>
-  <li>Park, Rogers, Vickery (2018). The roles of order, distance, and interstitial items in temporal visual statistical learning. <em>Attention, Perception, and Psychophysics</em>, 80(6).</li>
-  <li>Kan, Garrison, Drummey, Emmert, Rogers (2017). The roles of chronological age and time perspective in memory positivity. <em>Aging, Neuropsychology, and Cognition</em>, 25(4).</li>
-  <li>Rogers, Friedman, Vickery (2016). No apparent influence of reward upon visual statistical learning. <em>Frontiers in Psychology</em>, 7.</li>
-  <li>Anderson, Folk, Garrison, Rogers (2016). Mechanisms of habitual approach. <em>Journal of Experimental Psychology: General</em>, 145(6).</li>
-</ol>
-  </div>
-</section>
 """)
 
 CONTACT = page("Contact", "", f"""
