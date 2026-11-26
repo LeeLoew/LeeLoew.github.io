@@ -272,7 +272,7 @@ BACKGROUND = page("Background", "", """
         <ul class="points">
           <li>Led the lab's operations and its research team</li>
           <li>Responsible for running a multi-million-dollar MRI scanner safely with human participants</li>
-          <li>Delivered peer-reviewed research on how people learn and decide</li>
+          <li>Authored peer-reviewed scientific publications on the cognitive neuroscience of how people learn and decide</li>
         </ul>
       </li>
     </ul>
