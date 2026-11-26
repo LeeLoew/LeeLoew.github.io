@@ -253,7 +253,7 @@ BACKGROUND = page("Background", "", """
       <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span></li>
       <li><b>Acting Director of Research (Research Specialist)</b><span>PICPA and CPA Crossings, July 2025 to April 2026</span></li>
       <li><b>Professor</b><span>Drexel University</span></li>
-      <li><b>Market and user research consulting</b><span>Market and user research for product companies, from a global electronics maker's foldable phones to medical devices tested with their users. Argued for changing FDA guidance on device testing to adopt more rigorous statistical methods and prevent harmful use errors, in work presented at the human factors conference FDA reviewers attend.</span></li>
+      <li><b>Market and user research consulting</b><span>Market and user research for product companies, from a global electronics maker's foldable phones to medical devices tested with their users. Argued for changing FDA guidance on device testing to adopt more rigorous statistical and research methods and prevent harmful use errors, including a 2021 presentation at the HFES Health Care Symposium, where FDA's human factors reviewers take part.</span></li>
       <li><b>Cognitive neuroscience laboratory</b><span>Ran the lab day to day and operated its MRI brain-imaging studies of how people learn and decide</span></li>
     </ul>
   </div>
