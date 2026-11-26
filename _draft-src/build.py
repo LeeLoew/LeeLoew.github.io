@@ -174,7 +174,7 @@ HOME = """
   <ul class="scope">
     <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
     <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
-    <li>Co-lead of the enterprise AI enablement and governance program</li>
+    <li>AI adoption and governance across the organization</li>
   </ul>
 </section>
 
