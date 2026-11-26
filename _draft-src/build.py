@@ -253,8 +253,9 @@ BACKGROUND = page("Background", "", """
       <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span></li>
       <li><b>Acting Director of Research (Research Specialist)</b><span>PICPA and CPA Crossings, July 2025 to April 2026</span></li>
       <li><b>Professor</b><span>Drexel University</span></li>
+      <li><b>Product research consulting</b><span>Tested regulated medical devices and foldable smartphones with users, guiding design decisions for manufacturers including a global electronics company</span></li>
+      <li><b>Cognitive neuroscience laboratory</b><span>Ran the lab day to day and operated its MRI brain-imaging studies of how people learn and decide</span></li>
     </ul>
-    <p>Before that: research consulting for product companies, testing regulated medical devices and foldable smartphones with users to guide design decisions.</p>
   </div>
 </section>
 
