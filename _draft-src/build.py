@@ -70,7 +70,7 @@ p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27p
 .entries p+p{margin-top:6px}
 .entries .meta{color:var(--muted);font-size:14.5px}
 /* home pointers */
-.pointers{list-style:none;margin:0;padding:0;display:grid;gap:14px 32px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.pointers{list-style:none;margin:0;padding:0;display:grid;gap:14px 32px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .pointers li{border-top:1px solid var(--rule);padding-top:12px}
 .pointers a{border:0;font-family:var(--display);font-size:21px;color:var(--ink)}
 .pointers a:hover{color:var(--accent-ink)}
@@ -108,7 +108,7 @@ footer a{color:var(--muted)}
 @media(prefers-reduced-motion:no-preference){a{transition:color .15s,border-color .15s}}
 """
 
-NAV = [("Papers", "papers.html"), ("Research", "research.html"), ("Background", "background.html"),
+NAV = [("Papers", "papers.html"), ("Background", "background.html"),
        ("Writing", "writing.html"), ("Contact", "contact.html")]
 
 def shell(title, body, depth, current, hero=False):
@@ -175,7 +175,6 @@ HOME = """
 <section>
   <ul class="pointers">
     <li><a href="papers.html">Papers</a><p>Start from Trust and College to Career, the Insights series.</p></li>
-    <li><a href="research.html">Research</a><p>The census, the forecast to 2035, and the rest of the operation.</p></li>
     <li><a href="background.html">Background</a><p>Degrees, prior work, publications.</p></li>
     <li><a href="writing.html">Writing</a><p>Two essays on adoption and on building with AI.</p></li>
   </ul>
@@ -195,31 +194,6 @@ PAPERS = page("Papers", "The Insights series: research packages written for stat
     <p>What the first year at a firm asks of new accountants, and what firms and professors can do before day one. Built from roundtables with firm leaders and the published research; every recommended practice carries an evidence grade. The second package in the series.</p>
   </li>
 </ol>
-""")
-
-RESEARCH = page("The research operation", "PICPA is the second-oldest state CPA society in the country, with about 20,000 members. I took its research function from one publication line to the evidence base behind membership, workforce, advocacy, and revenue decisions. Some of the pieces:", """
-<ul class="entries">
-  <li>
-    <h3><a href="work/census.html">The Pennsylvania CPA Census</a></h3>
-    <p>A full-population portrait of the state's profession from the public licensing roster, reported in aggregate with small-cell suppression. The first whole-population evidence base the organization has had.</p>
-  </li>
-  <li>
-    <h3><a href="work/forecast.html">Membership to 2035</a></h3>
-    <p>A cohort-replacement forecast, backtested to under 1% error, with a scenario simulator leadership uses to test recruitment, retention, and pricing levers.</p>
-  </li>
-  <li>
-    <h3><a href="work/the-missing-62.html">The Missing 62%</a></h3>
-    <p>Roughly 16,000 licensed CPAs in the state were not members. A four-stage AI pipeline researched them from public sources, passed an accuracy audit with zero wrong entries, and surfaced a seven-figure opportunity. Built alone, on a flat $200-a-month subscription.</p>
-  </li>
-  <li>
-    <h3>Peer-society intelligence</h3>
-    <p>A verified base covering 17 state CPA societies: offerings, dues mechanics, financials. Built with paired gather-and-verify agents and adversarial checking, so every claim traces to a source.</p>
-  </li>
-  <li>
-    <h3>The member survey</h3>
-    <p>The organization's largest member survey to date, analyzed end to end: the outcome of a board-level KPI, the strongest driver of perceived value, and a weighting caveat on the reported NPS.</p>
-  </li>
-</ul>
 """)
 
 BACKGROUND = page("Background", "", """
@@ -306,52 +280,6 @@ CTC = article("Insights series · 2026", "College to Career",
 <p>The second package in the Insights series, delivered to state CPA societies for their own branding, with a partner webinar and a classroom offer alongside.</p>
 """)
 
-M62 = article("Applied AI · PICPA", "The Missing 62%",
-  "Member research at a scale no team could do by hand, verified by a zero-error audit. Designed and built solo.",
-  [("0", "wrong entries in the accuracy audit"), ("≈16,000", "people to research"), ("3–4", "person-years of manual work, estimated"), ("~$200/mo", "flat AI subscription, no vendor contract")],
-  """
-<h2>The challenge</h2>
-<p>A majority of Pennsylvania's licensed CPAs, roughly 16,000 people or about 62%, weren't PICPA members. The opportunity was obvious. The prospect list wasn't much help: names and license numbers only, without the firm, role, or seniority you'd need to reach anyone thoughtfully. Researching one person properly takes 20 to 30 minutes across multiple sources, which works out to an estimated three to four person-years of manual work. Commercial data vendors tested poorly, and they raised the kind of compliance and brand questions a professional association is obligated to ask.</p>
-<h2>The approach</h2>
-<p>I built a four-stage multi-agent AI pipeline:</p>
-<ol>
-  <li><b>Anchor</b> each person's identity, rejecting the look-alikes</li>
-  <li><b>Corroborate</b> facts across five independent public sources</li>
-  <li><b>Weigh</b> the evidence by source reliability</li>
-  <li><b>Verify</b> every value against the page it was cited from</li>
-</ol>
-<p>Two design choices mattered more than any model choice. The pipeline runs locally, so sensitive member data never leaves the building. And it declines rather than guesses: every field carries a source and a confidence level, and when the evidence isn't there, the field stays empty.</p>
-<div class="callout"><b>7/10, zero errors</b><p>In a bake-off against a commercial data tool, the pipeline scored 7 out of 10 with zero errors. The vendor managed 2 to 3 out of 10 and was confidently wrong.</p></div>
-<h2>The results</h2>
-<p>Thousands of records enriched, and an accuracy audit that found zero wrong entries. The output is a segmented, source-cited dataset behind a seven-figure membership opportunity, built solo on a flat ~$200/month AI subscription, without per-record metering or a data-vendor contract.</p>
-<h2>What I learned</h2>
-<p>The speed matters less than the trust. A pipeline that guesses confidently poisons its own results: the first wrong answer someone acts on discredits every row that was right. Provenance, confidence levels, and the discipline to leave a field blank are what make AI output something a team will build a campaign on.</p>
-""")
-
-CENSUS = article("Benchmarking · PICPA", "The Pennsylvania CPA Census",
-  "A full-population portrait of a state's accounting profession. Designer and analyst.",
-  [("Full population", "every licensee in the state, member or not"), ("Aggregate only", "reporting with small-cell suppression")],
-  """
-<h2>The context</h2>
-<p>Membership organizations usually see only their member file, a partial and self-selected view of the market they serve. The question that matters is the whole profession: everyone licensed in the state, member or not.</p>
-<h2>The method</h2>
-<p>A full-population portrait built from public licensure data and governed by a strict privacy-containment model: a hard wall between public and internal data, aggregate-only reporting, and small-cell suppression so no individual is ever exposed. The result is a view of an entire state profession, its generations, its geography, and its membership penetration, built from data anyone could legally access and handled more carefully than required.</p>
-<h2>What it demonstrates</h2>
-<p>The method repeats in any state with an accessible licensure roster, which makes it a template for membership organizations that want to see their whole market rather than the slice that already joined. Privacy containment is built into the method itself, so the rigor doesn't depend on anyone's good intentions.</p>
-""")
-
-FORECAST = article("Forecasting · PICPA", "Membership to 2035",
-  "A membership forecast built overnight by autonomous AI agents, then made to prove itself. Architect.",
-  [("<1%", "backtest error on the full sample"), ("Overnight", "autonomous multi-agent build, quality-gated")],
-  """
-<h2>The context</h2>
-<p>Membership organizations plan against demographic change they can feel but rarely quantify. Leadership needed a forecast rigorous enough to build strategy on, plus levers they could test themselves rather than a static chart.</p>
-<h2>The method</h2>
-<p>A cohort-replacement forecast designed, built, and quality-gated by an autonomous overnight multi-agent AI run. Two candidate models were built and judged in an independent bake-off; the winner backtested to under 1% error on the full sample and was validated against a blind holdout. The deliverables include an interactive scenario simulator that lets leadership test recruitment, retention, and pricing levers directly.</p>
-<h2>What it demonstrates</h2>
-<p>Quantitative strategy work run by AI can be held to the same standards as work run by a research team: competing models, backtests, and independent judging before anything reached a decision-maker. The overnight-run pattern, a defined contract with gated quality checks, generalizes to any analysis too large for a single working session.</p>
-""")
-
 # ---------------------------------------------------------------- essays
 def essay(title, sub, body):
     return f"""
@@ -408,15 +336,11 @@ M62_ESSAY = essay("The Missing 62%: researching 16,000 people on a $200 subscrip
 PAGES = {
     "index.html": ("Lee Rogers", HOME, 0, "index.html", True),
     "papers.html": ("Papers · Lee Rogers", PAPERS, 0, "papers.html"),
-    "research.html": ("Research · Lee Rogers", RESEARCH, 0, "research.html"),
     "background.html": ("Background · Lee Rogers", BACKGROUND, 0, "background.html"),
     "writing.html": ("Writing · Lee Rogers", WRITING, 0, "writing.html"),
     "contact.html": ("Contact · Lee Rogers", CONTACT, 0, "contact.html"),
     "work/start-from-trust.html": ("Start from Trust · Lee Rogers", SFT, 1, "papers.html"),
     "work/college-to-career.html": ("College to Career · Lee Rogers", CTC, 1, "papers.html"),
-    "work/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62, 1, "research.html"),
-    "work/census.html": ("The Pennsylvania CPA Census · Lee Rogers", CENSUS, 1, "research.html"),
-    "work/forecast.html": ("Membership to 2035 · Lee Rogers", FORECAST, 1, "research.html"),
     "writing/adoption.html": ("AI fails on adoption · Lee Rogers", ADOPTION, 1, "writing.html"),
     "writing/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62_ESSAY, 1, "writing.html"),
 }
