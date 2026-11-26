@@ -108,8 +108,7 @@ footer a{color:var(--muted)}
 @media(prefers-reduced-motion:no-preference){a{transition:color .15s,border-color .15s}}
 """
 
-NAV = [("Papers", "papers.html"), ("Background", "background.html"),
-       ("Writing", "writing.html"), ("Contact", "contact.html")]
+NAV = [("Background", "background.html"), ("Contact", "contact.html")]
 
 def shell(title, body, depth, current, hero=False):
     pre = "../" * depth
@@ -171,30 +170,7 @@ HOME = """
   <p>The firms that navigate this period best will not be the firms that trusted everything. They will be the firms that started from trust and built from there.</p>
   <cite>Start from Trust, 2026</cite>
 </blockquote>
-
-<section>
-  <ul class="pointers">
-    <li><a href="papers.html">Papers</a><p>Start from Trust and College to Career, the Insights series.</p></li>
-    <li><a href="background.html">Background</a><p>Degrees, prior work, publications.</p></li>
-    <li><a href="writing.html">Writing</a><p>Two essays on adoption and on building with AI.</p></li>
-  </ul>
-</section>
 """
-
-PAPERS = page("Papers", "The Insights series: research packages written for state CPA societies to publish under their own names.", """
-<ol class="entries">
-  <li>
-    <h3><a href="work/start-from-trust.html">Start from Trust</a></h3>
-    <p class="meta">Insights series · 2026</p>
-    <p>Technology adoption for small and mid-size CPA firms, built around a framework that maps people by how much they use AI and how much they trust it. Six state CPA organizations license it under their own brands, and a companion CPE webinar runs on the national circuit.</p>
-  </li>
-  <li>
-    <h3><a href="work/college-to-career.html">College to Career</a></h3>
-    <p class="meta">Insights series · 2026</p>
-    <p>What the first year at a firm asks of new accountants, and what firms and professors can do before day one. Built from roundtables with firm leaders and the published research; every recommended practice carries an evidence grade. The second package in the series.</p>
-  </li>
-</ol>
-""")
 
 BACKGROUND = page("Background", "", """
 <ul class="creds">
@@ -215,19 +191,6 @@ BACKGROUND = page("Background", "", """
 </ol>
 """)
 
-WRITING = page("Writing", "", """
-<ul class="entries">
-  <li>
-    <h3><a href="writing/adoption.html">Most AI projects don't fail on the technology. They fail on adoption.</a></h3>
-    <p class="meta">What a behavioral scientist sees in stalled AI rollouts</p>
-  </li>
-  <li>
-    <h3><a href="writing/the-missing-62.html">The Missing 62%: researching 16,000 people on a $200 subscription</a></h3>
-    <p class="meta">The build story, and the design rule that mattered more than the model</p>
-  </li>
-</ul>
-""")
-
 CONTACT = page("Contact", "", f"""
 <div class="contact">
   <p>Talks and advisory, by email.</p>
@@ -235,114 +198,10 @@ CONTACT = page("Contact", "", f"""
 </div>
 """)
 
-# ---------------------------------------------------------------- case studies
-def article(eyebrow, title, sub, facts, body):
-    f = "".join(f"<li><b>{v}</b><span>{l}</span></li>" for v, l in facts)
-    return f"""
-<article>
-  <header>
-    <p class="eyebrow">{eyebrow}</p>
-    <h1>{title}</h1>
-    <p>{sub}</p>
-  </header>
-  <ul class="facts">{f}</ul>
-{body}
-  <p style="margin-top:48px"><a class="back" href="../index.html">&larr; Lee Rogers</a></p>
-</article>
-"""
-
-SFT = article("Insights series · 2026", "Start from Trust",
-  "A research package that meets a skeptical profession where it stands. PICPA and CPA Crossings. Author and lead researcher.",
-  [("6", "state CPA organizations license the research"), ("4", "starting points in the AI Trust and Usage Quadrant"), ("1 hr", "companion CPE webinar on the national circuit")],
-  """
-<h2>The challenge</h2>
-<p>Small and mid-size accounting firms were hearing the same advice from every direction: adopt AI faster. The advice ignored the defining trait of the profession, a deliberate and well-placed skepticism. Firms needed a way to adopt technology on their own terms, without dismissing AI and without over-trusting it.</p>
-<h2>The approach</h2>
-<p>I built the package around a reframe: treat professional caution as an asset and design adoption around it. The anchor is a primary research paper, supported by tools a firm can put to work the same week: a vendor-evaluation checklist, a where-do-I-start guide, a discussion guide for firm leaders, and a quick-start list of actions.</p>
-<p>At the center is the AI Trust and Usage Quadrant, which maps people on two axes: how much they use AI, and how much they trust it. Each quadrant is a different starting point, and each needs a different first move.</p>
-<div class="callout"><b>Licensed nationally</b><p>Six state CPA organizations have licensed and rebranded the package for their own members.</p></div>
-<h2>The results</h2>
-<p>The package shipped as a published report with supporting tools, blog content, infographics, and video. Six state CPA organizations license and rebrand it for their members, and a companion one-hour CPE webinar built from the research runs on the national state-society circuit.</p>
-<h2>What I learned</h2>
-<p>The reframe did the heavy lifting. Research that treats skepticism as professional judgment gets a hearing that another adopt-faster report never would. Firms listened because the work respected how they already make decisions.</p>
-""")
-
-CTC = article("Insights series · 2026", "College to Career",
-  "Stronger starts, sharper professionals. PICPA and CPA Crossings. Author and lead researcher.",
-  [("30", "sourced references"), ("Graded", "evidence behind every recommended practice"), ("4", "audiences: students, new hires, firms, professors")],
-  """
-<h2>The challenge</h2>
-<p>Almost every career resource for accounting students stops at the offer letter. Explore the career, win the scholarship, pass the exam, land the internship, and then silence. School teaches the accounting; nobody teaches the rest. Firms, meanwhile, were describing the same first-year gaps to each other and not to the students.</p>
-<h2>The approach</h2>
-<p>I built the package from direct conversations with the people who lead and hire at CPA firms, then grounded each claim in the published research. The paper names the practices that hold up, grades the evidence behind each one, and names the famous statistics nobody should be citing. It travels with a set of pages written for each audience: the real recruiting calendar for students, a 12-behavior scorecard for the first 90 days, a six-move onboarding plan for firms that run without a training department, and a classroom session for professors.</p>
-<div class="callout"><b>Four doors, one body of evidence</b><p>Students, new hires, firm leaders, and professors each get a page that hands them something usable the same day, all drawn from the same graded research.</p></div>
-<h2>Where it stands</h2>
-<p>The second package in the Insights series, delivered to state CPA societies for their own branding, with a partner webinar and a classroom offer alongside.</p>
-""")
-
-# ---------------------------------------------------------------- essays
-def essay(title, sub, body):
-    return f"""
-<article>
-  <header>
-    <p class="eyebrow">Writing</p>
-    <h1>{title}</h1>
-    <p>{sub}</p>
-  </header>
-{body}
-  <p style="margin-top:48px"><a class="back" href="../index.html">&larr; Lee Rogers</a></p>
-</article>
-"""
-
-ADOPTION = essay("Most AI projects don't fail on the technology. They fail on adoption.",
-  "What a behavioral scientist sees in stalled AI rollouts", """
-<p>Walk into any organization that "adopted AI last year" and ask a simple question: who is using it, daily, for real work?</p>
-<p>The honest answer is usually a small fraction of the people who were supposed to. The licenses are paid for. The kickoff went fine. The technology works. And adoption quietly stalled anyway.</p>
-<p>That is a human failure, not a technology failure, and it is predictable.</p>
-<h2>Three ways rollouts stall</h2>
-<h3>Trust is miscalibrated</h3>
-<p>People don't need to trust AI more; they need to trust it accurately. Some ignore the tool entirely because one early error convinced them it can't be relied on. Others accept everything it produces without checking, right up until it's confidently wrong about something that matters. Both patterns are well documented in the research on automation bias, and both are expensive: one wastes the tool, the other creates risk.</p>
-<h3>The habit never forms</h3>
-<p>Using AI means interrupting a workflow someone has run, comfortably, for years. That switch has a cost every single time, and if the payoff isn't immediate and obvious, the old way wins. A mandate can't fix that. The design has to, by meeting people inside the work they already do instead of in a separate window they have to remember to open.</p>
-<h3>Judgment feels threatened</h3>
-<p>Skilled professionals hear "AI will make you more efficient" as "AI will make you less necessary." Unless the rollout is explicit about where human judgment stays in the loop, resistance is rational. People are defending the part of the job that makes them valuable.</p>
-<h2>Caution is not the enemy</h2>
-<p>In my research with accounting firms, a profession famous for its skepticism, the most useful reframe was to treat professional caution as a strength to build on rather than a lag to overcome. The firms that adopt AI well aren't the fastest. They're the ones that moved deliberately, matching their usage to their trust and closing the gap in both directions.</p>
-<p>That's the thinking behind the AI Trust and Usage Quadrant, a framework from my published adoption research. Map where people sit on two axes, how much they use AI and how much they trust it, and you get four very different starting points. The over-trusting experimenter needs guardrails. The capable skeptic needs a low-stakes win. Treat them identically and the rollout produces risk and resentment at the same time.</p>
-<h2>What works</h2>
-<p>Nothing here requires a bigger model. It requires designing for the humans:</p>
-<ul>
-  <li>Start where trust already exists. Find the workflow where people already double-check everything, and give them AI that shows its sources, so verifying its work feels natural rather than burdensome.</li>
-  <li>Make the first win personal. Adoption spreads through "look what this just did for me," and almost never through training decks.</li>
-  <li>Be explicit about the division of labor. Write down what the AI drafts and what the human decides; ambiguity breeds both over-reliance and refusal.</li>
-  <li>Measure usage, not access. Weekly real-work usage, trust calibration, and time to first value say more than the number of licenses provisioned.</li>
-</ul>
-<p>The organizations getting real value from AI treat adoption as what it is: a behavior-change problem, with decades of science behind it, sitting right where most rollouts never look.</p>
-""")
-
-M62_ESSAY = essay("The Missing 62%: researching 16,000 people on a $200 subscription",
-  "The build story, and the design rule that mattered more than the model", """
-<p>I needed to research 16,000 people.</p>
-<p>Done properly, one person takes 20 to 30 minutes: confirm the identity, find the firm, figure out the role, check that you haven't mixed them up with someone who shares the name. Multiply that across the list and it comes to an estimated three to four person-years of full-time work. I didn't have a team. I had a flat AI subscription that costs about $200 a month.</p>
-<p>Here's how the list got that big. At PICPA, the Pennsylvania Institute of CPAs, a majority of the state's licensed CPAs, about 62%, weren't members. Leadership wanted to change that thoughtfully, but the prospect list held names and license numbers and nothing else. You can't write a thoughtful letter to a license number.</p>
-<p>The obvious answer was a commercial data vendor. We tested that first, and the test settled it: scored head to head, the vendor managed 2 to 3 out of 10, and it delivered its wrong answers with total confidence. For a professional association, confident wrong answers are a compliance problem and a brand problem at the same time.</p>
-<p>So I built the researcher I needed out of AI agents. The pipeline treats each person as a small research project: it pins down identity before anything else, gathers facts from five independent public sources, weighs the evidence by how reliable each source has proven, and then checks every value against the page it was cited from. In the same head-to-head test, it scored 7 out of 10 with zero errors.</p>
-<p>Two rules shaped the design more than any technical decision. Member data stays local, on machines we control. And when the evidence is thin, a field stays blank; a blank cell is honest, and a plausible guess is a small landmine for whoever acts on it.</p>
-<p>The result: thousands of records enriched, an audit that found zero wrong entries, and a segmented, source-cited dataset behind a seven-figure membership opportunity. The monthly bill never changed.</p>
-<h2>The lesson</h2>
-<p>Accuracy is the product. The first time a colleague acts on a wrong answer, they stop trusting the whole dataset, and no amount of speed buys that trust back. What made this one hold up is that it's checkable: every value carries its source, so nobody has to take the machine's word for anything.</p>
-""")
-
 PAGES = {
     "index.html": ("Lee Rogers", HOME, 0, "index.html", True),
-    "papers.html": ("Papers · Lee Rogers", PAPERS, 0, "papers.html"),
     "background.html": ("Background · Lee Rogers", BACKGROUND, 0, "background.html"),
-    "writing.html": ("Writing · Lee Rogers", WRITING, 0, "writing.html"),
     "contact.html": ("Contact · Lee Rogers", CONTACT, 0, "contact.html"),
-    "work/start-from-trust.html": ("Start from Trust · Lee Rogers", SFT, 1, "papers.html"),
-    "work/college-to-career.html": ("College to Career · Lee Rogers", CTC, 1, "papers.html"),
-    "writing/adoption.html": ("AI fails on adoption · Lee Rogers", ADOPTION, 1, "writing.html"),
-    "writing/the-missing-62.html": ("The Missing 62% · Lee Rogers", M62_ESSAY, 1, "writing.html"),
 }
 
 if __name__ == "__main__":
