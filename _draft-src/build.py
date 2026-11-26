@@ -168,23 +168,7 @@ def page(title, intro, body):
 """
 
 # ---------------------------------------------------------------- home
-HOME = """
-<section>
-  <p class="eyebrow">At PICPA and CPA Crossings</p>
-  <ul class="scope">
-    <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
-    <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
-    <li>AI adoption and governance across the organization</li>
-  </ul>
-</section>
-
-<section>
-  <p class="eyebrow">Service</p>
-  <ul class="scope">
-    <li>Community member, Institutional Review Board, Holy Family University</li>
-  </ul>
-</section>
-"""
+HOME = ""
 
 BACKGROUND = page("Background", "", """
 <section>
