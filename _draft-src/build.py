@@ -165,11 +165,6 @@ HOME = """
   <p class="lede">I run the research operation at the Pennsylvania Institute of CPAs and its national research arm, CPA Crossings. The papers I write there go out under the names of state CPA societies across the country.</p>
   <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide. That turned out to be the right preparation for the question most organizations are now working through: what happens when skilled people are handed AI, and what it takes for them to keep using it.</p>
 </section>
-
-<blockquote class="pull">
-  <p>The firms that navigate this period best will not be the firms that trusted everything. They will be the firms that started from trust and built from there.</p>
-  <cite>Start from Trust, 2026</cite>
-</blockquote>
 """
 
 BACKGROUND = page("Background", "", """
