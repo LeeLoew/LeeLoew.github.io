@@ -67,6 +67,13 @@ p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27p
 .creds b{font-weight:600;margin-right:10px}
 .creds span{color:var(--muted)}
 .sub{margin-top:44px;padding-top:28px;border-top:1px solid var(--rule)}
+.sub+.sub,section+.sub{margin-top:0}
+.roles{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:14px}
+.roles b{display:block;font-weight:600}
+.roles span{display:block;color:var(--muted)}
+.scope{list-style:none;margin:0;padding:0;max-width:720px}
+.scope li{border-top:1px solid var(--rule);padding:14px 0;font-family:var(--display);font-size:clamp(19px,2.2vw,22px);line-height:1.35}
+.scope li:last-child{border-bottom:1px solid var(--rule)}
 .pubs{margin:8px 0 0;padding-left:22px;font-size:15.5px}
 .pubs li{margin-bottom:8px}
 /* pull quote */

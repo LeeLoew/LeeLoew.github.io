@@ -80,6 +80,13 @@ p.lede{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,27p
 .creds b{font-weight:600;margin-right:10px}
 .creds span{color:var(--muted)}
 .sub{margin-top:44px;padding-top:28px;border-top:1px solid var(--rule)}
+.sub+.sub,section+.sub{margin-top:0}
+.roles{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:14px}
+.roles b{display:block;font-weight:600}
+.roles span{display:block;color:var(--muted)}
+.scope{list-style:none;margin:0;padding:0;max-width:720px}
+.scope li{border-top:1px solid var(--rule);padding:14px 0;font-family:var(--display);font-size:clamp(19px,2.2vw,22px);line-height:1.35}
+.scope li:last-child{border-bottom:1px solid var(--rule)}
 .pubs{margin:8px 0 0;padding-left:22px;font-size:15.5px}
 .pubs li{margin-bottom:8px}
 /* pull quote */
@@ -163,24 +170,49 @@ def page(title, intro, body):
 # ---------------------------------------------------------------- home
 HOME = """
 <section>
-  <p>Before this I spent a decade in cognitive science, studying how people learn, attend, and decide.</p>
+  <p class="eyebrow">At PICPA and CPA Crossings</p>
+  <ul class="scope">
+    <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
+    <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
+    <li>Co-lead of the enterprise AI enablement and governance program</li>
+  </ul>
+</section>
+
+<section>
+  <p class="eyebrow">Service</p>
+  <ul class="scope">
+    <li>Community member, Institutional Review Board, Holy Family University</li>
+  </ul>
 </section>
 """
 
 BACKGROUND = page("Background", "", """
+<section>
+<h2>Experience</h2>
+<ul class="roles">
+  <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span></li>
+  <li><b>Acting Director of Research (Research Specialist)</b><span>PICPA and CPA Crossings, July 2025 to April 2026</span></li>
+</ul>
+<p>Before PICPA: professor at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at the University of Delaware on visual statistical learning, reward, and attention.</p>
+</section>
+
+<section class="sub">
+<h2>Service</h2>
+<ul class="roles">
+  <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, October 2025 to present</span></li>
+</ul>
+<p>I serve as the external community member on Holy Family University's Institutional Review Board, the independent body that approves research involving human participants. I review proposed studies for participant risk, informed consent, privacy, and data protection.</p>
+</section>
+
+<section class="sub">
+<h2>Education</h2>
 <ul class="creds">
   <li><b>PhD, Psychological and Brain Sciences</b><span>University of Delaware</span></li>
   <li><b>MS, Experimental Psychology</b><span>Villanova University</span></li>
   <li><b>BA, Psychology</b><span>Temple University</span></li>
 </ul>
-<p>Before PICPA: teaching and research at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at Delaware on visual statistical learning, reward, and attention.</p>
-<section class="sub">
-<h2>Service</h2>
-<ul class="creds">
-  <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, 2025 to present</span></li>
-</ul>
-<p>I review proposed studies for participant risk, informed consent, privacy, and data protection.</p>
 </section>
+
 <section class="sub">
 <h2>Academic publications</h2>
 <ol class="pubs">
