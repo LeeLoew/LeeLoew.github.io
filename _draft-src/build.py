@@ -231,8 +231,8 @@ HOME = """
   <h2 class="label">At PICPA and CPA Crossings</h2>
   <div class="body">
     <ul class="scope">
-      <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
-      <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
+      <li>Strategy advisor to the chief executives of PICPA and CPA Crossings</li>
+      <li>The evidence behind Board of Directors decisions on membership, growth, and strategy</li>
       <li>AI strategy and governance for PICPA and CPA Crossings</li>
     </ul>
   </div>
@@ -255,8 +255,8 @@ BACKGROUND = page("Background", "", """
     <ul class="roles">
       <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span>
         <ul class="points">
-          <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
-          <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
+          <li>Strategy advisor to the chief executives of PICPA and CPA Crossings</li>
+          <li>The evidence behind Board of Directors decisions on membership, growth, and strategy</li>
           <li>AI strategy and governance for PICPA and CPA Crossings</li>
         </ul>
       </li>
@@ -264,17 +264,15 @@ BACKGROUND = page("Background", "", """
       <li><b>Professor</b><span>Drexel University</span></li>
       <li><b>Market and user research consulting</b>
         <ul class="points">
-          <li>Market and user research for product companies, including a global electronics maker's foldable phones</li>
-          <li>Tested medical devices with the people who use them</li>
-          <li>Argued for changing FDA guidance on device testing to adopt more rigorous statistical and research methods and prevent harmful use errors</li>
-          <li>Presented at the 2021 HFES Health Care Symposium, where FDA's human factors reviewers take part</li>
+          <li>Market and user research for global product makers, from foldable smartphones to medical devices</li>
+          <li>Made the case at the HFES Health Care Symposium for changing FDA policy on device testing, toward better science that saves lives</li>
         </ul>
       </li>
-      <li><b>Brain-imaging lab management</b><span>University neuroscience lab</span>
+      <li><b>Cognitive neuroscience laboratory</b>
         <ul class="points">
-          <li>Ran studies on the lab's multi-million-dollar MRI scanner</li>
-          <li>Trained the lab's research staff</li>
-          <li>Published peer-reviewed research on how people learn and decide</li>
+          <li>Led the lab's operations and its research team</li>
+          <li>Responsible for running a multi-million-dollar MRI scanner safely with human participants</li>
+          <li>Delivered peer-reviewed research on how people learn and decide</li>
         </ul>
       </li>
     </ul>
@@ -287,8 +285,9 @@ BACKGROUND = page("Background", "", """
     <ul class="roles">
       <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, October 2025 to present</span>
         <ul class="points">
-          <li>External community member of the independent body that approves research involving human participants</li>
-          <li>Review proposed studies for participant risk, informed consent, privacy, and data protection</li>
+          <li>Independent oversight of research involving people, on the board with authority to approve or stop it</li>
+          <li>Holds the outside seat that federal regulations require, answerable to the public and not the institution</li>
+          <li>Votes on participant risk, consent, privacy, and data protection</li>
         </ul>
       </li>
     </ul>
