@@ -252,8 +252,9 @@ BACKGROUND = page("Background", "", """
     <ul class="roles">
       <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span></li>
       <li><b>Acting Director of Research (Research Specialist)</b><span>PICPA and CPA Crossings, July 2025 to April 2026</span></li>
+      <li><b>Professor</b><span>Drexel University</span></li>
     </ul>
-    <p>Before PICPA: professor at Drexel University. User research on medical devices at Bresslergroup. Seven years of lab research at the University of Delaware on visual statistical learning, reward, and attention.</p>
+    <p>Before that: user research on medical devices at Bresslergroup. Seven years of lab research at the University of Delaware on visual statistical learning, reward, and attention.</p>
   </div>
 </section>
 
