@@ -88,6 +88,9 @@ h1,h2,h3,p{margin:0}
 .roles{list-style:none;margin:0;padding:0;display:grid;gap:22px}
 .roles b{display:block;font-family:var(--display);font-weight:500;font-size:21px;line-height:1.25;letter-spacing:-.012em}
 .roles span{display:block;margin-top:3px;color:var(--muted);font-size:15.5px;font-variant-numeric:tabular-nums}
+.points{list-style:none;margin:11px 0 0;padding:0;display:grid;gap:7px}
+.points li{position:relative;padding-left:22px;font-size:16px;line-height:1.5}
+.points li::before{content:"";position:absolute;left:0;top:.74em;width:10px;height:1px;background:var(--brass)}
 .pubs{list-style:none;counter-reset:pub;margin:0;padding:0;font-size:15.5px;line-height:1.55}
 .pubs li{counter-increment:pub;position:relative;padding:0 0 14px 38px}
 .pubs li:last-child{padding-bottom:0}

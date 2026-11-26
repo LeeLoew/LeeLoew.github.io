@@ -102,6 +102,9 @@ h1,h2,h3,p{margin:0}
 .roles{list-style:none;margin:0;padding:0;display:grid;gap:22px}
 .roles b{display:block;font-family:var(--display);font-weight:500;font-size:21px;line-height:1.25;letter-spacing:-.012em}
 .roles span{display:block;margin-top:3px;color:var(--muted);font-size:15.5px;font-variant-numeric:tabular-nums}
+.points{list-style:none;margin:11px 0 0;padding:0;display:grid;gap:7px}
+.points li{position:relative;padding-left:22px;font-size:16px;line-height:1.5}
+.points li::before{content:"";position:absolute;left:0;top:.74em;width:10px;height:1px;background:var(--brass)}
 .pubs{list-style:none;counter-reset:pub;margin:0;padding:0;font-size:15.5px;line-height:1.55}
 .pubs li{counter-increment:pub;position:relative;padding:0 0 14px 38px}
 .pubs li:last-child{padding-bottom:0}
@@ -250,11 +253,30 @@ BACKGROUND = page("Background", "", """
   <h2 class="label">Experience</h2>
   <div class="body">
     <ul class="roles">
-      <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span></li>
+      <li><b>Director of Strategic Research and Insights</b><span>PICPA and CPA Crossings, April 2026 to present</span>
+        <ul class="points">
+          <li>Strategic support to the chief executives of PICPA and CPA Crossings and to the Board of Directors</li>
+          <li>Board briefs, and facilitation of board strategy sessions with the CEO</li>
+          <li>AI strategy and governance for PICPA and CPA Crossings</li>
+        </ul>
+      </li>
       <li><b>Acting Director of Research (Research Specialist)</b><span>PICPA and CPA Crossings, July 2025 to April 2026</span></li>
       <li><b>Professor</b><span>Drexel University</span></li>
-      <li><b>Market and user research consulting</b><span>Market and user research for product companies, from a global electronics maker's foldable phones to medical devices tested with their users. Argued for changing FDA guidance on device testing to adopt more rigorous statistical and research methods and prevent harmful use errors, including a 2021 presentation at the HFES Health Care Symposium, where FDA's human factors reviewers take part.</span></li>
-      <li><b>Brain-imaging lab management</b><span>Managed a university neuroscience lab: ran studies on its multi-million-dollar MRI scanner, trained its research staff, and published peer-reviewed research on how people learn and decide.</span></li>
+      <li><b>Market and user research consulting</b>
+        <ul class="points">
+          <li>Market and user research for product companies, including a global electronics maker's foldable phones</li>
+          <li>Tested medical devices with the people who use them</li>
+          <li>Argued for changing FDA guidance on device testing to adopt more rigorous statistical and research methods and prevent harmful use errors</li>
+          <li>Presented at the 2021 HFES Health Care Symposium, where FDA's human factors reviewers take part</li>
+        </ul>
+      </li>
+      <li><b>Brain-imaging lab management</b><span>University neuroscience lab</span>
+        <ul class="points">
+          <li>Ran studies on the lab's multi-million-dollar MRI scanner</li>
+          <li>Trained the lab's research staff</li>
+          <li>Published peer-reviewed research on how people learn and decide</li>
+        </ul>
+      </li>
     </ul>
   </div>
 </section>
@@ -263,9 +285,13 @@ BACKGROUND = page("Background", "", """
   <h2 class="label">Service</h2>
   <div class="body">
     <ul class="roles">
-      <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, October 2025 to present</span></li>
+      <li><b>Institutional Review Board, Community Member</b><span>Holy Family University, October 2025 to present</span>
+        <ul class="points">
+          <li>External community member of the independent body that approves research involving human participants</li>
+          <li>Review proposed studies for participant risk, informed consent, privacy, and data protection</li>
+        </ul>
+      </li>
     </ul>
-    <p>I serve as the external community member on Holy Family University's Institutional Review Board, the independent body that approves research involving human participants. I review proposed studies for participant risk, informed consent, privacy, and data protection.</p>
   </div>
 </section>
 
