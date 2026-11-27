@@ -11,7 +11,8 @@ from urllib.parse import quote
 import json
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://leeloew.github.io"
+DOMAIN = "leelandrogers.com"
+SITE = "https://" + DOMAIN
 EMAIL = "Leeland.Rogers@gmail.com"
 
 CSS = r"""
@@ -380,6 +381,7 @@ if __name__ == "__main__":
         (ROOT / rel).write_text(shell(title, body, depth, cur, hero, desc))
         print("wrote", rel)
     (ROOT / "404.html").write_text(NOT_FOUND)
+    (ROOT / "CNAME").write_text(DOMAIN + "\n")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     urls = "".join(f"  <url><loc>{SITE}/{'' if r == 'index.html' else r}</loc></url>\n" for r in PAGES)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
