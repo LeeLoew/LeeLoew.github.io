@@ -185,3 +185,15 @@ body{padding-bottom:40px}
   .top nav{gap:22px;font-size:15px}
   .home .top .brand{display:none}
 }
+
+/* her additions */
+.hero .name{font-size:clamp(44px,6.6vw,84px)}
+.hero .name small{display:block;margin:.9em 0 0;vertical-align:baseline;font-family:var(--body);font-size:13px;font-weight:600;letter-spacing:.16em;line-height:1.4}
+.scope a{color:inherit;background:linear-gradient(var(--rule),var(--rule)) 0 100%/100% 1px no-repeat}
+.scope a:hover{color:var(--accent-ink);background-image:linear-gradient(var(--accent),var(--accent))}
+.scope .meta{display:block;margin-top:12px;font-family:var(--body);font-size:15.5px;line-height:1.5;letter-spacing:0;color:var(--muted)}
+.note a{color:var(--accent-ink);border-bottom:1px solid var(--rule)}
+@media(prefers-reduced-motion:no-preference){
+  .home main .band:nth-of-type(3)::before,.home main .band:nth-of-type(3)>.label{animation-delay:1.22s}
+  .home .band:nth-of-type(3) .scope li{animation-delay:1.28s}
+}
