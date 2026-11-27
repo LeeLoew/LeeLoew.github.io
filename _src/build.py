@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Build the unlisted portfolio draft into ../draft/.
+"""Build the site into the repository root.
 
-Run:  python3 build.py
-Every page carries noindex/nofollow; the site-wide robots.txt also blocks crawlers.
-Content lives in this file so the whole draft can be regenerated after edits.
+Run:  python3 _src/build.py
+Writes the three pages, the stylesheet, robots.txt, sitemap.xml, the 404 page,
+and redirect stubs for the old /draft/ addresses. Content lives in this file so
+the whole site can be regenerated after edits.
 """
 from pathlib import Path
 from urllib.parse import quote
+import json
 
-ROOT = Path(__file__).resolve().parent.parent / "draft"
+ROOT = Path(__file__).resolve().parent.parent
+SITE = "https://leeloew.github.io"
 EMAIL = "Leeland.Rogers@gmail.com"
 
 CSS = r"""
@@ -173,7 +176,7 @@ NAV = [("Background", "background.html"), ("Contact", "contact.html")]
 
 ICON = quote("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='13' fill='#1f4a40'/><text x='32' y='43' font-family='Georgia,serif' font-size='29' fill='#fff' text-anchor='middle'>LR</text></svg>")
 
-def shell(title, body, depth, current, hero=False):
+def shell(title, body, depth, current, hero=False, desc=""):
     pre = "../" * depth
     parts = []
     for label, href in NAV:
@@ -196,17 +199,24 @@ def shell(title, body, depth, current, hero=False):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="theme-color" content="{'#255649' if hero else '#f4f2ec'}">
 <title>{title}</title>
-<link rel="preload" href="{pre}assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{SITE}/{'' if current == 'index.html' else current}">
+<meta property="og:type" content="{'profile' if hero else 'website'}">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{SITE}/{'' if current == 'index.html' else current}">
+<meta property="og:image" content="{SITE}/assets/portrait.jpg">
+<meta name="twitter:card" content="summary">
+{PERSON if hero else ''}<link rel="preload" href="{pre}assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{pre}assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{pre}assets/site.css">
 <link rel="icon" href="data:image/svg+xml,{ICON}">
 </head>
 <body class="{'home' if hero else 'inner'}">
 <div class="top"><div class="wrap">
-  <a class="brand" href="{pre}index.html">Lee Rogers<span>PhD</span></a>
+  <a class="brand" href="/">Lee Rogers<span>PhD</span></a>
   <nav aria-label="Site">{nav}</nav>
 </div></div>{hero_html}
 <main><div class="wrap">
@@ -216,6 +226,15 @@ def shell(title, body, depth, current, hero=False):
 </body>
 </html>
 """
+
+PERSON = '<script type="application/ld+json">' + json.dumps({
+    "@context": "https://schema.org", "@type": "Person",
+    "name": "Lee Rogers", "honorificSuffix": "PhD",
+    "jobTitle": "Director of Strategic Research and Insights",
+    "worksFor": [{"@type": "Organization", "name": "PICPA"}, {"@type": "Organization", "name": "CPA Crossings"}],
+    "address": {"@type": "PostalAddress", "addressLocality": "Philadelphia", "addressRegion": "PA"},
+    "url": SITE + "/", "image": SITE + "/assets/portrait.jpg",
+}) + "</script>"
 
 def page(title, intro, body):
     return f"""
@@ -314,18 +333,57 @@ CONTACT = page("Contact", "", f"""
 """)
 
 PAGES = {
-    "index.html": ("Lee Rogers", HOME, 0, "index.html", True),
-    "background.html": ("Background · Lee Rogers", BACKGROUND, 0, "background.html"),
-    "contact.html": ("Contact · Lee Rogers", CONTACT, 0, "contact.html"),
+    "index.html": ("Lee Rogers, PhD", HOME, 0, "index.html", True,
+                   "Lee Rogers, PhD. Director of Strategic Research and Insights at PICPA and CPA Crossings in Philadelphia."),
+    "background.html": ("Background · Lee Rogers, PhD", BACKGROUND, 0, "background.html", False,
+                        "Experience, service and education of Lee Rogers, PhD."),
+    "contact.html": ("Contact · Lee Rogers, PhD", CONTACT, 0, "contact.html", False,
+                     "Contact Lee Rogers, PhD."),
 }
+
+def redirect(target):
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{SITE}/{target}">
+<meta http-equiv="refresh" content="0; url=/{target}">
+<title>Lee Rogers, PhD</title></head>
+<body><p><a href="/{target}">This page has moved.</a></p></body></html>
+"""
+
+NOT_FOUND = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found · Lee Rogers, PhD</title>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="inner">
+<div class="top"><div class="wrap">
+  <a class="brand" href="/">Lee Rogers<span>PhD</span></a>
+  <nav aria-label="Site"><a href="/background.html">Background</a><a href="/contact.html">Contact</a></nav>
+</div></div>
+<main><div class="wrap">
+<div class="page-head"><h1><span class="mask"><span class="in">Page not found</span></span></h1></div>
+<section class="band"><h2 class="label">404</h2><div class="body"><a class="mail" href="/">Go to the home page</a></div></section>
+</div></main>
+</body>
+</html>
+"""
 
 if __name__ == "__main__":
     (ROOT / "assets").mkdir(parents=True, exist_ok=True)
     (ROOT / "assets" / "site.css").write_text(CSS.strip() + "\n")
-    for rel, spec in PAGES.items():
-        title, body, depth, cur = spec[:4]
-        hero = spec[4] if len(spec) > 4 else False
-        out = ROOT / rel
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(shell(title, body, depth, cur, hero))
-        print("wrote", out.relative_to(ROOT.parent))
+    for rel, (title, body, depth, cur, hero, desc) in PAGES.items():
+        (ROOT / rel).write_text(shell(title, body, depth, cur, hero, desc))
+        print("wrote", rel)
+    (ROOT / "404.html").write_text(NOT_FOUND)
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    urls = "".join(f"  <url><loc>{SITE}/{'' if r == 'index.html' else r}</loc></url>\n" for r in PAGES)
+    (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    (ROOT / "draft").mkdir(exist_ok=True)
+    for old, target in [("index.html", ""), ("background.html", "background.html"), ("contact.html", "contact.html")]:
+        (ROOT / "draft" / old).write_text(redirect(target))
+    print("wrote 404.html, robots.txt, sitemap.xml, draft/ redirects")
