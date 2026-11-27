@@ -13,6 +13,7 @@ import json
 ROOT = Path(__file__).resolve().parent.parent
 DOMAIN = "leelandrogers.com"
 SITE = "https://" + DOMAIN
+LINKEDIN = "https://www.linkedin.com/in/leelandrogers"
 EMAIL = "Leeland.Rogers@gmail.com"
 
 CSS = r"""
@@ -122,6 +123,7 @@ footer{border-top:1px solid var(--rule)}
 footer .wrap{padding-block:22px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--accent-ink)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 24px}
 
 /* page-to-page crossfade */
 @view-transition{navigation:auto}
@@ -223,7 +225,7 @@ def shell(title, body, depth, current, hero=False, desc=""):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap"><span>Lee Rogers, Philadelphia</span><a href="mailto:{EMAIL}">{EMAIL}</a></div></footer>
+<footer><div class="wrap"><span>Lee Rogers, Philadelphia</span><span class="foot-links"><a href="{LINKEDIN}" rel="me noopener">LinkedIn</a><a href="mailto:{EMAIL}">{EMAIL}</a></span></div></footer>
 </body>
 </html>
 """
@@ -235,6 +237,7 @@ PERSON = '<script type="application/ld+json">' + json.dumps({
     "worksFor": [{"@type": "Organization", "name": "PICPA"}, {"@type": "Organization", "name": "CPA Crossings"}],
     "address": {"@type": "PostalAddress", "addressLocality": "Philadelphia", "addressRegion": "PA"},
     "url": SITE + "/", "image": SITE + "/assets/portrait.jpg",
+    "sameAs": [LINKEDIN],
 }) + "</script>"
 
 def page(title, intro, body):
@@ -330,6 +333,11 @@ CONTACT = page("Contact", "", f"""
 <section class="band">
   <h2 class="label">Email</h2>
   <div class="body"><a class="mail" href="mailto:{EMAIL}">{EMAIL}</a></div>
+</section>
+
+<section class="band">
+  <h2 class="label">LinkedIn</h2>
+  <div class="body"><a class="mail" href="{LINKEDIN}" rel="me noopener">in/leelandrogers</a></div>
 </section>
 """)
 

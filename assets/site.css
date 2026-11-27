@@ -104,6 +104,7 @@ footer{border-top:1px solid var(--rule)}
 footer .wrap{padding-block:22px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--accent-ink)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 24px}
 
 /* page-to-page crossfade */
 @view-transition{navigation:auto}
