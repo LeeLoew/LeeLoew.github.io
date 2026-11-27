@@ -65,6 +65,10 @@ a{color:var(--accent-ink);text-decoration:none}
 .hero .name small{font-size:.26em;font-weight:400;letter-spacing:.02em;margin-left:.5em;color:rgba(255,255,255,.66);vertical-align:.95em}
 .hero .role{margin:0;font-size:clamp(17px,1.55vw,20px);line-height:1.45;color:rgba(255,255,255,.92)}
 .hero .role span{display:block;color:rgba(255,255,255,.66)}
+.hero-links{margin:26px 0 0;font-size:15px;font-weight:500}
+.hero-links a{color:rgba(255,255,255,.92);padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.4)}
+.hero-links a:hover{color:#fff;border-bottom-color:var(--brass-lt)}
+.hero-links span{margin-left:.4em;font-size:.9em}
 .portrait{position:relative;margin:0 0 -44px;width:min(68%,280px);aspect-ratio:4/5;overflow:hidden;box-shadow:0 36px 60px -34px rgba(8,22,18,.7)}
 .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.16);pointer-events:none}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
@@ -149,6 +153,8 @@ footer a:hover{color:var(--accent-ink)}
   .kicker::before{animation:draw .8s var(--ease) .1s both}
   .hero .name .in{animation:mask-up 1s var(--ease) .12s both}
   .hero .role{animation:rise .8s var(--ease) .42s both}
+  .hero-links{animation:rise .8s var(--ease) .56s both}
+  .hero-links a{transition:color .2s,border-color .2s}
   .portrait{animation:unveil 1.15s var(--ease) .22s both}
   .portrait img{animation:settle 1.7s var(--ease) .22s both}
 
@@ -193,6 +199,7 @@ def shell(title, body, depth, current, hero=False, desc=""):
       <p class="kicker">Philadelphia</p>
       <h1 class="name"><span class="mask"><span class="in">Lee Rogers<small>PhD</small></span></span></h1>
       <p class="role">Director of Strategic Research and Insights<span>PICPA and CPA Crossings</span></p>
+      <p class="hero-links"><a href="{LINKEDIN}" rel="me noopener">LinkedIn<span aria-hidden="true">↗</span></a></p>
     </div>
     <figure class="portrait"><img src="{pre}assets/portrait.jpg" alt="Lee Rogers" width="870" height="1000"></figure>
   </div>
